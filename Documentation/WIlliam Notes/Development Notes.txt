@@ -1,0 +1,13 @@
+webpages
+a printout page for barcode = isneeded?
+
+confirmation page of order request
+
+
+determine
+what information is being stored in the QR code.
+
+
+database
+user position 
+ - new role for the recciever on site
