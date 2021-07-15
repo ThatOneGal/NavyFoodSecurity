@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\OrderContents;
+use App\Models\Location;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class OrderContentsFactory extends Factory
+class LocationFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = OrderContents::class;
+    protected $model = Location::class;
 
     /**
      * Define the model's default state.

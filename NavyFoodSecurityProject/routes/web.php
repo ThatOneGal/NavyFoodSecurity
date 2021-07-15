@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\LocationController;
+use App\Http\Controllers\StatusController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('location', LocationController::class);
+Route::resource('status', StatusController::class);

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\OrderContents;
+use App\Models\Location;
 use Illuminate\Http\Request;
 
-class OrderContentsController extends Controller
+class LocationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class OrderContentsController extends Controller
      */
     public function index()
     {
-        //
+        $locations = Location::all();
+        return view('location.index', ['locations' => $locations]);
     }
 
     /**
@@ -24,7 +25,7 @@ class OrderContentsController extends Controller
      */
     public function create()
     {
-        //
+        return view('location.create');
     }
 
     /**
@@ -35,16 +36,19 @@ class OrderContentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $locations = new Location();
+        $locations -> fill($request -> all());
+        $locations -> save();
+        return redirect(route('location.index'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\OrderContents  $orderContents
+     * @param  \App\Models\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function show(OrderContents $orderContents)
+    public function show(Location $location)
     {
         //
     }
@@ -52,34 +56,38 @@ class OrderContentsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\OrderContents  $orderContents
+     * @param  \App\Models\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function edit(OrderContents $orderContents)
+    public function edit(Location $location)
     {
-        //
+        return view('location.edit', ['location' => $location]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\OrderContents  $orderContents
+     * @param  \App\Models\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, OrderContents $orderContents)
+    public function update(Request $request, Location $location)
     {
-        //
+        $location->fill($request->all());
+        $location->save();
+        return redirect(route('location.index'));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\OrderContents  $orderContents
+     * @param  \App\Models\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function destroy(OrderContents $orderContents)
+    public function destroy(Location $location)
     {
-        //
+        $model = $location;
+        $model->delete();
+        return redirect(route('location.index'));
     }
 }
