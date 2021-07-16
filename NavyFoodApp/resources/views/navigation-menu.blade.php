@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('OrderContent.create') }}"
+                    <x-jet-nav-link href="{{ route('orderfunction.create') }}"
                                     :active="request()->routeIs('Create Order')">
                         {{ __('Create Order') }}
                     </x-jet-nav-link>
