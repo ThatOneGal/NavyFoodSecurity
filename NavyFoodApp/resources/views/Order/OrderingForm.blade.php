@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('OrderingForm') }}
+            {{ __('Create Order') }}
         </h2>
     </x-slot>
 
@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
 
-                <form action="{{route('orderfunction.store')}}" method="POST">
+                <form action="{{route('order.store')}}" method="POST">
                     @csrf
 
                     <div>
@@ -28,9 +28,7 @@
                                 @foreach($locationList as $location)
                                     <option value="{{$location->id}}">{{$location->locationName}}</option>
                                 @endforeach
-                                <option value="11">Base</option>
-                                <option value="22">Kitchen</option>
-                                <option value="33">DeliverySector</option>
+
                             </select>
                         </div>
                     </div>

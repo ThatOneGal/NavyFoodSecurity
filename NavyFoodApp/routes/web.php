@@ -25,7 +25,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return view('dashboard');
     })->name('dashboard');
 
-    Route::resource('orderfunction', OrderController::class);
+    Route::resource('order', OrderController::class);
     Route::resource('location', LocationController::class);
     Route::resource('status', StatusController::class);
 

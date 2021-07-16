@@ -17,7 +17,9 @@ class OrderController extends Controller
     public function index()
     {
         //
+
         return view('Order.OrderingForm');
+
 
     }
 
@@ -35,6 +37,8 @@ class OrderController extends Controller
 
     }
 
+
+
     /**
      * Store a newly created resource in storage.
      *
@@ -43,19 +47,22 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         //
+
+
+
         $locationList = Location::all();
         $statusList = Status::all();
 
         $Order = new Order();
         $Order->fill($request->all());
-        $Order->CustomerId = Auth::id($this);
+        $Order->CustomerId = Auth::id();
 
         $Order->StatusId = 1;
         $Order->OrderDate = now();
 
 
         $Order->save();
-        return view('Order.OrderingIndex', compact('Order','locationList','statusList'));
+        return view('Order.Show', compact('Order','locationList','statusList'));
 
     }
 
@@ -63,44 +70,73 @@ class OrderController extends Controller
      * Display the specified resource.
      *
      */
-    public function show()
+    public function show(Order $Order)
     {
-        //
-        return view('Order.OrderingIndex');
+        $locationList = Location::all();
+        $statusList = Status::all();
+
+
+
+        return view('Order.Show', compact('Order', 'locationList', 'statusList'));
     }
 
     /**
      * Show the form for editing the specified resource.
-     *
-     * @param \App\Models\OrderContent $orderContent
-     * @return \Illuminate\Http\Response
+
      */
-    public function edit(Order $order)
+    public function edit(Order $Order)
     {
         //
+        $locationList = Location::all();
+        $statusList = Status::all();
+        return view('Order.Edit', compact('Order','locationList', 'statusList'));
     }
+
 
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Models\OrderContent $orderContent
-     * @return \Illuminate\Http\Response
+
      */
-    public function update(Request $request, Order $order)
+    public function update(Request $request, Order $Order)
     {
-        //
+
+        $Order->fill($request->all());
+        $Order->save();
+        return redirect(route('order.show', compact('Order')));
+
     }
+/*    public function update(Request $request, $id)
+    {
+        $Order = Order::find($id);
+        if (!$Order) {
+            abort(404);
+        }
+        $Order->fill($request->all());
+        $Order->CustomerId = Auth::id();
+
+        $Order->StatusId = 1;
+        $Order->OrderDate = now();
+
+
+        $Order->save();
+        $id = $Order->id;
+        return redirect(route('orderfunction.show', compact('id')));
+
+        //
+    }*/
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Models\OrderContent $orderContent
-     * @return \Illuminate\Http\Response
      */
     public function destroy(Order $order)
     {
         //
+
+        $order->delete();
+        return redirect(route('order.create'));
+
 
     }
 }

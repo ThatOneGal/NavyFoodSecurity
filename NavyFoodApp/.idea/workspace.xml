@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="769d679b-17ff-4a27-a830-4b3a5f67c168" name="Default Changelist" comment="Updated navigation of status and location create, edit and index pages.">
       <change beforePath="$PROJECT_DIR$/resources/views/Status/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Status/edit.blade.php" afterDir="false" />
+=======
+    <list default="true" id="769d679b-17ff-4a27-a830-4b3a5f67c168" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

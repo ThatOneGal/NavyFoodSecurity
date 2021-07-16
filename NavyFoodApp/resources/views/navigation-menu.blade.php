@@ -18,8 +18,8 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('orderfunction.create') }}"
-                                    :active="request()->routeIs('Create Order')">
+                    <x-jet-nav-link href="{{ route('order.create') }}"
+                                    :active="request()->routeIs('order.create')">
                         {{ __('Create Order') }}
                     </x-jet-nav-link>
                 </div>
@@ -43,12 +43,12 @@
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('location.index') }}" :active="request()->routeIs('Help')">
+                    <x-jet-nav-link href="{{ route('location.index') }}" :active="request()->routeIs('location.index')">
                         {{ __('Location') }}
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('status.index') }}" :active="request()->routeIs('Help')">
+                    <x-jet-nav-link href="{{ route('status.index') }}" :active="request()->routeIs('status.index')">
                         {{ __('Status') }}
                     </x-jet-nav-link>
                 </div>

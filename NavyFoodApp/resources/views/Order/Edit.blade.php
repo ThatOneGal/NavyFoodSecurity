@@ -10,9 +10,9 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
 
-                <form action="{{route('orderfunction.store')}}" method="POST">
+                <form action="{{route('order.update', $Order)}}" method="POST">
                     @csrf
-
+                    @method('PUT')
                     <div> {{--Destination--}}
                         <div><label for="Location">Destination</label></div>
                         <div>
@@ -33,7 +33,7 @@
 
 
                     <div> {{--Status--}}
-                        <div><label for="Status">Destination</label></div>
+                        <div><label for="Status">Status</label></div>
 
                         <div>
                             <select name="StatusId" id="StatusId">
@@ -67,7 +67,12 @@
                             <label for="OrderShipped">Date Shipped:</label>
                         </div>
                         <div>
-                            <label for="OrderShipped" >{{$Order->OrderShipped}}</label>
+                            <label for="OrderShipped">
+                                @if($Order->OrderShipped == null)
+                                    0000-00-00 00:00:00
+                                @else
+                                    {{$Order->OrderShipped}}
+                                @endif </label>
                         </div>
                     </div>
 
@@ -76,7 +81,13 @@
                             <label for="OrderPacked">Date Packed:</label>
                         </div>
                         <div>
-                            <label for="OrderPacked" >{{$Order->OrderPacked}}</label>
+                            <label for="OrderPacked">
+                                @if($Order->OrderPacked == null)
+                                    0000-00-00 00:00:00
+                                @else
+                                    {{$Order->OrderPacked}}
+                                @endif
+                            </label>
                         </div>
                     </div>
 
@@ -124,24 +135,23 @@
                         </div>
 
 
-                    <div> {{--Notes Preparation--}}
-                        <div>
-                            <label for="NotesPreparation">Notes Preparation :</label>
-                        </div>
-                        <div>
+                        <div> {{--Notes Preparation--}}
+                            <div>
+                                <label for="NotesPreparation">Notes Preparation :</label>
+                            </div>
+                            <div>
                             <textarea name="NotesPreparation" id="NotesPreparation" cols="0"
                                       rows="0">{{$Order->NotesPreparation}}</textarea>
+                            </div>
+
                         </div>
+                        <div>
+                            <input type="submit" value="Submit">
 
-                    </div>
-                    <div>
-                        <input type="submit" value="Submit">
-
-                    </div>
-                    <div>
-                        <input type="reset" value="Cancel">
-                    </div>
-
+                        </div>
+                        <div>
+                            <input type="reset" value="Cancel">
+                        </div>
 
                 </form>
 
