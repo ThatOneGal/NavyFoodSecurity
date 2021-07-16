@@ -29,6 +29,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::resource('location', LocationController::class);
     Route::resource('status', StatusController::class);
 
+    Route::get('/history', function () {
+        return view('history.history');
+    })->name('history');
+
 });
 
 
