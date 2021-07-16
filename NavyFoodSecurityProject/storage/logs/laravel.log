@@ -1,0 +1,47 @@
+[2021-06-16 14:56:53] local.ERROR: The "-A" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"-A\" option does not exist. at E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\symfony\\console\\Input\\ArgvInput.php:115)
+[stacktrace]
+#0 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\symfony\\console\\Input\\ArgvInput.php(97): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOptionSet('All')
+#1 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\symfony\\console\\Input\\ArgvInput.php(78): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOption('-All')
+#2 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\symfony\\console\\Command\\Command.php(247): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#5 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\symfony\\console\\Application.php(974): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\symfony\\console\\Application.php(291): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\ModelMakeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\symfony\\console\\Application.php(167): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(92): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 {main}
+"} 
+[2021-06-16 14:56:59] local.ERROR: The "-l" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"-l\" option does not exist. at E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\symfony\\console\\Input\\ArgvInput.php:115)
+[stacktrace]
+#0 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\symfony\\console\\Input\\ArgvInput.php(97): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOptionSet('all')
+#1 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\symfony\\console\\Input\\ArgvInput.php(78): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOption('-all')
+#2 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\symfony\\console\\Command\\Command.php(247): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#5 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\symfony\\console\\Application.php(974): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\symfony\\console\\Application.php(291): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\ModelMakeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\symfony\\console\\Application.php(167): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(92): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 {main}
+"} 
+[2021-06-17 10:36:04] local.ERROR: Command "server" is not defined.
+
+Did you mean one of these?
+    make:observer
+    serve {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"server\" is not defined.
+
+Did you mean one of these?
+    make:observer
+    serve at E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\symfony\\console\\Application.php:678)
+[stacktrace]
+#0 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\symfony\\console\\Application.php(255): Symfony\\Component\\Console\\Application->find('server')
+#1 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\symfony\\console\\Application.php(167): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(92): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 E:\\GitHubRepo\\NavyFoodSecurity\\NavyFoodSecurityProject\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
