@@ -8,7 +8,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <form method="POST" action="{{route('status.update', $location)}}">
+                <form method="POST" action="{{route('status.update', $status)}}">
                     @method('PUT')
                     @csrf
 

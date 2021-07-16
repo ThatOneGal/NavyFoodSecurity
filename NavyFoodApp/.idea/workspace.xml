@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="769d679b-17ff-4a27-a830-4b3a5f67c168" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Location/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Location/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Location/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Location/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Location/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Location/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Status/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Status/create.blade.php" afterDir="false" />
+    <list default="true" id="769d679b-17ff-4a27-a830-4b3a5f67c168" name="Default Changelist" comment="Updated navigation of status and location create, edit and index pages.">
       <change beforePath="$PROJECT_DIR$/resources/views/Status/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Status/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Status/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Status/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,6 +187,21 @@
       <workItem from="1626403715981" duration="11334000" />
       <workItem from="1626420614954" duration="14745000" />
     </task>
+    <task id="LOCAL-00001" summary="Updated navigation of status and location create, edit and index pages.">
+      <created>1626446091662</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1626446091662</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Updated navigation of status and location create, edit and index pages.">
+      <created>1626446108392</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1626446108392</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,5 +221,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Updated navigation of status and location create, edit and index pages." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated navigation of status and location create, edit and index pages." />
   </component>
 </project>
