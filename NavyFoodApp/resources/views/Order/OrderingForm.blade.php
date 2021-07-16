@@ -22,7 +22,11 @@
 
                         <div>
                             {{--<input type="select" name="Location" list="LocationList" --}}{{--Location variable--}}{{--/>--}}
+
                             <select name="Location" id="LocationList">
+                                @foreach($LocationList as $Location)
+                                    <option value="{{$Location->id}}">{{$Location->Name}}</option>
+                                @endforeach
                                 <option value="Base">Base</option>
                                 <option value="Kitchen">Kitchen</option>
                                 <option value="DeliverySector">DeliverySector</option>
@@ -30,15 +34,7 @@
                         </div>
                     </div>
 
-                    {{--<form action="/action_page.php" method="get">
 
-                        <select name = "dropdown">
-                            <option value = "Computer Architecture" selected>Computer Architecture</option>
-                            <option value = "Java">Java</option>
-                            <option value = "Discrete Mathematics">Discrete Mathematics</option>
-                            <input type="submit">
-
-                    </form>--}}
 
                     <div> {{--Order Name--}}
                         <div>
@@ -74,8 +70,8 @@
 
                     </div>
                     <div>
-                        <input class="button" type="submit" value="Submit">
-                        <input class="button" type="reset" value="Cancel">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Cancel">
 
                     </div>
 

@@ -25,6 +25,7 @@ class OrderContentController extends Controller
     public function create()
     {
         //
+
         return view('Order.OrderingForm');
 
     }
@@ -38,6 +39,7 @@ class OrderContentController extends Controller
     public function store(Request $request)
     {
         //
+
     }
 
     /**
