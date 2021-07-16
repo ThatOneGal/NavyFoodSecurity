@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
 
-                <form action="{{route(OrderContent.store)}}" method="POST">
+                <form action="{{route('orderfunction.store')}}" method="POST">
                     @csrf
 
                     <div>
@@ -18,19 +18,19 @@
                     </div>
                     <div> {{--Destination--}}
                         <div>
-                            <label for="Location">Destination</label>
+                            <label for="Location">Destination:</label>
                         </div>
 
                         <div>
                             {{--<input type="select" name="Location" list="LocationList" --}}{{--Location variable--}}{{--/>--}}
 
-                            <select name="Location" id="LocationList">
+                            <select name="LocationId" id="LocationId">
                                 @foreach($locationList as $location)
-                                    <option value="{{$location->id}}">{{$location->name}}</option>
+                                    <option value="{{$location->id}}">{{$location->locationName}}</option>
                                 @endforeach
-                                <option value="Base">Base</option>
-                                <option value="Kitchen">Kitchen</option>
-                                <option value="DeliverySector">DeliverySector</option>
+                                <option value="11">Base</option>
+                                <option value="22">Kitchen</option>
+                                <option value="33">DeliverySector</option>
                             </select>
                         </div>
                     </div>
@@ -43,30 +43,26 @@
                         </div>
 
                         <div>
-                            <input type="text" id="CustomerId" value="{Rank}{Name} {{--Variable for users details--}} " readonly>
+                            <input type="text" id="CustomerId" value="{{Auth::user()->id }} {{--Variable for users details--}} " readonly>
                         </div>
                     </div>
 
-                    <div>{{--Order List--}}
+                    <div>{{--Order Content--}}
                         <div>
                             <label for="Content">Content:</label>
                         </div>
 
                         <div>
-                            <textarea name="Content" id="Content" cols="30" rows="10">
-                                {{--content list of data--}}
-                            </textarea>
+                            <textarea name="Content" id="Content" cols="0" rows="0">{{--content list of data--}}</textarea>
                         </div>
                     </div>
 
                     <div> {{--Notes--}}
                         <div>
-                            <label for="Notes">Notes:</label>
+                            <label for="NotesStorage">Notes:</label>
                         </div>
                         <div>
-                            <textarea name="Notes" id="Notes" cols="30" rows="5">
-                                {{--content list of data--}}
-                            </textarea>
+                            <textarea name="NotesStorage" id="NotesStorage" cols="0" rows="0">{{--content list of data--}}</textarea>
                         </div>
 
                     </div>

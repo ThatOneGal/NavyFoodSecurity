@@ -2,10 +2,10 @@
 
 namespace Database\Factories;
 
-use App\Models\OrderContent;
+use App\Models\Order;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class OrderContentFactory extends Factory
+class OrderFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
