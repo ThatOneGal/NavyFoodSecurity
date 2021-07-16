@@ -10,8 +10,9 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
 
-                <form action="#" method="POST">
+                <form action="{{route(OrderContent.store)}}" method="POST">
                     @csrf
+
                     <div>
                         <h1>Ordering Form</h1>
                     </div>
@@ -24,8 +25,8 @@
                             {{--<input type="select" name="Location" list="LocationList" --}}{{--Location variable--}}{{--/>--}}
 
                             <select name="Location" id="LocationList">
-                                @foreach($LocationList as $Location)
-                                    <option value="{{$Location->id}}">{{$Location->Name}}</option>
+                                @foreach($locationList as $location)
+                                    <option value="{{$location->id}}">{{$location->name}}</option>
                                 @endforeach
                                 <option value="Base">Base</option>
                                 <option value="Kitchen">Kitchen</option>
@@ -63,7 +64,7 @@
                             <label for="Notes">Notes:</label>
                         </div>
                         <div>
-                            <textarea name="Notes" id="Notes" cols="30" rows="10">
+                            <textarea name="Notes" id="Notes" cols="30" rows="5">
                                 {{--content list of data--}}
                             </textarea>
                         </div>

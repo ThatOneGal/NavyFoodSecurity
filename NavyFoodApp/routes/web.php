@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\LocationController;
 use App\Http\Controllers\OrderContentController;
+use App\Http\Controllers\StatusController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +26,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     })->name('dashboard');
 
     Route::resource('OrderContent', OrderContentController::class);
+    Route::resource('location', LocationController::class);
+    Route::resource('status', StatusController::class);
+
 });
 
 
