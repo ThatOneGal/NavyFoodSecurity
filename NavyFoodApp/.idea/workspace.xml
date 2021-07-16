@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="769d679b-17ff-4a27-a830-4b3a5f67c168" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HistoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/History.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/HistoryFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_07_16_113743_create_histories_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/HistorySeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/History/history.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Order/OrderingForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Order/OrderingForm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Location/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Location/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Location/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Location/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Location/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Location/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Status/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Status/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Status/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Status/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Status/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Status/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
