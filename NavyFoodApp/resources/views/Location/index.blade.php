@@ -16,15 +16,15 @@
 
                     @foreach($locations as $location)
                         <tr class="text-center">
-                            <td>{{$locations->id}}</td>
-                            <td>{{$locations->locationName}}</td>
+                            <td>{{$location->id}}</td>
+                            <td>{{$location->locationName}}</td>
 
                             <td>
                                 <a href="{{route('location.edit', $location)}}">Edit</a>
                             </td>
 
                             <td>
-                                <form method="POST" action="{{route('location.destroy', $locations)}}">
+                                <form method="POST" action="{{route('location.destroy', $location)}}">
                                     @method('DELETE')
                                     @csrf
                                     <button class="button button-red" type="submit">Delete</button>
@@ -37,7 +37,7 @@
                 </table>
             </div>
 
-            <a href="{{route('location.create', $locations)}}" class="button">Create New</a>
+            <a href="{{route('location.create')}}" class="button">Create New</a>
         </div>
     </div>
 </x-app-layout>

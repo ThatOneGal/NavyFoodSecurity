@@ -60,7 +60,6 @@ class OrderController extends Controller
         $Order->StatusId = 1;
         $Order->OrderDate = now();
 
-
         $Order->save();
         return view('Order.Show', compact('Order','locationList','statusList'));
 

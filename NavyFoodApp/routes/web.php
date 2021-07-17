@@ -4,6 +4,7 @@ use App\Http\Controllers\LocationController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\StatusController;
 use Illuminate\Support\Facades\Route;
+use \BaconQrCode\Encoder\QrCode;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +22,9 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
-    Route::get('/dashboard', function () {
+    /*Route::get('/dashboard', function () {
         return view('dashboard');
-    })->name('dashboard');
+    })->name('dashboard');*/
 
     Route::resource('order', OrderController::class);
     Route::resource('location', LocationController::class);
@@ -32,6 +33,15 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/history', function () {
         return view('history.history');
     })->name('history');
+
+    Route::get('/dashboard', function (){
+
+        QrCode::size(500)
+            ->format('png')
+            ->generate(view('order.show'));
+
+        return view('dashboard');
+    })->name('dashboard');
 
 });
 

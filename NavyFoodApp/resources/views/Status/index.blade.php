@@ -37,7 +37,7 @@
                 </table>
             </div>
 
-            <a href="{{route('status.create', $status)}}" class="button">Create New</a>
+            <a href="{{route('status.create')}}" class="button">Create New</a>
 
         </div>
     </div>
