@@ -9,19 +9,32 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
-                    <div> {{--Destination--}}
-                        <div><label for="Location">Destination</label></div>
+                <div> {{--Destination--}}
+                    <div><label for="Location">Destination:</label></div>
+                    <div>
                         <div>
-                            <div><label for="Location">{{$Order->locationName}}</label></div>
+                            <label for="Location">
+                                @foreach($locationList as $location)
+                                    @if ($Order->LocationId == $location->id)
+                                        {{$location->locationName}}
+                                    @endif
+                                @endforeach
+                            </label>
                         </div>
                     </div>
 
 
                     <div> {{--Status--}}
-                        <div><label for="Status">Status</label></div>
+                        <div><label for="Status">Status:</label></div>
 
                         <div>
-                            <label for="Status">{{$Order->statusName}}</label>
+                            <label for="Status">
+                                @foreach($statusList as $status)
+                                    @if ($Order->StatusId == $status->id)
+                                        {{$status->statusName}}
+                                    @endif
+                                @endforeach
+                            </label>
                         </div>
                     </div>
 
@@ -94,7 +107,8 @@
                         </div>
 
                         <div>
-                            <textarea name="Content" id="Content" cols="0" rows="0" readonly>{{$Order->Content}}</textarea>
+                            <textarea name="Content" id="Content" cols="0" rows="0"
+                                      readonly>{{$Order->Content}}</textarea>
                         </div>
                     </div>
 
@@ -120,7 +134,7 @@
                         </div>
                         <a href="{{route('order.edit',$Order)}}">Edit</a>
 
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 </x-app-layout>

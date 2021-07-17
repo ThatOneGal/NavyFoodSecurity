@@ -18,7 +18,7 @@ class CreateOrdersTable extends Migration
             $table->foreignId('CustomerId')->constrained('users');
             //$table->foreignId('PackerId')->constrained('users');
             //$table->foreignId('DriverId')->constrained('users');
-            $table->foreignId('LocationId')->constrained('locations','id');
+            $table->foreignId('LocationId')->constrained('locations');
             $table->foreignId('StatusId')->constrained('statuses');
             $table->dateTime('OrderDate')->nullable();
             $table->dateTime('OrderShipped')->nullable();
