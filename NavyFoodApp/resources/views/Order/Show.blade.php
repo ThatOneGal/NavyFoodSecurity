@@ -132,9 +132,17 @@
                             </div>
 
                         </div>
-                        <a href="{{route('order.edit',$Order)}}">Edit</a>
-
+                        <a href="{{route('order.edit', $Order)}}">Edit</a>
                     </div>
                 </div>
+
+                <div>
+                    {!! QrCode::size(500)->format('svg')->generate($Order, public_path('images/qrcode.svg')) !!}
+                    <img src="{{url('/images/qrcode.svg')}}"/>
+                </div>
+
             </div>
+        </div>
+    </div>
+
 </x-app-layout>
