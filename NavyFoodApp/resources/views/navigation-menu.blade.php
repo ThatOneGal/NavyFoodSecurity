@@ -25,14 +25,14 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="#{{--{{ route('Scanned Order') }}--}}"
-                                    :active="request()->routeIs('Scanned Order')">
-                        {{ __('Scanned Order') }}
+                    <x-jet-nav-link href="/LastOrder"
+                                    :active="request()->routeIs('/LastOrder')">
+                        {{ __('Last Order') }}
                     </x-jet-nav-link>
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="#{{--{{ route('History') }}--}}" :active="request()->routeIs('History')">
+                    <x-jet-nav-link href="{{ route('order.index') }}" :active="request()->routeIs('order.index')">
                         {{ __('History') }}
                     </x-jet-nav-link>
                 </div>

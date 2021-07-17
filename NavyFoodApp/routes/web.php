@@ -28,12 +28,5 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::resource('order', OrderController::class);
     Route::resource('location', LocationController::class);
     Route::resource('status', StatusController::class);
-
-    Route::get('/history', function () {
-        return view('history.history');
-    })->name('history');
-
+    Route::get('/LastOrder', [OrderController::class, 'last']);
 });
-
-
-;
