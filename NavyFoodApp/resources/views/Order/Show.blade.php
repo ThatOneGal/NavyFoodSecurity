@@ -139,6 +139,8 @@
                 <div>
                     {!! QrCode::size(500)->format('svg')->generate($Order, public_path('images/qrcode.svg')) !!}
                     <img src="{{url('/images/qrcode.svg')}}"/>
+
+
                 </div>
 
             </div>

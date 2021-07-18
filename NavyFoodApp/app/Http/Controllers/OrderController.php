@@ -7,6 +7,7 @@ use App\Models\Order;
 use App\Models\Status;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
@@ -68,6 +69,15 @@ class OrderController extends Controller
         if ($Order == null)
             $Order = Order::latest()->first();
 
+
+        return view('Order.Show', compact('Order', 'locationList', 'statusList'));
+    }
+
+    public function showByID(int $orderNum)
+    {
+        $view = DB::table('orders')
+            ->where('id', $orderNum)
+            ->get();
 
         return view('Order.Show', compact('Order', 'locationList', 'statusList'));
     }

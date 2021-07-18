@@ -11,6 +11,7 @@
         "php": "^7.3|^8.0",
         "ext-json": "*",
         "calcinai/php-imagick": "^0.1.2",
+        "endroid/qr-code": "^4.2",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
