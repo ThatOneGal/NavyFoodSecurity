@@ -38,6 +38,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
 
     Route::get('/LastOrder', [OrderController::class, 'last']);
+
+    Route::get('/showID', [OrderController::class, 'showByID']);
 });
 
 

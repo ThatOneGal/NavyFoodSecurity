@@ -79,7 +79,11 @@ class OrderController extends Controller
             ->where('id', $orderNum)
             ->get();
 
-        return view('Order.Show', compact('Order', 'locationList', 'statusList'));
+        $locationList = Location::all();
+        $statusList = Status::all();
+
+        return view('showByID', compact('orderNum', 'locationList', 'statusList'));
+
     }
 
     public function last()
