@@ -39,7 +39,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     Route::get('/LastOrder', [OrderController::class, 'last']);
 
-    Route::post('/showID/{id}', [OrderController::class, 'showByID']);
+    Route::get('/showID/', [OrderController::class, 'showByID'])->name('showById');
 });
 
 

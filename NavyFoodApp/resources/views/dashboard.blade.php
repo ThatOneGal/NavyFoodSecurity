@@ -12,17 +12,17 @@
                 {{--
                                 <form method="GET" action="{{view('/showID'),['OrderNum']}}">
                 --}}
-                <form method="POST" action="/showID/{{'id'}}">
-                    @csrf
+                <form method="GET" action="{{route('showById'),}}">
+                @csrf
 
-                    <div style="text-align: left; padding-bottom:4px;">
-                        <Label>ID to Display </Label>
+                <div style="text-align: left; padding-bottom:4px;">
+                    <Label>ID to Display </Label>
 
-                        <input name="id" type="number"/>
-                    </div>
-                    <div style="text-align: center;">
-                        <input type="submit" class="button"/>
-                    </div>
+                    <input name="id" type="text" value=""/>
+                </div>
+                <div style="text-align: center;">
+                    <input type="submit" />
+                </div>
                 </form>
 
             </div>

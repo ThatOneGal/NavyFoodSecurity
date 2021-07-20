@@ -85,8 +85,10 @@ class OrderController extends Controller
         return view('showByID', compact('view', 'locationList', 'statusList'));
 
     }*/
-    public function showByID($id)
+    public function showByID(Request $request)
     {
+
+        (int) $id = $request->id;
         $Order = Order::find($id);
         if (!$Order) {
             abort(404);
