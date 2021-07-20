@@ -122,8 +122,6 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
       <path value="$PROJECT_DIR$/vendor/simplesoftwareio/simple-qrcode" />
       <path value="$PROJECT_DIR$/vendor/calcinai/php-imagick" />
-      <path value="$PROJECT_DIR$/vendor/libern/qr-code-reader" />
-      <path value="$PROJECT_DIR$/vendor/khanamiryan/qrcode-detector-decoder" />
       <path value="$PROJECT_DIR$/vendor/endroid/qr-code" />
     </include_path>
   </component>
