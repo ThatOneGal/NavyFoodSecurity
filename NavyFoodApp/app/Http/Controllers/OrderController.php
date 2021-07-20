@@ -72,7 +72,7 @@ class OrderController extends Controller
 
         return view('Order.Show', compact('Order', 'locationList', 'statusList'));
     }
-
+/*
     public function showByID(int $orderNum)
     {
         $view = DB::table('orders')
@@ -82,7 +82,20 @@ class OrderController extends Controller
         $locationList = Location::all();
         $statusList = Status::all();
 
-        return view('showByID', compact('orderNum', 'locationList', 'statusList'));
+        return view('showByID', compact('view', 'locationList', 'statusList'));
+
+    }*/
+    public function showByID($id)
+    {
+        $Order = Order::find($id);
+        if (!$Order) {
+            abort(404);
+        }
+
+        $locationList = Location::all();
+        $statusList = Status::all();
+
+        return view('Order.Show', compact('Order', 'locationList', 'statusList'));
 
     }
 
