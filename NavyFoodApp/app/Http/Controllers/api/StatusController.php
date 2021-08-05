@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Location;
+use App\Models\Status;
 use Illuminate\Http\Request;
 
-class LocationController extends Controller
+class StatusController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class LocationController extends Controller
      */
     public function index()
     {
-        $locations = Location::all();
-        return response()->json($locations, 200);
+        $statuses = Status::all();
+        return response()->json($statuses, 200);
     }
 
     /**
@@ -30,53 +30,53 @@ class LocationController extends Controller
         $this->validate(
             $request,
             [
-                'locationName'=>'required|max:32'
+                'statusName'=>'required|max:32'
             ]
         );
-        $locations = Location::create($request->all());
+        $statuses = Status::create($request->all());
 
-        return response()->json($locations, 201);
+        return response()->json($statuses, 201);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Location  $location
+     * @param  \App\Models\Status  $status
      * @return \Illuminate\Http\Response
      */
-    public function show(Location $location)
+    public function show(Status $status)
     {
-        return response()->json($location, 200);
+        return response()->json($status, 200);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Location  $location
+     * @param  \App\Models\Status  $status
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Location $location)
+    public function update(Request $request, Status $status)
     {
         $this->validate(
             $request,
             [
-                'locationName'=>'required|max:32'
+                'statusName'=>'required|max:32'
             ]
         );
-        $location->update($request->all());
-        return response()->json($location, 201);
+        $status->update($request->all());
+        return response()->json($status, 201);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Location  $location
+     * @param  \App\Models\Status  $status
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Location $location)
+    public function destroy(Status $status)
     {
-        $location->delete();
+        $status->delete();
         return response()->json(null, 200);
     }
 }

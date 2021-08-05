@@ -4,7 +4,6 @@ use App\Http\Controllers\LocationController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\StatusController;
 use Illuminate\Support\Facades\Route;
-use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,5 +41,3 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/showID/', [OrderController::class, 'showByID'])->name('showById');
 });
 
-
-;
