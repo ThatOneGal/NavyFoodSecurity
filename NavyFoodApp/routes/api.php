@@ -19,4 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::resource('Orders','App\Http\Controllers\Api\OrderController');
 Route::resource('status','App\Http\Controllers\Api\StatusController');
-Route::resource('location','App\Http\Controllers\Api\StatusController');
+Route::resource('location','App\Http\Controllers\Api\LocationController');
+Route::resource('Users','App\Http\Controllers\Api\UserController');
