@@ -21,6 +21,7 @@ protected $fillable = [
     'PackerId',
     'DriverId',
     'Content',
+    'PackageQty',
     'NotesStorage',
     'NotesPreparation',
 
