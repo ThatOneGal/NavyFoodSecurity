@@ -3,6 +3,7 @@
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\StatusController;
+use App\Http\Controllers\UserRolesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::resource('order', OrderController::class);
     Route::resource('location', LocationController::class);
     Route::resource('status', StatusController::class);
+    Route::resource('userrole', UserRolesController::class);
 
     Route::get('/history', function () {
         return view('history.history');

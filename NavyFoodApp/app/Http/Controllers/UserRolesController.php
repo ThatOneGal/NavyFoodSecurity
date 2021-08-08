@@ -14,7 +14,8 @@ class UserRolesController extends Controller
      */
     public function index()
     {
-        //
+        $userRoles = UserRoles::all();
+        return view('userRoles.index', ['userRoles' => $userRoles]);
     }
 
     /**
@@ -24,7 +25,7 @@ class UserRolesController extends Controller
      */
     public function create()
     {
-        //
+        return view('userRoles.create');
     }
 
     /**
@@ -35,18 +36,10 @@ class UserRolesController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\UserRoles  $userRoles
-     * @return \Illuminate\Http\Response
-     */
-    public function show(UserRoles $userRoles)
-    {
-        //
+        $userRoles = new UserRoles();
+        $userRoles -> fill($request -> all());
+        $userRoles -> save();
+        return redirect(route('userRoles.index'));
     }
 
     /**
@@ -57,7 +50,7 @@ class UserRolesController extends Controller
      */
     public function edit(UserRoles $userRoles)
     {
-        //
+        return view('userRoles.edit', ['userRoles' => $userRoles]);
     }
 
     /**
@@ -69,7 +62,9 @@ class UserRolesController extends Controller
      */
     public function update(Request $request, UserRoles $userRoles)
     {
-        //
+        $userRoles->fill($request->all());
+        $userRoles->save();
+        return redirect(route('userRoles.index'));
     }
 
     /**
@@ -80,6 +75,8 @@ class UserRolesController extends Controller
      */
     public function destroy(UserRoles $userRoles)
     {
-        //
+        $model = $userRoles;
+        $model->delete();
+        return redirect(route('userRoles.index'));
     }
 }
