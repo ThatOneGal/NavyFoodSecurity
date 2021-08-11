@@ -16,8 +16,8 @@ class CreateOrdersTable extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->foreignId('CustomerId')->constrained('users');
-            $table->foreignId('PackerId')->constrained('users')->nullable();
-            $table->foreignId('DriverId')->constrained('users')->nullable();
+            $table->foreignId('PackerId')->nullable()->constrained('users');
+            $table->foreignId('DriverId')->nullable()->constrained('users');
             $table->foreignId('LocationId')->constrained('locations');
             $table->foreignId('StatusId')->constrained('statuses');
             $table->dateTime('OrderDate')->nullable();
