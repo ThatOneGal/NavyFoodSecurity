@@ -61,10 +61,11 @@ class UserRolesController extends Controller
         $this->validate(
             $request,
             [
-                'RolesName'=>'required|max:32'
+                'RoleName'=>'required|max:32'
             ]
         );
         $roles->update($request->all());
+        $roles->save();
         return response()->json($roles, 201);
     }
 
