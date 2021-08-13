@@ -41,12 +41,15 @@ class UserRolesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Status  $roles
-     * @return \Illuminate\Http\Response
+
      */
-    public function show(UserRoles $roles)
+    public function show($id)
     {
-        return response()->json($roles, 200);
+        $model = UserRoles::find($id);
+        if (!$model) {
+            abort(404);
+        }
+        return response()->json($model, 200);
     }
 
     /**
@@ -58,12 +61,7 @@ class UserRolesController extends Controller
      */
     public function update(Request $request, UserRoles $roles)
     {
-        $this->validate(
-            $request,
-            [
-                'RoleName'=>'required|max:32'
-            ]
-        );
+
         $roles->update($request->all());
         $roles->save();
         return response()->json($roles, 201);
@@ -75,9 +73,14 @@ class UserRolesController extends Controller
      * @param  \App\Models\Status  $roles
      * @return \Illuminate\Http\Response
      */
-    public function destroy(UserRoles $roles)
+    public function destroy($id)
     {
-        $roles->delete();
+
+        $model = UserRoles::find($id);
+        if (!$model) {
+            abort(404);
+        }
+        $model->delete();
         return response()->json(null, 200);
     }
 }
