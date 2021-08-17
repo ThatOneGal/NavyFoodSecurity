@@ -29,6 +29,7 @@ class User extends Authenticatable
         'rank',
         'serialnumber',
         'email',
+        'UserRoleId',
         'password',
 
     ];

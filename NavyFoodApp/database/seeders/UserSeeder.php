@@ -23,6 +23,7 @@ class UserSeeder extends Seeder
                 'rank' => 'AdminRank',
                 'serialnumber' => 'AdminSerial',
                 'email' => 'Admin@Admin.com',
+                'UserRoleId' => 1,
                 'password' => Hash::make('AdminPassword'),
             ],
             [
@@ -31,6 +32,7 @@ class UserSeeder extends Seeder
                 'rank' => 'Soldier',
                 'serialnumber' => '123456',
                 'email' => 'KBowers@Soldier.com',
+                'UserRoleId' => 2,
                 'password' => Hash::make('Password'),
             ],
             [
@@ -39,6 +41,7 @@ class UserSeeder extends Seeder
                 'rank' => 'Soldier',
                 'serialnumber' => '654321',
                 'email' => 'WTe@Soldier.com',
+                'UserRoleId' => 2,
                 'password' => Hash::make('Password'),
             ],
 
