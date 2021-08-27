@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-27T04:44:33.747Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="RkD9b7f_VoKhNeF5VETg" version="14.9.8" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2021-08-27T04:54:40.313Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="Mh7IHXb0XHBGVr8Hz_Ay" version="14.9.8" type="github" pages="7">
   <diagram name="Login" id="vzEmE2A0ZHLYKGs7lfsM">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -80,76 +80,6 @@
         </mxCell>
         <mxCell id="rFT2PauP2LSy-HenGCjy-27" value="Dashboard" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=0;fontSize=29;" parent="1" vertex="1">
           <mxGeometry x="510" y="110" width="140" height="40" as="geometry" />
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram id="frxMsbOwANxwagq56pc1" name="Order form">
-    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
-      <root>
-        <mxCell id="RGJaSEa40KxG9HeyEspv-0" />
-        <mxCell id="RGJaSEa40KxG9HeyEspv-1" parent="RGJaSEa40KxG9HeyEspv-0" />
-        <mxCell id="gZTvHQbobf-e5O2UXO_g-0" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" parent="RGJaSEa40KxG9HeyEspv-1" vertex="1">
-          <mxGeometry x="360" y="10" width="480" height="890" as="geometry" />
-        </mxCell>
-        <mxCell id="gZTvHQbobf-e5O2UXO_g-1" value="Order Form" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=29;" parent="RGJaSEa40KxG9HeyEspv-1" vertex="1">
-          <mxGeometry x="490" y="100" width="220" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="htj1vdxGTUQXkzkbgYBp-0" value="" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;strokeColor=#888888;fillColor=#444444;" parent="RGJaSEa40KxG9HeyEspv-1" vertex="1">
-          <mxGeometry x="90" y="90" width="260" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="htj1vdxGTUQXkzkbgYBp-1" value="Dashboard" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="htj1vdxGTUQXkzkbgYBp-0" vertex="1">
-          <mxGeometry width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="htj1vdxGTUQXkzkbgYBp-2" value="Create Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="htj1vdxGTUQXkzkbgYBp-0" vertex="1">
-          <mxGeometry y="40" width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="htj1vdxGTUQXkzkbgYBp-3" value="Scanned Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="htj1vdxGTUQXkzkbgYBp-0" vertex="1">
-          <mxGeometry y="80" width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="htj1vdxGTUQXkzkbgYBp-4" value="History" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="htj1vdxGTUQXkzkbgYBp-0" vertex="1">
-          <mxGeometry y="120" width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="htj1vdxGTUQXkzkbgYBp-5" value="Destination" style="fillColor=none;strokeColor=none;align=left;fontSize=14;fontColor=#000000;" parent="RGJaSEa40KxG9HeyEspv-1" vertex="1">
-          <mxGeometry x="390" y="210" width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="htj1vdxGTUQXkzkbgYBp-6" value="Order Recipient" style="fillColor=none;strokeColor=none;align=left;fontSize=14;fontColor=#000000;" parent="RGJaSEa40KxG9HeyEspv-1" vertex="1">
-          <mxGeometry x="390" y="290" width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="htj1vdxGTUQXkzkbgYBp-7" value="Rank, Name (preset)" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;fillColor=none;strokeColor=#999999;align=left;spacing=15;fontSize=14;fontColor=#6C767D;" parent="RGJaSEa40KxG9HeyEspv-1" vertex="1">
-          <mxGeometry x="390" y="330" width="410" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="htj1vdxGTUQXkzkbgYBp-8" value="Contents" style="fillColor=none;strokeColor=none;align=left;fontSize=14;fontColor=#000000;" parent="RGJaSEa40KxG9HeyEspv-1" vertex="1">
-          <mxGeometry x="390" y="370" width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="htj1vdxGTUQXkzkbgYBp-9" value="- Contents&lt;br&gt;- Contents&lt;br&gt;- Contents" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;fillColor=none;strokeColor=#999999;align=left;spacing=15;fontSize=14;fontColor=#6C767D;" parent="RGJaSEa40KxG9HeyEspv-1" vertex="1">
-          <mxGeometry x="390" y="410" width="410" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="htj1vdxGTUQXkzkbgYBp-10" value="Base Name Dropdown" style="rounded=1;fillColor=#F1F2F4;strokeColor=none;html=1;fontColor=#596780;align=left;fontSize=12;spacingLeft=10" parent="RGJaSEa40KxG9HeyEspv-1" vertex="1">
-          <mxGeometry x="390" y="250" width="410" height="33" as="geometry" />
-        </mxCell>
-        <mxCell id="htj1vdxGTUQXkzkbgYBp-11" value="" style="shape=triangle;direction=south;fillColor=#596780;strokeColor=none;html=1" parent="htj1vdxGTUQXkzkbgYBp-10" vertex="1">
-          <mxGeometry x="1" y="0.5" width="12" height="6" relative="1" as="geometry">
-            <mxPoint x="-20" y="-3" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="htj1vdxGTUQXkzkbgYBp-12" value="Notes" style="fillColor=none;strokeColor=none;align=left;fontSize=14;fontColor=#000000;" parent="RGJaSEa40KxG9HeyEspv-1" vertex="1">
-          <mxGeometry x="390" y="500" width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="htj1vdxGTUQXkzkbgYBp-13" value="Allergy info" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;fillColor=none;strokeColor=#999999;align=left;spacing=15;fontSize=14;fontColor=#6C767D;" parent="RGJaSEa40KxG9HeyEspv-1" vertex="1">
-          <mxGeometry x="390" y="540" width="410" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="htj1vdxGTUQXkzkbgYBp-14" value="Cancel" style="rounded=1;html=1;shadow=0;dashed=0;whiteSpace=wrap;fontSize=10;fillColor=#E6E6E6;align=center;strokeColor=#B3B3B3;fontColor=#333333;" parent="RGJaSEa40KxG9HeyEspv-1" vertex="1">
-          <mxGeometry x="630" y="650" width="105.5" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="htj1vdxGTUQXkzkbgYBp-15" value="Submit" style="rounded=1;html=1;shadow=0;dashed=0;whiteSpace=wrap;fontSize=10;fillColor=#666666;align=center;strokeColor=#4D4D4D;fontColor=#ffffff;" parent="RGJaSEa40KxG9HeyEspv-1" vertex="1">
-          <mxGeometry x="490" y="650" width="105.5" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="htj1vdxGTUQXkzkbgYBp-16" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/ios-11-glyphs/30/qr_code-128.png;fontSize=29;" parent="RGJaSEa40KxG9HeyEspv-1" vertex="1">
-          <mxGeometry x="531" y="940" width="128" height="128" as="geometry" />
-        </mxCell>
-        <mxCell id="N2krAGdmt6IK_VlWmmFx-0" value="Reset" style="rounded=1;html=1;shadow=0;dashed=0;whiteSpace=wrap;fontSize=10;fillColor=#E6E6E6;align=center;strokeColor=#B3B3B3;fontColor=#333333;" parent="RGJaSEa40KxG9HeyEspv-1" vertex="1">
-          <mxGeometry x="400" y="760" width="70" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -697,7 +627,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="HP4zyQ58YhU9RgWrkSG_" name="History">
+  <diagram id="HP4zyQ58YhU9RgWrkSG_" name="Local History">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="gf0nsTy2lI6bSGKHi-rw-0" />
@@ -720,7 +650,7 @@
         <mxCell id="gf0nsTy2lI6bSGKHi-rw-7" value="History" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="gf0nsTy2lI6bSGKHi-rw-3" vertex="1">
           <mxGeometry y="120" width="260" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-8" value="History" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=48;" parent="gf0nsTy2lI6bSGKHi-rw-1" vertex="1">
+        <mxCell id="gf0nsTy2lI6bSGKHi-rw-8" value="Local History" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=48;" parent="gf0nsTy2lI6bSGKHi-rw-1" vertex="1">
           <mxGeometry x="425" y="110" width="370" height="60" as="geometry" />
         </mxCell>
         <mxCell id="gf0nsTy2lI6bSGKHi-rw-9" value="Search date, order ID, contents, userID" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fontColor=#000000;fillColor=#EEEEEE;" parent="gf0nsTy2lI6bSGKHi-rw-1" vertex="1">
@@ -771,7 +701,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="kaUXib7hrf0DzSUDCIaO" name="Registration">
+  <diagram id="kaUXib7hrf0DzSUDCIaO" name="Profile">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="oQkwY07xy6kqqJZWhAol-0" />
