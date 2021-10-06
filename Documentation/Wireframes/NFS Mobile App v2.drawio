@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-27T04:54:40.313Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="Mh7IHXb0XHBGVr8Hz_Ay" version="14.9.8" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2021-10-06T06:25:26.872Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36" etag="4daUbwCroR5KL63nhGbl" version="15.4.3" type="github" pages="7">
   <diagram name="Login" id="vzEmE2A0ZHLYKGs7lfsM">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -57,9 +57,6 @@
         <mxCell id="rFT2PauP2LSy-HenGCjy-17" value="Dashboard" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="rFT2PauP2LSy-HenGCjy-16" vertex="1">
           <mxGeometry width="260" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="rFT2PauP2LSy-HenGCjy-18" value="Create Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="rFT2PauP2LSy-HenGCjy-16" vertex="1">
-          <mxGeometry y="40" width="260" height="40" as="geometry" />
-        </mxCell>
         <mxCell id="rFT2PauP2LSy-HenGCjy-19" value="Scanned Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="rFT2PauP2LSy-HenGCjy-16" vertex="1">
           <mxGeometry y="80" width="260" height="40" as="geometry" />
         </mxCell>
@@ -94,9 +91,6 @@
         </mxCell>
         <mxCell id="Nk8CYd9O14f9BbBBX4Ti-1" value="Dashboard" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="Nk8CYd9O14f9BbBBX4Ti-0" vertex="1">
           <mxGeometry width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Nk8CYd9O14f9BbBBX4Ti-2" value="Create Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="Nk8CYd9O14f9BbBBX4Ti-0" vertex="1">
-          <mxGeometry y="40" width="260" height="40" as="geometry" />
         </mxCell>
         <mxCell id="Nk8CYd9O14f9BbBBX4Ti-3" value="Scanned Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="Nk8CYd9O14f9BbBBX4Ti-0" vertex="1">
           <mxGeometry y="80" width="260" height="40" as="geometry" />
@@ -276,9 +270,6 @@
         <mxCell id="xa3lozB6767LpUINJtdV-3" value="Dashboard" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="xa3lozB6767LpUINJtdV-2" vertex="1">
           <mxGeometry width="260" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="xa3lozB6767LpUINJtdV-4" value="Create Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="xa3lozB6767LpUINJtdV-2" vertex="1">
-          <mxGeometry y="40" width="260" height="40" as="geometry" />
-        </mxCell>
         <mxCell id="xa3lozB6767LpUINJtdV-5" value="Scanned Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="xa3lozB6767LpUINJtdV-2" vertex="1">
           <mxGeometry y="80" width="260" height="40" as="geometry" />
         </mxCell>
@@ -455,9 +446,6 @@
         </mxCell>
         <mxCell id="7bjxPFpd4uHDCTLC2yT9-3" value="Dashboard" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="7bjxPFpd4uHDCTLC2yT9-2" vertex="1">
           <mxGeometry width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="7bjxPFpd4uHDCTLC2yT9-4" value="Create Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="7bjxPFpd4uHDCTLC2yT9-2" vertex="1">
-          <mxGeometry y="40" width="260" height="40" as="geometry" />
         </mxCell>
         <mxCell id="7bjxPFpd4uHDCTLC2yT9-5" value="Scanned Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="7bjxPFpd4uHDCTLC2yT9-2" vertex="1">
           <mxGeometry y="80" width="260" height="40" as="geometry" />
@@ -641,9 +629,6 @@
         <mxCell id="gf0nsTy2lI6bSGKHi-rw-4" value="Dashboard" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="gf0nsTy2lI6bSGKHi-rw-3" vertex="1">
           <mxGeometry width="260" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-5" value="Create Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="gf0nsTy2lI6bSGKHi-rw-3" vertex="1">
-          <mxGeometry y="40" width="260" height="40" as="geometry" />
-        </mxCell>
         <mxCell id="gf0nsTy2lI6bSGKHi-rw-6" value="Scanned Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="gf0nsTy2lI6bSGKHi-rw-3" vertex="1">
           <mxGeometry y="80" width="260" height="40" as="geometry" />
         </mxCell>
@@ -714,9 +699,6 @@
         </mxCell>
         <mxCell id="oQkwY07xy6kqqJZWhAol-4" value="Dashboard" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="oQkwY07xy6kqqJZWhAol-3" vertex="1">
           <mxGeometry width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="oQkwY07xy6kqqJZWhAol-5" value="Create Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="oQkwY07xy6kqqJZWhAol-3" vertex="1">
-          <mxGeometry y="40" width="260" height="40" as="geometry" />
         </mxCell>
         <mxCell id="oQkwY07xy6kqqJZWhAol-6" value="Scanned Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="oQkwY07xy6kqqJZWhAol-3" vertex="1">
           <mxGeometry y="80" width="260" height="40" as="geometry" />
