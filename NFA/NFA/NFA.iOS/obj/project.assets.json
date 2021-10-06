@@ -1093,11 +1093,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\20069271\\Documents\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA.iOS\\NFA.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\20069271\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA.iOS\\NFA.iOS.csproj",
       "projectName": "NFA.iOS",
-      "projectPath": "C:\\Users\\20069271\\Documents\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA.iOS\\NFA.iOS.csproj",
+      "projectPath": "C:\\Users\\20069271\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA.iOS\\NFA.iOS.csproj",
       "packagesPath": "C:\\Users\\20069271\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\20069271\\Documents\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA.iOS\\obj\\",
+      "outputPath": "C:\\Users\\20069271\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1118,8 +1118,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\20069271\\Documents\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {
-              "projectPath": "C:\\Users\\20069271\\Documents\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj"
+            "C:\\Users\\20069271\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {
+              "projectPath": "C:\\Users\\20069271\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj"
             }
           }
         }
