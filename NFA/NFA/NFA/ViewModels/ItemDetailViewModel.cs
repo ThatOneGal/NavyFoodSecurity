@@ -6,11 +6,11 @@ namespace NFA.ViewModels
 {
     public class ItemDetailViewModel : BaseViewModel
     {
-        public Item Item { get; set; }
-        public ItemDetailViewModel(Item item = null)
+        public Order order { get; set; }
+        public ItemDetailViewModel(Order o = null)
         {
-            Title = item?.Text;
-            Item = item;
+            Title = "Order " + o?.id.ToString();
+            order = o;
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NFA.Models
 {
-    class Location
+    public class Location
     {
         public int id { get; set; }
         public string locationName { get; set; }
