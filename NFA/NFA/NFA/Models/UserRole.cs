@@ -4,10 +4,9 @@ using System.Text;
 
 namespace NFA.Models
 {
-    class Location
+    class UserRole
     {
         public int id { get; set; }
-        public string locationName { get; set; }
-
+        public string userRoleName { get; set; }
     }
 }
