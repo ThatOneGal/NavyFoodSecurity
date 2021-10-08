@@ -6,5 +6,6 @@ namespace NFA.Models
 {
     class Location
     {
+
     }
 }

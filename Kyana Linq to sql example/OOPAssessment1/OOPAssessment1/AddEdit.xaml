@@ -1,0 +1,39 @@
+﻿<Window x:Class="OOPAssessment1.AddEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OOPAssessment1"
+        mc:Ignorable="d"
+        Title="Add / Edit" Height="599.396" Width="294.909">
+    <Grid>
+        <TextBox x:Name="AddNameTB" HorizontalAlignment="Left" Height="22" Margin="13,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261"/>
+        <Label x:Name="AddNameLabel" Content="Name" HorizontalAlignment="Left" Margin="14,34,0,0" VerticalAlignment="Top" Height="30"/>
+        <TextBox x:Name="AddPrepTB" HorizontalAlignment="Left" Height="22" Margin="13,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261"/>
+        <Label x:Name="AddPrepLabel" Content="Prep Time" HorizontalAlignment="Left" Margin="14,90,0,0" VerticalAlignment="Top" Height="30"/>
+        <Label x:Name="AddIngredientsLabel" Content="Ingredients" HorizontalAlignment="Left" Margin="15,148,0,0" VerticalAlignment="Top" Height="30"/>
+        <Label x:Name="AddMethodLabel" Content="Method" HorizontalAlignment="Left" Margin="13,328,0,0" VerticalAlignment="Top" Height="30"/>
+        <Button x:Name="SubmitBTN" Content="Submit" HorizontalAlignment="Left" Height="26" Margin="177,8,0,0" VerticalAlignment="Top" Width="97" Click="SubmitBTN_Click"/>
+        <TextBox x:Name="AddMethodTB" HorizontalAlignment="Left" Height="198" Margin="14,358,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"/>
+        <Button x:Name="CancelBTN" Content="Cancel" HorizontalAlignment="Left" Height="26" Margin="56,8,0,0" VerticalAlignment="Top" Width="97" Click="CancelBTN_Click"/>
+        <Label x:Name="AddQtyLabel" Content="Quantity" HorizontalAlignment="Left" Margin="13,264,0,0" VerticalAlignment="Top" Height="30"/>
+        <TextBox x:Name="AddQtyTB" HorizontalAlignment="Left" Height="30" Margin="16,294,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258"/>
+        <ListView x:Name="IngAddListView" HorizontalAlignment="Left" Height="80" Margin="15,178,0,0" VerticalAlignment="Top" Width="106">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView x:Name="IngSubmitListView" HorizontalAlignment="Left" Height="80" Margin="169,178,0,0" VerticalAlignment="Top" Width="105">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="AddIngBTN" Content="&gt;&gt;" HorizontalAlignment="Left" Height="26" Margin="126,178,0,0" VerticalAlignment="Top" Width="38" Click="AddIngBTN_Click"/>
+        <Button x:Name="RemIngBTN" Content="&lt;&lt;" HorizontalAlignment="Left" Height="24" Margin="126,234,0,0" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.263,0.44" Click="RemIngBTN_Click"/>
+
+    </Grid>
+</Window>
