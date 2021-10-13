@@ -27,3 +27,4 @@ NFA/NFA/NFA.Android/obj/project.assets.json
 NFA/.vs/NFA/v16/.suo
 NFA/NFA/NFA.Android/obj/Debug/90/libraryprojectimports.cache
 *.cache
+NFA/*.sln.iml
