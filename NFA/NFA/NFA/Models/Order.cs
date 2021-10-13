@@ -6,7 +6,6 @@ namespace NFA.Models
 {
     public class Order
     {
-        //aaaaaaaaaaaaaaaa
         public int id { get; set; }
         public int customerId { get; set; }
         public int locationId { get; set; }
