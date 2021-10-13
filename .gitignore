@@ -15,3 +15,15 @@ yarn-error.log
 NavyFoodApp/.idea/workspace.xml
 Documentation/Information/~$stPlan.docx
 Documentation/Information/~$quirements Document.docx
+NFA/.vs/NFA/DesignTimeBuild/.dtbcache
+NFA/.vs/NFA/v16/.suo
+*.props
+NFA/NFA/NFA.Android/obj/Debug/90/designtime/Resource.designer.cs
+*.cache
+*.flata
+NFA/NFA/NFA.Android/obj/NFA.Android.csproj.nuget.dgspec.json
+NFA/NFA/NFA.Android/obj/NFA.Android.csproj.nuget.dgspec.json
+NFA/NFA/NFA.Android/obj/project.assets.json
+NFA/.vs/NFA/v16/.suo
+NFA/NFA/NFA.Android/obj/Debug/90/libraryprojectimports.cache
+*.cache
