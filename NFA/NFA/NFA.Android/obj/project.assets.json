@@ -1973,24 +1973,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\20069271\\.nuget\\packages\\": {},
+    "C:\\Users\\William  Te\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\20069271\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\NFA.Android.csproj",
+      "projectUniqueName": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\NFA.Android.csproj",
       "projectName": "NFA.Android",
-      "projectPath": "C:\\Users\\20069271\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\NFA.Android.csproj",
-      "packagesPath": "C:\\Users\\20069271\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\20069271\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\obj\\",
+      "projectPath": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\NFA.Android.csproj",
+      "packagesPath": "C:\\Users\\William  Te\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\20069271\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\William  Te\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2004,8 +2004,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\20069271\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {
-              "projectPath": "C:\\Users\\20069271\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj"
+            "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {
+              "projectPath": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj"
             }
           }
         }

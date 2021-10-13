@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "TKQbI7ymTk/UIkiULOUJwzAg9bqQto8anBvq7/WzarxSuh2wUosRsyAxgs1bcNPUgYLd8kOUKpN/lAbJ/zsSGA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA.iOS\\NFA.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Microsoft\\Xamarin\\NuGet\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\William  Te\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\William  Te\\.nuget\\packages\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Users\\William  Te\\.nuget\\packages\\xamarin.forms\\4.3.0.908675\\xamarin.forms.4.3.0.908675.nupkg.sha512"
+  ],
+  "logs": []
+}
