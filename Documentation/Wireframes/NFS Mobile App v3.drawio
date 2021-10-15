@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-15T02:18:50.585Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="pEUMFIXKC1tFQkfrlZRT" version="15.5.2" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2021-10-15T03:54:59.749Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="j60V2TkW1F47A63iuidl" version="15.5.2" type="github" pages="6">
   <diagram name="Login" id="vzEmE2A0ZHLYKGs7lfsM">
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -6,21 +6,6 @@
         <mxCell id="HmLfFUDv88kQ0Jo19o5z-1" parent="HmLfFUDv88kQ0Jo19o5z-0" />
         <mxCell id="HmLfFUDv88kQ0Jo19o5z-2" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" parent="HmLfFUDv88kQ0Jo19o5z-1" vertex="1">
           <mxGeometry x="360" y="10" width="480" height="890" as="geometry" />
-        </mxCell>
-        <mxCell id="HmLfFUDv88kQ0Jo19o5z-3" value="" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;strokeColor=#888888;fillColor=#444444;" parent="HmLfFUDv88kQ0Jo19o5z-1" vertex="1">
-          <mxGeometry x="90" y="90" width="260" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="HmLfFUDv88kQ0Jo19o5z-4" value="Dashboard" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="HmLfFUDv88kQ0Jo19o5z-3" vertex="1">
-          <mxGeometry width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="HmLfFUDv88kQ0Jo19o5z-5" value="" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="HmLfFUDv88kQ0Jo19o5z-3" vertex="1">
-          <mxGeometry y="40" width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="HmLfFUDv88kQ0Jo19o5z-6" value="Scanned Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="HmLfFUDv88kQ0Jo19o5z-3" vertex="1">
-          <mxGeometry y="80" width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="HmLfFUDv88kQ0Jo19o5z-7" value="" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="HmLfFUDv88kQ0Jo19o5z-3" vertex="1">
-          <mxGeometry y="120" width="260" height="40" as="geometry" />
         </mxCell>
         <mxCell id="HmLfFUDv88kQ0Jo19o5z-12" value="Login" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=0;fontSize=29;" parent="HmLfFUDv88kQ0Jo19o5z-1" vertex="1">
           <mxGeometry x="510" y="110" width="140" height="40" as="geometry" />
@@ -51,21 +36,6 @@
         <mxCell id="rFT2PauP2LSy-HenGCjy-1" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" parent="1" vertex="1">
           <mxGeometry x="360" y="10" width="480" height="890" as="geometry" />
         </mxCell>
-        <mxCell id="rFT2PauP2LSy-HenGCjy-16" value="" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;strokeColor=#888888;fillColor=#444444;" parent="1" vertex="1">
-          <mxGeometry x="90" y="90" width="260" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="rFT2PauP2LSy-HenGCjy-17" value="Dashboard" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="rFT2PauP2LSy-HenGCjy-16" vertex="1">
-          <mxGeometry width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="rFT2PauP2LSy-HenGCjy-19" value="Scanned Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="rFT2PauP2LSy-HenGCjy-16" vertex="1">
-          <mxGeometry y="80" width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="rFT2PauP2LSy-HenGCjy-20" value="" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="rFT2PauP2LSy-HenGCjy-16" vertex="1">
-          <mxGeometry y="120" width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="rFT2PauP2LSy-HenGCjy-21" value="Profiles&lt;br&gt;Login/Logout" style="labelPosition=center;verticalLabelPosition=middle;align=center;html=1;shape=mxgraph.basic.shaded_button;dx=10;fillColor=#E6E6E6;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="710" y="100" width="100" height="70" as="geometry" />
-        </mxCell>
         <mxCell id="rFT2PauP2LSy-HenGCjy-28" value="" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=29;" parent="1" vertex="1">
           <mxGeometry x="415" y="310" width="370" height="370" as="geometry" />
         </mxCell>
@@ -86,18 +56,6 @@
       <root>
         <mxCell id="nPjMR-miDQe9hLEb6nzI-0" />
         <mxCell id="nPjMR-miDQe9hLEb6nzI-1" parent="nPjMR-miDQe9hLEb6nzI-0" />
-        <mxCell id="Nk8CYd9O14f9BbBBX4Ti-0" value="" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;strokeColor=#888888;fillColor=#444444;" parent="nPjMR-miDQe9hLEb6nzI-1" vertex="1">
-          <mxGeometry x="90" y="90" width="260" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="Nk8CYd9O14f9BbBBX4Ti-1" value="Dashboard" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="Nk8CYd9O14f9BbBBX4Ti-0" vertex="1">
-          <mxGeometry width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Nk8CYd9O14f9BbBBX4Ti-3" value="Scanned Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="Nk8CYd9O14f9BbBBX4Ti-0" vertex="1">
-          <mxGeometry y="80" width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Nk8CYd9O14f9BbBBX4Ti-4" value="" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="Nk8CYd9O14f9BbBBX4Ti-0" vertex="1">
-          <mxGeometry y="120" width="260" height="40" as="geometry" />
-        </mxCell>
         <mxCell id="Nk8CYd9O14f9BbBBX4Ti-5" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" parent="nPjMR-miDQe9hLEb6nzI-1" vertex="1">
           <mxGeometry x="360" y="10" width="480" height="1650" as="geometry" />
         </mxCell>
@@ -264,18 +222,6 @@
       <root>
         <mxCell id="xa3lozB6767LpUINJtdV-0" />
         <mxCell id="xa3lozB6767LpUINJtdV-1" parent="xa3lozB6767LpUINJtdV-0" />
-        <mxCell id="xa3lozB6767LpUINJtdV-2" value="" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;strokeColor=#888888;fillColor=#444444;" parent="xa3lozB6767LpUINJtdV-1" vertex="1">
-          <mxGeometry x="90" y="90" width="260" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="xa3lozB6767LpUINJtdV-3" value="Dashboard" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="xa3lozB6767LpUINJtdV-2" vertex="1">
-          <mxGeometry width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="xa3lozB6767LpUINJtdV-5" value="Scanned Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="xa3lozB6767LpUINJtdV-2" vertex="1">
-          <mxGeometry y="80" width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="xa3lozB6767LpUINJtdV-6" value="" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="xa3lozB6767LpUINJtdV-2" vertex="1">
-          <mxGeometry y="120" width="260" height="40" as="geometry" />
-        </mxCell>
         <mxCell id="xa3lozB6767LpUINJtdV-7" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" parent="xa3lozB6767LpUINJtdV-1" vertex="1">
           <mxGeometry x="360" y="10" width="480" height="1650" as="geometry" />
         </mxCell>
@@ -441,18 +387,6 @@
       <root>
         <mxCell id="7bjxPFpd4uHDCTLC2yT9-0" />
         <mxCell id="7bjxPFpd4uHDCTLC2yT9-1" parent="7bjxPFpd4uHDCTLC2yT9-0" />
-        <mxCell id="7bjxPFpd4uHDCTLC2yT9-2" value="" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;strokeColor=#888888;fillColor=#444444;" parent="7bjxPFpd4uHDCTLC2yT9-1" vertex="1">
-          <mxGeometry x="90" y="90" width="260" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="7bjxPFpd4uHDCTLC2yT9-3" value="Dashboard" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="7bjxPFpd4uHDCTLC2yT9-2" vertex="1">
-          <mxGeometry width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="7bjxPFpd4uHDCTLC2yT9-5" value="Scanned Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="7bjxPFpd4uHDCTLC2yT9-2" vertex="1">
-          <mxGeometry y="80" width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="7bjxPFpd4uHDCTLC2yT9-6" value="" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="7bjxPFpd4uHDCTLC2yT9-2" vertex="1">
-          <mxGeometry y="120" width="260" height="40" as="geometry" />
-        </mxCell>
         <mxCell id="7bjxPFpd4uHDCTLC2yT9-7" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" parent="7bjxPFpd4uHDCTLC2yT9-1" vertex="1">
           <mxGeometry x="360" y="10" width="480" height="1650" as="geometry" />
         </mxCell>
@@ -615,77 +549,6 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="HP4zyQ58YhU9RgWrkSG_" name="Local History">
-    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
-      <root>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-0" />
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-1" parent="gf0nsTy2lI6bSGKHi-rw-0" />
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-2" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" parent="gf0nsTy2lI6bSGKHi-rw-1" vertex="1">
-          <mxGeometry x="360" y="10" width="480" height="890" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-3" value="" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;strokeColor=#888888;fillColor=#444444;" parent="gf0nsTy2lI6bSGKHi-rw-1" vertex="1">
-          <mxGeometry x="90" y="90" width="260" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-4" value="Dashboard" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="gf0nsTy2lI6bSGKHi-rw-3" vertex="1">
-          <mxGeometry width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-6" value="Scanned Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="gf0nsTy2lI6bSGKHi-rw-3" vertex="1">
-          <mxGeometry y="80" width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-7" value="" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="gf0nsTy2lI6bSGKHi-rw-3" vertex="1">
-          <mxGeometry y="120" width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-8" value="Local History" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;fontSize=48;" parent="gf0nsTy2lI6bSGKHi-rw-1" vertex="1">
-          <mxGeometry x="425" y="110" width="370" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-9" value="Search date, order ID, contents, userID" style="rounded=0;whiteSpace=wrap;html=1;fontSize=14;fontColor=#000000;fillColor=#EEEEEE;" parent="gf0nsTy2lI6bSGKHi-rw-1" vertex="1">
-          <mxGeometry x="435" y="185" width="240" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-10" value="History" style="shape=table;childLayout=tableLayout;rowLines=0;columnLines=0;startSize=40;html=1;whiteSpace=wrap;collapsible=0;recursiveResize=0;expand=0;pointerEvents=0;fontStyle=1;align=center;fontSize=14;fontColor=#000000;fillColor=#EEEEEE;" parent="gf0nsTy2lI6bSGKHi-rw-1" vertex="1">
-          <mxGeometry x="410" y="260" width="380" height="470" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-11" value="Actor 1" style="swimlane;horizontal=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;startSize=40;html=1;whiteSpace=wrap;collapsible=0;recursiveResize=0;expand=0;pointerEvents=0;fontStyle=1" parent="gf0nsTy2lI6bSGKHi-rw-10" vertex="1">
-          <mxGeometry y="40" width="380" height="143" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-12" value="Phase 1" style="swimlane;connectable=0;startSize=40;html=1;whiteSpace=wrap;collapsible=0;recursiveResize=0;expand=0;pointerEvents=0;" parent="gf0nsTy2lI6bSGKHi-rw-11" vertex="1">
-          <mxGeometry x="40" width="113" height="143" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-13" value="Phase 2" style="swimlane;connectable=0;startSize=40;html=1;whiteSpace=wrap;collapsible=0;recursiveResize=0;expand=0;pointerEvents=0;" parent="gf0nsTy2lI6bSGKHi-rw-11" vertex="1">
-          <mxGeometry x="153" width="114" height="143" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-14" value="Phase 3" style="swimlane;connectable=0;startSize=40;html=1;whiteSpace=wrap;collapsible=0;recursiveResize=0;expand=0;pointerEvents=0;" parent="gf0nsTy2lI6bSGKHi-rw-11" vertex="1">
-          <mxGeometry x="267" width="113" height="143" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-15" value="Actor 2" style="swimlane;horizontal=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;startSize=40;html=1;whiteSpace=wrap;collapsible=0;recursiveResize=0;expand=0;pointerEvents=0;" parent="gf0nsTy2lI6bSGKHi-rw-10" vertex="1">
-          <mxGeometry y="183" width="380" height="144" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-16" value="" style="swimlane;connectable=0;startSize=0;html=1;whiteSpace=wrap;collapsible=0;recursiveResize=0;expand=0;pointerEvents=0;" parent="gf0nsTy2lI6bSGKHi-rw-15" vertex="1">
-          <mxGeometry x="40" width="113" height="144" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-17" value="" style="swimlane;connectable=0;startSize=0;html=1;whiteSpace=wrap;collapsible=0;recursiveResize=0;expand=0;pointerEvents=0;" parent="gf0nsTy2lI6bSGKHi-rw-15" vertex="1">
-          <mxGeometry x="153" width="114" height="144" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-18" value="" style="swimlane;connectable=0;startSize=0;html=1;whiteSpace=wrap;collapsible=0;recursiveResize=0;expand=0;pointerEvents=0;" parent="gf0nsTy2lI6bSGKHi-rw-15" vertex="1">
-          <mxGeometry x="267" width="113" height="144" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-19" value="Actor 3" style="swimlane;horizontal=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;startSize=40;html=1;whiteSpace=wrap;collapsible=0;recursiveResize=0;expand=0;pointerEvents=0;" parent="gf0nsTy2lI6bSGKHi-rw-10" vertex="1">
-          <mxGeometry y="327" width="380" height="143" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-20" value="" style="swimlane;connectable=0;startSize=0;html=1;whiteSpace=wrap;collapsible=0;recursiveResize=0;expand=0;pointerEvents=0;" parent="gf0nsTy2lI6bSGKHi-rw-19" vertex="1">
-          <mxGeometry x="40" width="113" height="143" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-21" value="" style="swimlane;connectable=0;startSize=0;html=1;whiteSpace=wrap;collapsible=0;recursiveResize=0;expand=0;pointerEvents=0;" parent="gf0nsTy2lI6bSGKHi-rw-19" vertex="1">
-          <mxGeometry x="153" width="114" height="143" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-22" value="" style="swimlane;connectable=0;startSize=0;html=1;whiteSpace=wrap;collapsible=0;recursiveResize=0;expand=0;pointerEvents=0;" parent="gf0nsTy2lI6bSGKHi-rw-19" vertex="1">
-          <mxGeometry x="267" width="113" height="143" as="geometry" />
-        </mxCell>
-        <mxCell id="gf0nsTy2lI6bSGKHi-rw-23" value="Search" style="labelPosition=center;verticalLabelPosition=middle;align=center;html=1;shape=mxgraph.basic.shaded_button;dx=10;fillColor=#E6E6E6;strokeColor=none;fontSize=14;fontColor=#000000;" parent="gf0nsTy2lI6bSGKHi-rw-1" vertex="1">
-          <mxGeometry x="685" y="180" width="100" height="40" as="geometry" />
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
   <diagram id="kaUXib7hrf0DzSUDCIaO" name="Profile">
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -693,18 +556,6 @@
         <mxCell id="oQkwY07xy6kqqJZWhAol-1" parent="oQkwY07xy6kqqJZWhAol-0" />
         <mxCell id="oQkwY07xy6kqqJZWhAol-2" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" parent="oQkwY07xy6kqqJZWhAol-1" vertex="1">
           <mxGeometry x="360" y="10" width="480" height="890" as="geometry" />
-        </mxCell>
-        <mxCell id="oQkwY07xy6kqqJZWhAol-3" value="" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;strokeColor=#888888;fillColor=#444444;" parent="oQkwY07xy6kqqJZWhAol-1" vertex="1">
-          <mxGeometry x="90" y="90" width="260" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="oQkwY07xy6kqqJZWhAol-4" value="Dashboard" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="oQkwY07xy6kqqJZWhAol-3" vertex="1">
-          <mxGeometry width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="oQkwY07xy6kqqJZWhAol-6" value="Scanned Order" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="oQkwY07xy6kqqJZWhAol-3" vertex="1">
-          <mxGeometry y="80" width="260" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="oQkwY07xy6kqqJZWhAol-7" value="" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.android.rrect;rSize=0;align=left;spacingLeft=10;fontSize=8;fontColor=#ffffff;" parent="oQkwY07xy6kqqJZWhAol-3" vertex="1">
-          <mxGeometry y="120" width="260" height="40" as="geometry" />
         </mxCell>
         <mxCell id="jKUhlNA_UmC-SVEzl71W-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/48-bubbles/48/20.Photos-128.png;fontSize=19;" parent="oQkwY07xy6kqqJZWhAol-1" vertex="1">
           <mxGeometry x="640" y="381" width="128" height="128" as="geometry" />
