@@ -44,12 +44,14 @@ namespace NFA.Views
             await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
         }
 
-        protected override void OnAppearing()
+
+  /*    use method to allow for login or profile role page etc etc.
+   *    protected override void OnAppearing()
         {
             base.OnAppearing();
 
             if (viewModel.Items.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
-        }
+        }*/
     }
 }

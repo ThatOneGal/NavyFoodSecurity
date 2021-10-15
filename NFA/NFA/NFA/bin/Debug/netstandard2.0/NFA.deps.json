@@ -11,6 +11,7 @@
         "dependencies": {
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "11.0.2",
+          "VisualStudio.gitignore": "1.0.1",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.3.0.908675"
         },
@@ -40,6 +41,7 @@
           }
         }
       },
+      "VisualStudio.gitignore/1.0.1": {},
       "Xamarin.Essentials/1.3.1": {
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -102,6 +104,13 @@
       "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "path": "system.numerics.vectors/4.5.0",
       "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
+    },
+    "VisualStudio.gitignore/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uF3VC/z+BWxr6q16MisLgpKm8YtzcfAE72nmo8nY4W3s0AFzGWecPKOUsc41qeQeUI/dU4cBduTMf6ccXMx3Zw==",
+      "path": "visualstudio.gitignore/1.0.1",
+      "hashPath": "visualstudio.gitignore.1.0.1.nupkg.sha512"
     },
     "Xamarin.Essentials/1.3.1": {
       "type": "package",
