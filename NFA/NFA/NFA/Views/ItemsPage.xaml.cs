@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using NFA.Services;
+
+
 using NFA.Models;
 using NFA.Views;
 using NFA.ViewModels;
@@ -24,21 +27,43 @@ namespace NFA.Views
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new ItemsViewModel();
         }
 
-        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+
+        protected override async void OnAppearing()
         {
-            var item = args.SelectedItem as Item;
-            if (item == null)
-                return;
+            base.OnAppearing();
+            try
+            {
+                var scanner = DependencyService.Get<IQRScanningService>();
+                var result = await scanner.ScanAsync();
+                if (result != null)
+                {
+                    await DisplayAlert("Result",result,"OK");
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
 
-            // Manually deselect item.
-            ItemsListView.SelectedItem = null;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
 
+
+        /*   async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+           {
+               var item = args.SelectedItem as Item;
+               if (item == null)
+                   return;
+
+               await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+
+               // Manually deselect item.
+               ItemsListView.SelectedItem = null;
+           }
+   */
         async void AddItem_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));

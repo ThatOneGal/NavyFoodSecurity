@@ -16,7 +16,10 @@ C:\Users\William  Te\Desktop\NavyFood\NavyFoodSecurity\NFA\NFA\NFA\obj\Debug\net
 C:\Users\William  Te\Desktop\NavyFood\NavyFoodSecurity\NFA\NFA\NFA\obj\Debug\netstandard2.0\NFA.dll
 C:\Users\William  Te\Desktop\NavyFood\NavyFoodSecurity\NFA\NFA\NFA\obj\Debug\netstandard2.0\ref\NFA.dll
 C:\Users\William  Te\Desktop\NavyFood\NavyFoodSecurity\NFA\NFA\NFA\obj\Debug\netstandard2.0\NFA.pdb
-C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\obj\Debug\netstandard2.0\NFA.csprojAssemblyReference.cache
+C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\bin\Debug\netstandard2.0\NFA.deps.json
+C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\bin\Debug\netstandard2.0\NFA.dll
+C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\bin\Debug\netstandard2.0\ref\NFA.dll
+C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\bin\Debug\netstandard2.0\NFA.pdb
 C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
 C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
@@ -25,11 +28,7 @@ C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\obj\Debug\netstan
 C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
 C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\obj\Debug\netstandard2.0\NFA.AssemblyInfoInputs.cache
 C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\obj\Debug\netstandard2.0\NFA.AssemblyInfo.cs
+C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\obj\Debug\netstandard2.0\NFA.dll
 C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\obj\Debug\netstandard2.0\ref\NFA.dll
 C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\obj\Debug\netstandard2.0\NFA.pdb
-C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\bin\Debug\netstandard2.0\NFA.deps.json
-C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\bin\Debug\netstandard2.0\NFA.dll
-C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\bin\Debug\netstandard2.0\ref\NFA.dll
-C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\bin\Debug\netstandard2.0\NFA.pdb
-C:\Users\j162548\Documents\GitHub\NavyFoodSecurity\NFA\NFA\NFA\obj\Debug\netstandard2.0\XamlC.stamp
