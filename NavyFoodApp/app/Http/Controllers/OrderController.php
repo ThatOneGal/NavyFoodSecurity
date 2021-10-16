@@ -21,7 +21,7 @@ class OrderController extends Controller
         $statusList = Status::all();
         $orderList = Order::all();
 
-        return view('Order.index', compact('orderList', 'locationList', 'statusList'));
+        return view('order.Index', compact('orderList', 'locationList', 'statusList'));
     }
 
     /**
@@ -31,7 +31,7 @@ class OrderController extends Controller
     {
         $locationList = Location::all();
 
-        return view('Order.OrderingForm', compact('locationList'));
+        return view('order.OrderingForm', compact('locationList'));
     }
 
     /**
@@ -52,7 +52,7 @@ class OrderController extends Controller
         $Order->OrderDate = now();
 
         $Order->save();
-        return view('Order.Show', compact('Order', 'locationList', 'statusList'));
+        return view('order.Show', compact('Order', 'locationList', 'statusList'));
 
     }
 
@@ -70,7 +70,7 @@ class OrderController extends Controller
             $Order = Order::latest()->first();
 
 
-        return view('Order.Show', compact('Order', 'locationList', 'statusList'));
+        return view('order.Show', compact('Order', 'locationList', 'statusList'));
     }
 /*
     public function showByID(int $orderNum)
@@ -97,7 +97,7 @@ class OrderController extends Controller
         $locationList = Location::all();
         $statusList = Status::all();
 
-        return view('Order.Show', compact('Order', 'locationList', 'statusList'));
+        return view('order.Show', compact('Order', 'locationList', 'statusList'));
 
     }
 
@@ -108,7 +108,7 @@ class OrderController extends Controller
         $Order = Order::latest()->first();
 
 
-        return view('Order.Show', compact('Order', 'locationList', 'statusList'));
+        return view('order.Show', compact('Order', 'locationList', 'statusList'));
     }
 
     /**
@@ -119,18 +119,18 @@ class OrderController extends Controller
         //
         $locationList = Location::all();
         $statusList = Status::all();
-        return view('Order.Edit', compact('Order', 'locationList', 'statusList'));
+        return view('order.Edit', compact('Order', 'locationList', 'statusList'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Order $Order)
+    public function update(Request $request, Order $order)
     {
 
-        $Order->fill($request->all());
-        $Order->save();
-        return redirect(route('order.index'));
+        $order->fill($request->all());
+        $order->save();
+        return redirect(route('order.Index'));
 
     }
 
@@ -143,7 +143,7 @@ class OrderController extends Controller
         //
 
         $order->delete();
-        return redirect(route('order.index'));
+        return redirect(route('order.Index'));
 
 
     }
