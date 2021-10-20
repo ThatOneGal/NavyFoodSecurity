@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dniYTkRNh/sl9yKI/ZOEV2Z/0NgBQfQBfIwwzx95fLetxWEi36Dy6b8gzft75Pnd364MLRd+AO/Z73/rajlK5g==",
+  "dgSpecHash": "gH+zebu14Mojrv5X0rtVT0iB5NA84f9lULkkqNHnFYn1sy/CqFaLKBmD3RgcZsUFt/x31S/SDb8BUhNmlEPInw==",
   "success": true,
   "projectFilePath": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA.iOS\\NFA.iOS.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,8 @@
     "C:\\Users\\William  Te\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\William  Te\\.nuget\\packages\\visualstudio.gitignore\\1.0.1\\visualstudio.gitignore.1.0.1.nupkg.sha512",
     "C:\\Users\\William  Te\\.nuget\\packages\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
-    "C:\\Users\\William  Te\\.nuget\\packages\\xamarin.forms\\4.3.0.908675\\xamarin.forms.4.3.0.908675.nupkg.sha512"
+    "C:\\Users\\William  Te\\.nuget\\packages\\xamarin.forms\\4.3.0.908675\\xamarin.forms.4.3.0.908675.nupkg.sha512",
+    "C:\\Users\\William  Te\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512"
   ],
   "logs": []
 }

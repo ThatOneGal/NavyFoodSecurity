@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SBnZbx2t7XRRHIKia9tWGIwme2OJZC1pqCkmAsGWRGX10dVZQH0/qnj2kBbA2Wnowcn5RXNrzXdV99ccNjF+Ag==",
+  "dgSpecHash": "jp15CHzE59bdlPc91IUeZV5DWthSEVKqfFq6m/tF+CAo9I0mhxtMZC0KZfRQxKVMr6cCh9Kixfrazfcz7YlWqA==",
   "success": true,
   "projectFilePath": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\NFA.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\William  Te\\.nuget\\packages\\fastandroidcamera\\2.0.0\\fastandroidcamera.2.0.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\William  Te\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\William  Te\\.nuget\\packages\\visualstudio.gitignore\\1.0.1\\visualstudio.gitignore.1.0.1.nupkg.sha512",
@@ -45,7 +46,8 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.versionedparcelable\\28.0.0.3\\xamarin.android.support.versionedparcelable.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.viewpager\\28.0.0.3\\xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
     "C:\\Users\\William  Te\\.nuget\\packages\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
-    "C:\\Users\\William  Te\\.nuget\\packages\\xamarin.forms\\4.3.0.908675\\xamarin.forms.4.3.0.908675.nupkg.sha512"
+    "C:\\Users\\William  Te\\.nuget\\packages\\xamarin.forms\\4.3.0.908675\\xamarin.forms.4.3.0.908675.nupkg.sha512",
+    "C:\\Users\\William  Te\\.nuget\\packages\\zxing.net.mobile\\2.4.1\\zxing.net.mobile.2.4.1.nupkg.sha512"
   ],
   "logs": []
 }
