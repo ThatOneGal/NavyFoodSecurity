@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\j162548\\source\\repos\\NFA\\NFA\\NFA\\NFA.csproj": {}
+    "C:\\Users\\j162548\\Documents\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\j162548\\source\\repos\\NFA\\NFA\\NFA\\NFA.csproj": {
+    "C:\\Users\\j162548\\Documents\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\j162548\\source\\repos\\NFA\\NFA\\NFA\\NFA.csproj",
+        "projectUniqueName": "C:\\Users\\j162548\\Documents\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
         "projectName": "NFA",
-        "projectPath": "C:\\Users\\j162548\\source\\repos\\NFA\\NFA\\NFA\\NFA.csproj",
+        "projectPath": "C:\\Users\\j162548\\Documents\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
         "packagesPath": "C:\\Users\\j162548\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\j162548\\source\\repos\\NFA\\NFA\\NFA\\obj\\",
+        "outputPath": "C:\\Users\\j162548\\Documents\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\Xamarin"

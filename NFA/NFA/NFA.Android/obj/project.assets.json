@@ -1938,11 +1938,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\j162548\\source\\repos\\NFA\\NFA\\NFA.Android\\NFA.Android.csproj",
+      "projectUniqueName": "C:\\Users\\j162548\\Documents\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\NFA.Android.csproj",
       "projectName": "NFA.Android",
-      "projectPath": "C:\\Users\\j162548\\source\\repos\\NFA\\NFA\\NFA.Android\\NFA.Android.csproj",
+      "projectPath": "C:\\Users\\j162548\\Documents\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\NFA.Android.csproj",
       "packagesPath": "C:\\Users\\j162548\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\j162548\\source\\repos\\NFA\\NFA\\NFA.Android\\obj\\",
+      "outputPath": "C:\\Users\\j162548\\Documents\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1963,8 +1963,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\j162548\\source\\repos\\NFA\\NFA\\NFA\\NFA.csproj": {
-              "projectPath": "C:\\Users\\j162548\\source\\repos\\NFA\\NFA\\NFA\\NFA.csproj"
+            "C:\\Users\\j162548\\Documents\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {
+              "projectPath": "C:\\Users\\j162548\\Documents\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj"
             }
           }
         }
