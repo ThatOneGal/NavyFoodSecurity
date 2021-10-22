@@ -7,9 +7,6 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using NFA.Services;
-
-
 using NFA.Models;
 using NFA.Views;
 using NFA.ViewModels;
@@ -27,56 +24,32 @@ namespace NFA.Views
         {
             InitializeComponent();
 
+            BindingContext = viewModel = new ItemsViewModel();
         }
 
-
-        protected override async void OnAppearing()
+        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            base.OnAppearing();
-            try
-            {
-                var scanner = DependencyService.Get<IQRScanningService>();
-                var result = await scanner.ScanAsync();
-                if (result != null)
-                {
-                    await DisplayAlert("Result",result,"OK");
+            var item = args.SelectedItem as Item;
+            if (item == null)
+                return;
 
+            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
 
-                }
-            }
-            catch (Exception ex)
-            {
-
-                throw;
-            }
+            // Manually deselect item.
+            ItemsListView.SelectedItem = null;
         }
 
-
-        /*   async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
-           {
-               var item = args.SelectedItem as Item;
-               if (item == null)
-                   return;
-
-               await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
-
-               // Manually deselect item.
-               ItemsListView.SelectedItem = null;
-           }
-   */
         async void AddItem_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
         }
 
-
-  /*    use method to allow for login or profile role page etc etc.
-   *    protected override void OnAppearing()
+        protected override void OnAppearing()
         {
             base.OnAppearing();
 
             if (viewModel.Items.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
-        }*/
+        }
     }
 }
