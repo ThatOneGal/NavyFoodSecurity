@@ -22,6 +22,7 @@
                 </div>
                 <div style="text-align: center;">
                     <input type="submit" />
+					<Label>AAAAAAAAAAAAAAA</Label>
                 </div>
                 </form>
 
