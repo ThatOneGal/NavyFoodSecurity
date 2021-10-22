@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BF675358-2D01-46C0-AF3C-46E1F7DF365F}</ProjectGuid>
+    <ProjectGuid>{A3E5FB35-7315-4537-9769-577805B790A2}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{6968b3a4-1835-46a3-ac5c-1ae33b475983}</TemplateGuid>
     <OutputType>Library</OutputType>
@@ -87,7 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NFA\NFA.csproj">
-      <Project>{BA2B4366-B538-453B-AE58-85E45FE43D65}</Project>
+      <Project>{AF63928F-531B-4246-8E3D-32A468608B81}</Project>
       <Name>NFA</Name>
     </ProjectReference>
   </ItemGroup>
