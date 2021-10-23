@@ -15,7 +15,7 @@ class LocationController extends Controller
     public function index()
     {
         $locations = Location::all();
-        return view('location.index', ['locations' => $locations]);
+        return view('Location.index', ['locations' => $locations]);
     }
 
     /**
@@ -25,7 +25,7 @@ class LocationController extends Controller
      */
     public function create()
     {
-        return view('location.create');
+        return view('Location.create');
     }
 
     /**
@@ -39,7 +39,7 @@ class LocationController extends Controller
         $locations = new Location();
         $locations -> fill($request -> all());
         $locations -> save();
-        return redirect(route('location.index'));
+        return redirect(route('Location.index'));
     }
 
     /**
@@ -61,7 +61,7 @@ class LocationController extends Controller
      */
     public function edit(Location $location)
     {
-        return view('location.edit', ['location' => $location]);
+        return view('Location.edit', ['location' => $location]);
     }
 
     /**
@@ -75,7 +75,7 @@ class LocationController extends Controller
     {
         $location->fill($request->all());
         $location->save();
-        return redirect(route('location.index'));
+        return redirect(route('Location.index'));
     }
 
     /**
@@ -88,6 +88,6 @@ class LocationController extends Controller
     {
         $model = $location;
         $model->delete();
-        return redirect(route('location.index'));
+        return redirect(route('Location.index'));
     }
 }
