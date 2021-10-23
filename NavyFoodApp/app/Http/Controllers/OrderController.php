@@ -21,7 +21,7 @@ class OrderController extends Controller
         $statusList = Status::all();
         $orderList = Order::all();
 
-        return view('order.Index', compact('orderList', 'locationList', 'statusList'));
+        return view('Order.Index', compact('orderList', 'locationList', 'statusList'));
     }
 
     /**
@@ -31,7 +31,7 @@ class OrderController extends Controller
     {
         $locationList = Location::all();
 
-        return view('order.OrderingForm', compact('locationList'));
+        return view('Order.OrderingForm', compact('locationList'));
     }
 
     /**
@@ -52,7 +52,7 @@ class OrderController extends Controller
         $Order->OrderDate = now();
 
         $Order->save();
-        return view('order.Show', compact('Order', 'locationList', 'statusList'));
+        return view('Order.Show', compact('Order', 'locationList', 'statusList'));
 
     }
 
@@ -70,7 +70,7 @@ class OrderController extends Controller
             $Order = Order::latest()->first();
 
 
-        return view('order.Show', compact('Order', 'locationList', 'statusList'));
+        return view('Order.Show', compact('Order', 'locationList', 'statusList'));
     }
 /*
     public function showByID(int $orderNum)
@@ -97,7 +97,7 @@ class OrderController extends Controller
         $locationList = Location::all();
         $statusList = Status::all();
 
-        return view('order.Show', compact('Order', 'locationList', 'statusList'));
+        return view('Order.Show', compact('Order', 'locationList', 'statusList'));
 
     }
 
@@ -108,7 +108,7 @@ class OrderController extends Controller
         $Order = Order::latest()->first();
 
 
-        return view('order.Show', compact('Order', 'locationList', 'statusList'));
+        return view('Order.Show', compact('Order', 'locationList', 'statusList'));
     }
 
     /**
@@ -119,7 +119,7 @@ class OrderController extends Controller
         //
         $locationList = Location::all();
         $statusList = Status::all();
-        return view('order.Edit', compact('Order', 'locationList', 'statusList'));
+        return view('Order.Edit', compact('Order', 'locationList', 'statusList'));
     }
 
     /**
@@ -130,7 +130,7 @@ class OrderController extends Controller
 
         $order->fill($request->all());
         $order->save();
-        return redirect(route('order.index'));
+        return redirect(route('Order.index'));
 
     }
 
@@ -143,7 +143,7 @@ class OrderController extends Controller
         //
 
         $order->delete();
-        return redirect(route('order.index'));
+        return redirect(route('Order.index'));
 
 
     }

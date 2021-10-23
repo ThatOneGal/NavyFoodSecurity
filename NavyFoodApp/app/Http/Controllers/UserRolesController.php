@@ -15,7 +15,7 @@ class UserRolesController extends Controller
     public function index()
     {
         $userRoles = UserRoles::all();
-        return view('userRoles.index', ['userRoles' => $userRoles]);
+        return view('UserRoles.index', ['userRoles' => $userRoles]);
     }
 
     /**
@@ -25,7 +25,7 @@ class UserRolesController extends Controller
      */
     public function create()
     {
-        return view('userRoles.create');
+        return view('UserRoles.create');
     }
 
     /**
@@ -39,7 +39,7 @@ class UserRolesController extends Controller
         $userRoles = new UserRoles();
         $userRoles -> fill($request -> all());
         $userRoles -> save();
-        return redirect(route('userRoles.index'));
+        return redirect(route('UserRoles.index'));
     }
 
     /**
@@ -50,7 +50,7 @@ class UserRolesController extends Controller
      */
     public function edit(UserRoles $userRoles)
     {
-        return view('userRoles.edit', ['userRoles' => $userRoles]);
+        return view('UserRoles.edit', ['userRoles' => $userRoles]);
     }
 
     /**
@@ -64,7 +64,7 @@ class UserRolesController extends Controller
     {
         $userRoles->fill($request->all());
         $userRoles->save();
-        return redirect(route('userRoles.index'));
+        return redirect(route('UserRoles.index'));
     }
 
     /**
@@ -77,6 +77,6 @@ class UserRolesController extends Controller
     {
         $model = $userRoles;
         $model->delete();
-        return redirect(route('userRoles.index'));
+        return redirect(route('UserRoles.index'));
     }
 }
