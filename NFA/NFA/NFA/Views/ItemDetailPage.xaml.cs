@@ -15,6 +15,7 @@ namespace NFA.Views
     {
         ItemDetailViewModel viewModel;
 
+        
         public ItemDetailPage(ItemDetailViewModel viewModel)
         {
             InitializeComponent();

@@ -24,6 +24,8 @@ namespace NFA.Views
             InitializeComponent();
 
         }
+        
+
 
 /*        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {

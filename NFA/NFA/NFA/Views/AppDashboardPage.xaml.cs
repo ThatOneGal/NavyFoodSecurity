@@ -21,11 +21,13 @@ namespace NFA.Views
         public void scanView_OnScanResult(Result result)
         {
             //when scanned
-
+            scanView.Result = null;
+            
             Device.BeginInvokeOnMainThread(async () =>
             {
                 /*popup*/ await DisplayAlert("Scanned result", "The qr code's text is " + result.Text + ".", "OK");
 
+                
                 //validate qr code
                 //if qr code is invalid, display a popup/new page w/ confirmation
                 //if qr code is valid, stop scanning and open AppScannedOrder to display order w/ confirmation + edit button
