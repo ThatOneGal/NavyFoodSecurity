@@ -20,12 +20,18 @@ namespace NFA.Views
 
         public void scanView_OnScanResult(Result result)
         {
+            //when scanned
+
             Device.BeginInvokeOnMainThread(async () =>
             {
-                await DisplayAlert("Scanned result", "The barcode's text is " + result.Text + ". The barcode's format is " + result.BarcodeFormat, "OK");
-            });
+                /*popup*/ await DisplayAlert("Scanned result", "The qr code's text is " + result.Text + ".", "OK");
 
-            //off
+                //validate qr code
+                //if qr code is invalid, display a popup/new page w/ confirmation
+                //if qr code is valid, stop scanning and open AppScannedOrder to display order w/ confirmation + edit button
+                //if edited, display edits on a new page w/ final confirmation
+                //when confirmation is pressed, open dashboard again to scan a new code
+            });
         }
     }
 }
