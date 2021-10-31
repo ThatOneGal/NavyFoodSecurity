@@ -14,7 +14,5 @@ namespace NFA.Views
         {
             InitializeComponent();
         }
-
-        
     }
 }
