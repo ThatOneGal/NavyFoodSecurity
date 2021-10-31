@@ -22,23 +22,14 @@ namespace NFA.Views
 
         public void scanView_OnScanResult(Result result)
         {
-<<<<<<< HEAD
-            //when scanned
-            scanView.Result = null;
-            
-            Device.BeginInvokeOnMainThread(async () =>
-=======
             this.result = result;
-            Device.BeginInvokeOnMainThread(test);
-
-
+            Device.BeginInvokeOnMainThread(ValidateCode);
 
         }
 
-        public async void test()
+        public async void ValidateCode()
         {
             try
->>>>>>> 2bb0de5ce3c46e4aa930fbce07f28080e5e958db
             {
                 if (result != null)
                 {
@@ -49,9 +40,8 @@ namespace NFA.Views
                     scanView.IsAnalyzing = true;
                 }
 
-                
                 //validate qr code
-                if (result.BarcodeFormat != BarcodeFormat.QR_CODE)
+                if (result.BarcodeFormat == BarcodeFormat.QR_CODE)
                 {
                     //scan success
 
@@ -66,31 +56,20 @@ namespace NFA.Views
                 }
                 else
                 {
+                    //scan failed
                     await Navigation.PushModalAsync(new NavigationPage(new AppScanFailed()));
-                    //result = null;
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
             }
-
-
         }
-
-        //protected override bool OnBackButtonPressed()
-        //{
-        //    base.OnBackButtonPressed();
-        //    scanView.IsScanning = true;
-
-        //}
 
         protected override void OnAppearing()
         {
-
             scanView.IsAnalyzing = true;
             result = null;
-            //base.OnAppearing();
 
         }
     }
