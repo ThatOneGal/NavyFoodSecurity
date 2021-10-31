@@ -13,6 +13,8 @@ namespace NFA.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AppDashboardPage : ContentPage
     {
+        Result result = null;
+
         public AppDashboardPage()
         {
             InitializeComponent();
@@ -20,20 +22,76 @@ namespace NFA.Views
 
         public void scanView_OnScanResult(Result result)
         {
+<<<<<<< HEAD
             //when scanned
             scanView.Result = null;
             
             Device.BeginInvokeOnMainThread(async () =>
+=======
+            this.result = result;
+            Device.BeginInvokeOnMainThread(test);
+
+
+
+        }
+
+        public async void test()
+        {
+            try
+>>>>>>> 2bb0de5ce3c46e4aa930fbce07f28080e5e958db
             {
-                /*popup*/ await DisplayAlert("Scanned result", "The qr code's text is " + result.Text + ".", "OK");
+                if (result != null)
+                {
+                    scanView.IsAnalyzing = false;
+                }
+                else
+                {
+                    scanView.IsAnalyzing = true;
+                }
 
                 
                 //validate qr code
-                //if qr code is invalid, display a popup/new page w/ confirmation
-                //if qr code is valid, stop scanning and open AppScannedOrder to display order w/ confirmation + edit button
-                //if edited, display edits on a new page w/ final confirmation
-                //when confirmation is pressed, open dashboard again to scan a new code
-            });
+                if (result.BarcodeFormat != BarcodeFormat.QR_CODE)
+                {
+                    //scan success
+
+                    //result = null;
+                    //scanView.IsAnalyzing = true;
+
+                    //stop scanning and open AppScannedOrder to display order w/ confirmation + edit button
+
+                    //if edited
+                    //display edits on a new page w/ final confirmation
+
+                }
+                else
+                {
+                    await Navigation.PushModalAsync(new NavigationPage(new AppScanFailed()));
+                    //result = null;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
+
+        }
+
+        //protected override bool OnBackButtonPressed()
+        //{
+        //    base.OnBackButtonPressed();
+        //    scanView.IsScanning = true;
+
+        //}
+
+        protected override void OnAppearing()
+        {
+
+            scanView.IsAnalyzing = true;
+            result = null;
+            //base.OnAppearing();
+
         }
     }
 }
