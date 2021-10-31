@@ -4,12 +4,107 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="NFA.Views.AppScannedOrder">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="NFA.Views.AppScannedOrder"
+             xmlns:vm="clr-namespace:NFA.ViewModels">
+
+
+
+    <ContentPage.BindingContext>
+        <vm:AppOrderModel />
+    </ContentPage.BindingContext>
+
+
+    <StackLayout>
+        <ListView x:Name="ItemsListView"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="true"
+                RefreshCommand="{Binding LoadItemsCommand}"
+                IsPullToRefreshEnabled="true"
+                CachingStrategy="RecycleElement"
+                  >
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <!--order id--> 
+
+                            <Label Text="{Binding id}" 
+                                d:Text="{Binding .}"
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16" />
+                            <!--Location id-->
+
+                            <Label Text="{Binding locationId}" 
+                                d:Text="Item description"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                            <!--Order status-->
+
+                            <Label Text="{Binding orderStatus}" 
+                                d:Text="Item description"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                            <!--date ordered-->
+
+                            <Label Text="{Binding orderDate}" 
+                                d:Text="Item description"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                            <!--order id-->
+
+                            <Label Text="{Binding orderShipped}" 
+                                d:Text="Item description"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                            <!--order id-->
+
+                            <Label Text="{Binding orderPacked}" 
+                                d:Text="Item description"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                            <!--order id-->
+
+                            <Label Text="{Binding packageQty}" 
+                                d:Text="Item description"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                            <!--order id-->
+
+                            <Label Text="{Binding packerId}" 
+                                d:Text="Item description"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                            <!--order id-->
+
+                            <Label Text="{Binding driverId}" 
+                                    d:Text="Item description"
+                                    Style="{DynamicResource ListItemDetailTextStyle}"
+                                    FontSize="13" />
+                            <!--order id-->
+
+                            <Label Text="{Binding content}" 
+                                   d:Text="Item description"
+                                   Style="{DynamicResource ListItemDetailTextStyle}"
+                                   FontSize="13" />
+                            <!--order id-->
+
+                            <Label Text="{Binding notesStorage}" 
+                                   d:Text="Item description"
+                                   Style="{DynamicResource ListItemDetailTextStyle}"
+                                   FontSize="13" />
+                            <!--order id-->
+
+                            <Label Text="{Binding notesPreparation}" 
+                                    d:Text="Item description"
+                                    Style="{DynamicResource ListItemDetailTextStyle}"
+                                    FontSize="13" />
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
 </ContentPage>
