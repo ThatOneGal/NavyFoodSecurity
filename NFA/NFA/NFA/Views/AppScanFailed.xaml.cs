@@ -15,6 +15,9 @@ namespace NFA.Views
             InitializeComponent();
         }
 
-        
+        private void TryAgainButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PopModalAsync();
+        }
     }
 }

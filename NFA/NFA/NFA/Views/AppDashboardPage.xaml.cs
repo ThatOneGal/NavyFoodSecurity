@@ -24,35 +24,19 @@ namespace NFA.Views
         {
             this.result = result;
             Device.BeginInvokeOnMainThread(ValidateCode);
-
         }
 
         public async void ValidateCode()
         {
             try
             {
-                if (result != null)
-                {
-                    scanView.IsAnalyzing = false;
-                }
-                else
-                {
-                    scanView.IsAnalyzing = true;
-                }
+                scanView.IsAnalyzing = result == null;
 
                 //validate qr code
                 if (result.BarcodeFormat == BarcodeFormat.QR_CODE)
                 {
                     //scan success
-
-                    //result = null;
-                    //scanView.IsAnalyzing = true;
-
-                    //stop scanning and open AppScannedOrder to display order w/ confirmation + edit button
-
-                    //if edited
-                    //display edits on a new page w/ final confirmation
-
+                    await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder()));
                 }
                 else
                 {
@@ -70,7 +54,6 @@ namespace NFA.Views
         {
             scanView.IsAnalyzing = true;
             result = null;
-
         }
     }
 }
