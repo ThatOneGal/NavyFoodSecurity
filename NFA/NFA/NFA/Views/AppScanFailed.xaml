@@ -4,14 +4,27 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="NFA.Views.AppScanFailed">
+             x:Class="NFA.Views.AppScanFailed"
+             BackgroundColor="Red">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Scan Failed"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Button x:Name="TryAgainButton" Text="Try Again" 
-                    Clicked="TryAgainButton_Clicked" />
+                HorizontalOptions="CenterAndExpand"
+                   TextColor="White"
+                   FontSize="Title"
+                   FontAttributes="Bold"/>
+            
+            <Label Text="Make sure you scan a NFS QR code."
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                   TextColor="White"/>
+            
+            <Button x:Name="TryAgainButton" 
+                    Text="Try Again" 
+                    Clicked="TryAgainButton_Clicked"
+                    BackgroundColor="DarkRed"
+                    TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
