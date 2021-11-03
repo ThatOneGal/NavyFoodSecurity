@@ -28,9 +28,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::resource('status', StatusController::class);
     Route::resource('userrole', UserRolesController::class);
 
-    Route::get('/history', function () {
-        return view('history');
-    })->name('history');
 
     Route::get('/dashboard', function (){
         return view('dashboard');
