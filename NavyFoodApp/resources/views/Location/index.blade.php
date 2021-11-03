@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+            {{ __('Locations') }}
         </h2>
     </x-slot>
 
@@ -20,14 +20,14 @@
                             <td>{{$location->locationName}}</td>
 
                             <td>
-                                <a href="{{route('location.edit', $location)}}">Edit</a>
+                                <a href="{{route('location.edit', $location)}}">"\t"Edit</a>
                             </td>
 
                             <td>
                                 <form method="POST" action="{{route('location.destroy', $location)}}">
                                     @method('DELETE')
                                     @csrf
-                                    <button class="button button-red" type="submit">Delete</button>
+                                    <button class="button button-red" type="submit">"\t"Delete</button>
                                 </form>
                             </td>
 
