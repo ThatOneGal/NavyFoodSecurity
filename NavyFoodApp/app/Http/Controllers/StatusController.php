@@ -88,7 +88,6 @@ class StatusController extends Controller
     {
         $model = $status;
         $model->delete();
-        //return redirect(route('Status.index'));
-        return view('Status.index', ['status' => $status]);
+        return redirect(route('Status.index'));
     }
 }
