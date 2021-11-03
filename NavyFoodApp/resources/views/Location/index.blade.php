@@ -20,14 +20,15 @@
                             <td>{{$location->locationName}}</td>
 
                             <td>
-                                <a href="{{route('location.edit', $location)}}">"\t"Edit</a>
+                                <a href="{{route('location.edit', $location)}}">Edit</a>
                             </td>
 
                             <td>
                                 <form method="POST" action="{{route('location.destroy', $location)}}">
                                     @method('DELETE')
                                     @csrf
-                                    <button class="button button-red" type="submit">"\t"Delete</button>
+                                    <button class="button button-red" type="submit">
+                                        Delete</button>
                                 </form>
                             </td>
 
