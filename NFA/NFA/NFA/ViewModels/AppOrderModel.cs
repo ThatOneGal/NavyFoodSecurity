@@ -9,24 +9,38 @@ namespace NFA.ViewModels
 {
     public class AppOrderModel : BaseViewModel
     {
+        /*
+         * note-may not be needed 
+                private Command loadOrderCommand;
 
-        private Command loadItemsCommand;
-
-        public ICommand LoadItemsCommand
-        {
-            get
-            {
-                if (loadItemsCommand == null)
+                public ICommand LoadOrderCommand
                 {
-                    loadItemsCommand = new Command(LoadItems);
+                    get
+                    {
+                        if (loadOrderCommand == null)
+                        {
+                            loadOrderCommand = new Command(LoadOrder);
+                        }
+
+                        return loadOrderCommand;
+                    }
                 }
 
-                return loadItemsCommand;
-            }
+                private void LoadOrder()
+                {
+
+                }
+        */
+        public Order Order { get; set; }
+        public AppOrderModel(Order order = null)
+        {
+            Title = order?.id.ToString();
+            Order = order;
+
         }
 
-        private void LoadItems()
-        {
-        }
+
+
+
     }
 }

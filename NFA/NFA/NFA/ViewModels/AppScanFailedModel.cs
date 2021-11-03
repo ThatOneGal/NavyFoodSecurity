@@ -9,7 +9,7 @@ namespace NFA.ViewModels
     {
         public AppScanFailedModel()
         {
-            Title = "Dashboard";
+            Title = "Invalid Scan";
         }
 
     }

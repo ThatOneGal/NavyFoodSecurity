@@ -9,7 +9,9 @@ namespace NFA.Services
 {
     interface IGetApi
     {
-        Task GetApiAsync(); // note: no async here
+        Task<bool> GetApiAsync(); // note: no async here
+        Task<bool> GetApiAsync(); // note: no async here
+        Task<bool> GetApiAsync(); // note: no async here
 
 
 

@@ -34,12 +34,14 @@ namespace NFA.Views
 
                 //validate qr code
                 if (result.BarcodeFormat == BarcodeFormat.QR_CODE)
+                //if (result.BarcodeFormat == BarcodeFormat.QR_CODE && result.Text.Contains("NFA"))
                 {
                     //scan success
                     await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder()));
                 }
                 else
                 {
+                    //william - could do a try catch and parse the message to the failed page to show why it failed.
                     //scan failed
                     await Navigation.PushModalAsync(new NavigationPage(new AppScanFailed()));
                 }
