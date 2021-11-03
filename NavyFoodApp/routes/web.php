@@ -23,10 +23,10 @@ Route::get('/', function () {
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
-    Route::resource('order', OrderController::class);
-    Route::resource('location', LocationController::class);
-    Route::resource('status', StatusController::class);
-    Route::resource('userrole', UserRolesController::class);
+    Route::resource('Order', OrderController::class);
+    Route::resource('Location', LocationController::class);
+    Route::resource('Status', StatusController::class);
+    Route::resource('UserRole', UserRolesController::class);
 
 
     Route::get('/dashboard', function (){
