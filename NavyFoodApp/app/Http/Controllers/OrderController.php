@@ -130,7 +130,7 @@ class OrderController extends Controller
 
         $order->fill($request->all());
         $order->save();
-        return redirect(route('Order.index'));
+        return redirect(route('order.index'));
 
     }
 
@@ -143,7 +143,7 @@ class OrderController extends Controller
         //
 
         $order->delete();
-        return redirect(route('Order.index'));
+        return redirect(route('order.index'));
 
 
     }

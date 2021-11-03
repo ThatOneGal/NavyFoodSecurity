@@ -75,7 +75,7 @@ class LocationController extends Controller
     {
         $location->fill($request->all());
         $location->save();
-        return redirect(route('Location.index'));
+        return redirect(route('location.index'));
     }
 
     /**
@@ -88,6 +88,6 @@ class LocationController extends Controller
     {
         $model = $location;
         $model->delete();
-        return redirect(route('Location.index'));
+        return redirect(route('location.index'));
     }
 }
