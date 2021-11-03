@@ -19,5 +19,10 @@ namespace NFA.Models
         public string content { get; set; }
         public string notesStorage { get; set; }
         public string notesPreparation { get; set; }
+
+        public Order()
+        {
+
+        }
     }
 }

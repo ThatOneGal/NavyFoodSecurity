@@ -15,6 +15,14 @@ namespace NFA.Views
         public AppScannedOrder()
         {
             InitializeComponent();
+
         }
-    }
-}
+
+
+
+
+
+
+    }  // partial class
+
+}//namespace

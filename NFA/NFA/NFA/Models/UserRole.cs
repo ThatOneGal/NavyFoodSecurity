@@ -8,5 +8,12 @@ namespace NFA.Models
     {
         public int id { get; set; }
         public string userRoleName { get; set; }
+
+
+
+        public UserRole()
+        {
+        }
+
     }
 }

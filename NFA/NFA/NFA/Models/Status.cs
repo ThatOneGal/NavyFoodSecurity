@@ -8,5 +8,11 @@ namespace NFA.Models
     {
         public int id { get; set; }
         public string statusName { get; set; }
+
+
+        public Status()
+        {
+        }
+
     }
 }

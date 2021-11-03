@@ -13,5 +13,12 @@ namespace NFA.Models
         public string userName { get; set; }
         public string password { get; set; }
         public int urID { get; set; }
+
+
+
+        public User()
+        {
+        }
+
     }
 }

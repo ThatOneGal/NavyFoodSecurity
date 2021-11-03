@@ -33,66 +33,77 @@
                                 d:Text="{Binding .}"
                                 Style="{DynamicResource ListItemTextStyle}" 
                                 FontSize="16" />
+                            
                             <!--Location id-->
 
                             <Label Text="{Binding locationId}" 
                                 d:Text="Location"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
                                 FontSize="13" />
+                            
                             <!--Order status-->
 
                             <Label Text="{Binding orderStatus}" 
                                 d:Text="Current Order Status"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
                                 FontSize="13" />
+                            
                             <!--date ordered-->
 
                             <Label Text="{Binding orderDate}" 
                                 d:Text="Date Created"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
                                 FontSize="13" />
+                            
                             <!--order id-->
 
                             <Label Text="{Binding orderShipped}" 
                                 d:Text="Date Shipped"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
                                 FontSize="13" />
+                            
                             <!--order id-->
 
                             <Label Text="{Binding orderPacked}" 
                                 d:Text="Date Packed"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
                                 FontSize="13" />
+                            
                             <!--order id-->
 
                             <Label Text="{Binding packageQty}" 
                                 d:Text="Package Qty"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
                                 FontSize="13" />
+                            
                             <!--order id-->
 
                             <Label Text="{Binding packerId}" 
                                 d:Text="Packing staff"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
                                 FontSize="13" />
+                            
                             <!--order id-->
 
                             <Label Text="{Binding driverId}" 
                                     d:Text="Driver"
                                     Style="{DynamicResource ListItemDetailTextStyle}"
                                     FontSize="13" />
+                            
                             <!--order id-->
 
                             <Label Text="{Binding content}" 
                                    d:Text="List of items"
                                    Style="{DynamicResource ListItemDetailTextStyle}"
                                    FontSize="13" />
+                            
                             <!--order id-->
 
                             <Label Text="{Binding notesStorage}" 
                                    d:Text="storage notes"
                                    Style="{DynamicResource ListItemDetailTextStyle}"
                                    FontSize="13" />
+                            
                             <!--order id-->
 
                             <Label Text="{Binding notesPreparation}" 
