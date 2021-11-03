@@ -29,7 +29,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::resource('userrole', UserRolesController::class);
 
     Route::get('/history', function () {
-        return view('history.history');
+        return view('history');
     })->name('history');
 
     Route::get('/dashboard', function (){
