@@ -10,10 +10,10 @@ namespace NFA.Services
     interface IGetApi
     {
         Task<bool> GetApiOrderAsync(string orderId); // note: no async here
-        Task<string> GetApiLocationAsync(string locationId); // note: no async here
-        Task<string> GetApiStatusAsync(string statusId); // note: no async here
+        Task<bool> GetApiLocationAsync(string locationId); // note: no async here
+        Task<bool> GetApiStatusAsync(string statusId); // note: no async here
         Task<bool> GetApiUserAsync(string userId); // note: no async here
-        Task<string> GetApiUserRoleAsync(string userRoleId); // note: no async here
+        Task<bool> GetApiUserRoleAsync(string userRoleId); // note: no async here
 
     }
 }
