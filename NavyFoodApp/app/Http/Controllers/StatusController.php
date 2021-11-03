@@ -75,7 +75,7 @@ class StatusController extends Controller
     {
         $status->fill($request->all());
         $status->save();
-        return redirect(route('status.index'));
+        return redirect(route('Status.Index'));
     }
 
     /**
@@ -88,6 +88,6 @@ class StatusController extends Controller
     {
         $model = $status;
         $model->delete();
-        return redirect(route('status.index'));
+        return redirect(route('Status.Index'));
     }
 }
