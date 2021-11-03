@@ -20,11 +20,11 @@
                             <td>{{$location->locationName}}</td>
 
                             <td>
-                                <a href="{{route('location.edit', $location)}}">Edit</a>
+                                <a href="{{route('Location.edit', $location)}}">Edit</a>
                             </td>
 
                             <td>
-                                <form method="POST" action="{{route('location.destroy', $location)}}">
+                                <form method="POST" action="{{route('Location.destroy', $location)}}">
                                     @method('DELETE')
                                     @csrf
                                     <button class="button button-red" type="submit">
@@ -38,7 +38,7 @@
                 </table>
             </div>
 
-            <a href="{{route('location.create')}}" class="button">Create New</a>
+            <a href="{{route('Location.create')}}" class="button">Create New</a>
         </div>
     </div>
 </x-app-layout>
