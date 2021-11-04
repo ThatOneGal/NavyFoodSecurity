@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
 
-                <form action="{{route('order.store')}}" method="POST">
+                <form style="text-align: center" action="{{route('order.store')}}" method="POST">
                     @csrf
 
                     <div>
@@ -65,7 +65,7 @@
 
                     </div>
                     <div>
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Submit" style="padding-right: 15px">
                         <input type="reset" value="Cancel">
 
                     </div>
