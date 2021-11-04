@@ -10,14 +10,14 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
 
-            <table class="w=100">
+            <table class="w=100" style="text-align: center">
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
                     </tr>
 
                     @foreach($locations as $location)
-                        <tr style="text-align: center">
+                        <tr>
                             <td>{{$location->id}}</td>
                             <td>{{$location->locationName}}</td>
 
