@@ -15,7 +15,7 @@
                 <form method="GET" action="{{route('showById'),}}">
                 @csrf
 
-                <div style="text-align: center; padding-bottom:4px;">
+                <div style="text-align: center; padding-bottom:40px;">
                     <Label>ID to Display</Label>
 
                     <input name="id" type="text" value=""/>
