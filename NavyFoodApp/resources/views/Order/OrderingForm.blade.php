@@ -65,7 +65,7 @@
 
                     </div>
                     <div>
-                        <input type="submit" value="Submit" style="padding-right: 15px">
+                        <input style="padding-right: 15px" type="submit" value="Submit">
                         <input type="reset" value="Cancel">
 
                     </div>
