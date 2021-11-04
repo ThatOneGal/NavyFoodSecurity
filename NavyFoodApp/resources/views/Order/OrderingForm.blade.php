@@ -37,7 +37,7 @@
 
                     <div> {{--Order Name--}}
                         <div>
-                            <label for="CustomerId">Order Recipient</label>
+                            <label for="CustomerId" style="font-weight: bold">Order Recipient</label>
                         </div>
 
                         <div>
@@ -47,7 +47,7 @@
 
                     <div>{{--Order Content--}}
                         <div>
-                            <label for="Content">Content:</label>
+                            <label for="Content" style="font-weight: bold">Content:</label>
                         </div>
 
                         <div>
@@ -57,7 +57,7 @@
 
                     <div> {{--Notes--}}
                         <div>
-                            <label for="NotesStorage">Notes:</label>
+                            <label for="NotesStorage" style="font-weight: bold">Notes:</label>
                         </div>
                         <div>
                             <textarea name="NotesStorage" id="NotesStorage" cols="0" rows="0">{{--content list of data--}}</textarea>
