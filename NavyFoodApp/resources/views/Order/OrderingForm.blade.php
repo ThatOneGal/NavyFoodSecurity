@@ -13,12 +13,9 @@
                 <form style="text-align: center" action="{{route('order.store')}}" method="POST">
                     @csrf
 
-                    <div>
-                        <h1>Ordering Form</h1>
-                    </div>
                     <div> {{--Destination--}}
                         <div>
-                            <label for="Location">Destination:</label>
+                            <label for="Location" style="font-weight: bold">Destination:</label>
                         </div>
 
                         <div>
