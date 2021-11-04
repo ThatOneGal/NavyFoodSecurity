@@ -132,7 +132,7 @@
                             </div>
 
                         </div>
-                        <a href="{{route('order.edit', $Order)}}" style="align-items: center; background: lightsteelblue">Edit</a>
+                        <a href="{{route('order.edit', $Order)}}" style="text-align: center; background: #efefef">Edit</a>
                     </div>
                 </div>
 
