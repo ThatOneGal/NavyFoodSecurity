@@ -28,21 +28,34 @@ namespace NFA.Services
             //items.Remove(oldItem);
             //items.Add(item);
 
-            string baseLink = "https://pacific-spire-38129.herokuapp.com/api/Orders/";
-            string apiAddress = baseLink + item.id.ToString();
+            string baseLink = "https://pacific-spire-38129.herokuapp.com/";
+            string apiLink = "api/Orders/";
+            string apiindex = baseLink + item.id.ToString();
 
             var json = JsonConvert.SerializeObject(item);
 
             var client = new HttpClient();
 
-
-            var response = await client.PostAsync(apiAddress, json);
-
-
+            client.BaseAddress = new Uri(baseLink);
+            client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
 
+            HttpRequestMessage httpRequestMessage = new HttpRequestMessage();
+            httpRequestMessage = await client.PostAsJsonAsync(apiLink, item).ConfigureAwait(false);
 
-          
+            //httpRequestMessage = await client.PostAsync(apiAddress, json);
+
+
+
+            //var response = await client.PostAsync(apiAddress,);
+
+
+
+
+
+
+
+
 
 
 
