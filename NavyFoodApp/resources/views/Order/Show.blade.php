@@ -136,7 +136,7 @@
                     </div>
                 </div>
 
-                <div style="margin-left: 20px">{{--Display QR Code--}}
+                <div style="margin-left: 50px">{{--Display QR Code--}}
                     {!! QrCode::size(500)->format('svg')->generate($Order, public_path('images/qrcode.svg')) !!}
                     <img src="{{url('/images/qrcode.svg')}}"/>
 
