@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\j162548\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {}
+    "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\j162548\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {
+    "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\j162548\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
+        "projectUniqueName": "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
         "projectName": "NFA",
-        "projectPath": "C:\\Users\\j162548\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
-        "packagesPath": "C:\\Users\\j162548\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\j162548\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\obj\\",
+        "projectPath": "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
+        "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
+        "outputPath": "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\j162548\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -30,6 +30,7 @@
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -41,7 +42,12 @@
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -79,7 +85,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
