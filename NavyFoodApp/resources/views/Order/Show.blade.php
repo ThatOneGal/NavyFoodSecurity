@@ -128,11 +128,11 @@
                             </div>
                             <div>
                             <textarea name="NotesPreparation" id="NotesPreparation" cols="0"
-                                      rows="0" readonly>{{$Order->NotesPreparation}}</textarea>S
+                                      rows="0" readonly>{{$Order->NotesPreparation}}</textarea>
                             </div>
 
                         </div>
-                        <a href="{{route('order.edit', $Order)}}" style="alignment: center; background: darkgray">Edit</a>
+                        <a href="{{route('order.edit', $Order)}}" style="align-self: center; background: lightsteelblue">Edit</a>
                     </div>
                 </div>
 
