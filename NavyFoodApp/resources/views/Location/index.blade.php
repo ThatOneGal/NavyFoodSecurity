@@ -31,15 +31,15 @@
                                     @csrf
                                     <button class="button button-red" type="submit">Delete</button>
                                 </form>
-                            </td>s
+                            </td>
 
                         </tr>
 
                     @endforeach
                 </table>
-            </div>
 
-            <a href="{{route('location.create')}}" style="background: #efefef; border: black" class="button">Create New</a>
+                <a href="{{route('location.create')}}" style="background: #efefef; border: black" class="button">Create New</a>
+            </div>
         </div>
     </div>
 </x-app-layout>
