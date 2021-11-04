@@ -29,42 +29,42 @@
                     <tbody>
                     @foreach($orderList as $order)
                         <tr class="border">
-                            <td><label class="col-sm-2" for="">{{$order->id}}</label></td>
-                            <td>
+                            <td style="text-align: center"><label class="col-sm-2" for="">{{$order->id}}</label></td>
+                            <td style="text-align: center">
                                 @foreach($locationList as $location)
                                     @if ($order->LocationId == $location->id)
                                         {{$location->locationName}}
                                     @endif
                                 @endforeach
                             </td>
-                            <td>{{$order->CustomerId}}</td>
-                            <td>
+                            <td style="text-align: center">{{$order->CustomerId}}</td>
+                            <td style="text-align: center">
                                 @foreach($statusList as $status)
                                     @if ($order->StatusId == $status->id)
                                         {{$status->statusName}}
                                     @endif
                                 @endforeach
                             </td>
-                            <td>{{$order->OrderDate}}</td>
-                            <td>
+                            <td style="text-align: center">{{$order->OrderDate}}</td>
+                            <td style="text-align: center">
                                 @if($order->OrderShipped == null)
                                     0000-00-00 00:00:00
                                 @else
                                     {{$Order->OrderShipped}}
                                 @endif
                             </td>
-                            <td>
+                            <td style="text-align: center">
                                 @if($order->OrderPacked == null)
                                     0000-00-00 00:00:00
                                 @else
                                     {{$order->OrderPacked}}
                                 @endif
                             </td>
-                            <td>{{$order->PackageQty}}</td>
-                            <td>{{$order->Content}}</td>
-                            <td>{{$order->NotesStorage}}</td>
-                            <td>{{$order->NotesPreparation}}</td>
-                            <td><a href="{{route('order.edit', $order)}}">
+                            <td style="text-align: center">{{$order->PackageQty}}</td>
+                            <td style="text-align: center">{{$order->Content}}</td>
+                            <td style="text-align: center">{{$order->NotesStorage}}</td>
+                            <td style="text-align: center">{{$order->NotesPreparation}}</td>
+                            <td style="text-align: center"><a href="{{route('order.edit', $order)}}">
                                     <button class='button button-primary' type="submit">Edit</button>
                                 </a>
 
