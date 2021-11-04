@@ -7,7 +7,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg" style="display:flex; justify-content: center">
 
                 <div> {{--Destination--}}
                     <div><label for="Location">Destination:</label></div>
@@ -136,7 +136,7 @@
                     </div>
                 </div>
 
-                <div>
+                <div>{{--Display QR Code--}}
                     {!! QrCode::size(500)->format('svg')->generate($Order, public_path('images/qrcode.svg')) !!}
                     <img src="{{url('/images/qrcode.svg')}}"/>
 
