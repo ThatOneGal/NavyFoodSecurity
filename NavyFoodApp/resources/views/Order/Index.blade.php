@@ -65,13 +65,13 @@
                             <td style="text-align: center">{{$order->NotesStorage}}</td>
                             <td style="text-align: center">{{$order->NotesPreparation}}</td>
                             <td style="text-align: center"><a href="{{route('order.edit', $order)}}">
-                                    <button class='button button-primary' type="submit">Edit</button>
+                                    <button class='button button-primary' type="submit" style="background: #efefef; border: black">Edit</button>
                                 </a>
 
                                 <form method="POST" action="{{route('order.destroy', $order)}}">
                                     @csrf
                                     @method('DELETE')
-                                    <button class='button button-primary' type="submit">Delete</button>
+                                    <button class='button button-primary' type="submit" style="background: #efefef; border: black">Delete</button>
                                 </form>
                             </td>
                         </tr>

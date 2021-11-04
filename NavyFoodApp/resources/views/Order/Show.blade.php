@@ -132,7 +132,7 @@
                             </div>
 
                         </div>
-                        <a href="{{route('order.edit', $Order)}}" style="text-align: center; background: #efefef">Edit</a>
+                        <a href="{{route('order.edit', $Order)}}" style="background: #efefef; border: black">Edit</a>
                     </div>
                 </div>
 

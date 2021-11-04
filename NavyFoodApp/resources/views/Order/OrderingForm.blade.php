@@ -65,8 +65,8 @@
 
                     </div>
                     <div>
-                        <input  style="margin-right: 15px" type="submit" value="Submit">
-                        <input type="reset" value="Cancel">
+                        <input  style="margin-right: 15px; border: black" type="submit" value="Submit">
+                        <input style="border: black" type="reset" value="Cancel">
 
                     </div>
 
