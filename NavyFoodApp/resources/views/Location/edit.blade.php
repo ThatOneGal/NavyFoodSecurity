@@ -14,7 +14,7 @@
                     @method('PUT')
                     @csrf
 
-                    <div style="text-align: left; padding-bottom:4px;">
+                    <div style="text-align: center; padding-bottom:4px;">
                         <Label>Location Name
                             <input name="locationName" type="text" value="{{$location->locationName}}"/>
                         </Label>

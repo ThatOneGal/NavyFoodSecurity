@@ -9,8 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
-
-            <table class="w=100" style="text-align: center">
+                <table class="mx-auto" style="align-content: center">
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
@@ -22,23 +21,25 @@
                             <td>{{$location->locationName}}</td>
 
                             <td>
-                                <a href="{{route('location.edit', $location)}}">Edit</a>
-                            </td>
+                                <a href="{{route('location.edit', $location)}}"
+                                   style="background: #efefef; border: black; ">Edit</a>
 
-                            <td>
                                 <form method="POST" action="{{route('location.destroy', $location)}}">
                                     @method('DELETE')
                                     @csrf
-                                    <button class="button button-red" type="submit">Delete</button>
+                                    <button class="button button-red" style="background: #efefef; border: black;"
+                                            type="submit">Delete
+                                    </button>
                                 </form>
                             </td>
-
                         </tr>
-
                     @endforeach
                 </table>
 
-                <a href="{{route('location.create')}}" style="background: #efefef; border: black" class="button">Create New</a>
+                <div style="text-align: center; margin-top: 10px">
+                    <a href="{{route('location.create')}}" style="background: #efefef; border: black;"
+                        class="button">Create New</a>
+                </div>
             </div>
         </div>
     </div>

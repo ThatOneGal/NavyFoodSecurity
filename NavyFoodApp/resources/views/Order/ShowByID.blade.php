@@ -9,20 +9,23 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
-                <div> {{--Destination--}}
-                    <div><label for="Location">Destination:</label></div>
-                    <div>
+                <form style="text-align: center">
+                    @csrf
+
+                    <div> {{--Destination--}}
+                        <div><label for="Location">Destination:</label></div>
                         <div>
-                            <label for="Location">
-                                @foreach($locationList as $location)
-                                    @if ($OrderNum->LocationId == $location->id)
-                                        {{$location->locationName}}
-                                    @endif
-                                @endforeach
-                            </label>
+                            <div>
+                                <label for="Location">
+                                    @foreach($locationList as $location)
+                                        @if ($OrderNum->LocationId == $location->id)
+                                            {{$location->locationName}}
+                                        @endif
+                                    @endforeach
+                                </label>
+                            </div>
                         </div>
                     </div>
-
 
                     <div> {{--Status--}}
                         <div><label for="Status">Status:</label></div>
@@ -37,7 +40,6 @@
                             </label>
                         </div>
                     </div>
-
 
                     <div> {{--Order Date--}}
                         <div>
@@ -77,7 +79,6 @@
                         </div>
                     </div>
 
-
                     <div> {{--Packaged Qty--}}
                         <div>
                             <label for="PackageQty">Package Qty:</label>
@@ -100,7 +101,6 @@
                         </div>
                     </div>
 
-
                     <div>{{--Order Content--}}
                         <div>
                             <label for="Content">Content:</label>
@@ -120,31 +120,32 @@
                             <textarea name="NotesStorage" id="NotesStorage" cols="0"
                                       rows="0" readonly>{{$OrderNum->NotesStorage}}</textarea>
                         </div>
+                    </div>
 
-
-                        <div> {{--Notes Preparation--}}
-                            <div>
-                                <label for="NotesPreparation">Notes Preparation :</label>
-                            </div>
-                            <div>
+                    <div> {{--Notes Preparation--}}
+                        <div>
+                            <label for="NotesPreparation">Notes Preparation:</label>
+                        </div>
+                        <div>
                             <textarea name="NotesPreparation" id="NotesPreparation" cols="0"
                                       rows="0" readonly>{{$OrderNum->NotesPreparation}}</textarea>
-                            </div>
-
                         </div>
+                    </div>
+
+                    <div style="margin-top: 10px">
                         <a href="{{route('order.edit', $OrderNum)}}">Edit</a>
                     </div>
-                </div>
-
-                <div>
-                    {!! QrCode::size(500)->format('svg')->generate($OrderNum, public_path('images/qrcode.svg')) !!}
-                    <img src="{{url('/images/qrcode.svg')}}"/>
-
-
-                </div>
-
+                </form>
             </div>
         </div>
+
+        <div>
+            {!! QrCode::size(250)->format('svg')->generate($OrderNum, public_path('images/qrcode.svg')) !!}
+            <img src="{{url('/images/qrcode.svg')}}"/>
+        </div>
+
+    </div>
+    </div>
     </div>
 
 </x-app-layout>

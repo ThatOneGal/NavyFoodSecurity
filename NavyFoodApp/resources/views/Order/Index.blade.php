@@ -13,7 +13,7 @@
                     {{--Table header--}}
                     <thead>
                     <tr>
-                        <th>Order Id</th>
+                        <th>Order ID</th>
                         <th>Destination</th>
                         <th>Recipient</th>
                         <th>Status</th>

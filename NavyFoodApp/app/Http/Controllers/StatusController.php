@@ -39,7 +39,7 @@ class StatusController extends Controller
         $status = new Status();
         $status -> fill($request -> all());
         $status -> save();
-        return redirect(route('Status.index'));
+        return redirect(route('status.index'));
     }
 
     /**

@@ -59,8 +59,8 @@
                         <div>
                             <textarea name="NotesStorage" id="NotesStorage" cols="0" rows="0">{{--content list of data--}}</textarea>
                         </div>
-
                     </div>
+
                     <div>
                         <input  style="margin-right: 15px; border: black" type="submit" value="Submit">
                         <input style="border: black" type="reset" value="Cancel">
