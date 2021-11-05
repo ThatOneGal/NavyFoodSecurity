@@ -7,25 +7,22 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg" style="display:flex; align-items: center; justify-content: center">
 
-                <form style="text-align: center">
-                    @csrf
-
-                    <div> {{--Destination--}}
-                        <div><label for="Location" style="font-weight: bold">Destination:</label></div>
+                <div> {{--Destination--}}
+                    <div><label for="Location" style="font-weight: bold">Destination:</label></div>
+                    <div>
                         <div>
-                            <div>
-                                <label for="Location">
-                                    @foreach($locationList as $location)
-                                        @if ($Order->LocationId == $location->id)
-                                            {{$location->locationName}}
-                                        @endif
-                                    @endforeach
-                                </label>
-                            </div>
+                            <label for="Location">
+                                @foreach($locationList as $location)
+                                    @if ($Order->LocationId == $location->id)
+                                        {{$location->locationName}}
+                                    @endif
+                                @endforeach
+                            </label>
                         </div>
                     </div>
+
 
                     <div> {{--Status--}}
                         <div><label for="Status" style="font-weight: bold">Status:</label></div>
@@ -41,12 +38,13 @@
                         </div>
                     </div>
 
+
                     <div> {{--Order Date--}}
                         <div>
                             <label for="OrderDate" style="font-weight: bold">Date Ordered:</label>
                         </div>
                         <div>
-                            <label for="OrderDate" style="font-weight: bold">{{$Order->OrderDate}}</label>
+                            <label for="OrderDate">{{$Order->OrderDate}}</label>
                         </div>
                     </div>
 
@@ -55,7 +53,7 @@
                             <label for="OrderShipped" style="font-weight: bold">Date Shipped:</label>
                         </div>
                         <div>
-                            <label for="OrderShipped" style="font-weight: bold">
+                            <label for="OrderShipped">
                                 @if($Order->OrderShipped == null)
                                     0000-00-00 00:00:00
                                 @else
@@ -69,7 +67,7 @@
                             <label for="OrderPacked" style="font-weight: bold">Date Packed:</label>
                         </div>
                         <div>
-                            <label for="OrderPacked" style="font-weight: bold">
+                            <label for="OrderPacked">
                                 @if($Order->OrderPacked == null)
                                     0000-00-00 00:00:00
                                 @else
@@ -78,6 +76,7 @@
                             </label>
                         </div>
                     </div>
+
 
                     <div> {{--Packaged Qty--}}
                         <div>
@@ -101,6 +100,7 @@
                         </div>
                     </div>
 
+
                     <div>{{--Order Content--}}
                         <div>
                             <label for="Content" style="font-weight: bold">Content:</label>
@@ -120,32 +120,31 @@
                             <textarea name="NotesStorage" id="NotesStorage" cols="0"
                                       rows="0" readonly>{{$Order->NotesStorage}}</textarea>
                         </div>
-                    </div>
 
-                    <div> {{--Notes Preparation--}}
-                        <div>
-                            <label for="NotesPreparation" style="font-weight: bold">Notes Preparation:</label>
-                        </div>
-                        <div>
+
+                        <div> {{--Notes Preparation--}}
+                            <div>
+                                <label for="NotesPreparation" style="font-weight: bold">Notes Preparation :</label>
+                            </div>
+                            <div>
                             <textarea name="NotesPreparation" id="NotesPreparation" cols="0"
                                       rows="0" readonly>{{$Order->NotesPreparation}}</textarea>
-                        </div>
-                    </div>
+                            </div>
 
-                    <div style="margin-top: 10px">
-                        <a href="{{route('order.edit', $Order)}}">Edit</a>
+                        </div>
+                        <a href="{{route('order.edit', $Order)}}" style="background: #efefef; border: black">Edit</a>
                     </div>
-                </form>
-                <div>
-                    {!! QrCode::size(250)->format('svg')->generate($Order, public_path('images/qrcode.svg')) !!}
-                    <img src="{{url('/images/qrcode.svg')}}"/>
                 </div>
+
+                <div style="margin-left: 200px">{{--Display QR Code--}}
+                    {!! QrCode::size(500)->format('svg')->generate($Order, public_path('images/qrcode.svg')) !!}
+                    <img src="{{url('/images/qrcode.svg')}}"/>
+
+
+                </div>
+
             </div>
         </div>
-
-
-    </div>
-    </div>
     </div>
 
 </x-app-layout>
