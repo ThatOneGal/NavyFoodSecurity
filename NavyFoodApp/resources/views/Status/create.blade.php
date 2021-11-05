@@ -12,7 +12,7 @@
             <form method="POST" action="{{route('status.store')}}" style="text-align: center">
                 @csrf
 
-                <div style="text-align: left; padding-bottom:4px;">
+                <div style="text-align: center; padding-bottom:4px;">
                     <Label>Status Name
                         <input name="statusName" type="text"/>
                     </Label>
