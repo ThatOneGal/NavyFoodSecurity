@@ -21,7 +21,7 @@
                     <input type="submit" class="button" value="Send"/>
                 </div>
             </form>
+            </div>
         </div>
     </div>
-</div>
 </x-app-layout>
