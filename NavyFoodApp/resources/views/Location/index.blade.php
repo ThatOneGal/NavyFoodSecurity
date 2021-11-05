@@ -9,7 +9,6 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
-
                 <table class="mx-auto" style="align-content: center">
                     <tr>
                         <th>ID</th>
@@ -28,18 +27,16 @@
                                 <form method="POST" action="{{route('location.destroy', $location)}}">
                                     @method('DELETE')
                                     @csrf
-                                    <button class="button button-red" style="background: #efefef; border: black; "
+                                    <button class="button button-red" style="background: #efefef; border: black;"
                                             type="submit">Delete
                                     </button>
                                 </form>
                             </td>
-
                         </tr>
-
                     @endforeach
                 </table>
 
-                <a href="{{route('location.create')}}" style="background: #efefef; border: black; align-content: center"
+                <a href="{{route('location.create')}}" style="background: #efefef; border: black; alignment: center"
                    class="button">Create New</a>
             </div>
         </div>
