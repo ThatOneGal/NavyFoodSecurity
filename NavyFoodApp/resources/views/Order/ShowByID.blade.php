@@ -130,7 +130,7 @@
                             <textarea name="NotesPreparation" id="NotesPreparation" cols="0"
                                       rows="0" readonly>{{$OrderNum->NotesPreparation}}</textarea>
                             </div>
-                            <div style="text-align: center">
+                            <div style="align-content: center">
                                 <a href="{{route('order.edit', $OrderNum)}}" >Edit</a>
                             </div>
 
