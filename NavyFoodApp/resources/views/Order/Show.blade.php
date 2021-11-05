@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Order:') }} {{$OrderNum->id}}
+            {{ __('Order:') }} {{$Order->id}}
         </h2>
     </x-slot>
 
@@ -18,7 +18,7 @@
                             <div>
                                 <label for="Location">
                                     @foreach($locationList as $location)
-                                        @if ($OrderNum->LocationId == $location->id)
+                                        @if ($Order->LocationId == $location->id)
                                             {{$location->locationName}}
                                         @endif
                                     @endforeach
@@ -33,7 +33,7 @@
                         <div>
                             <label for="Status">
                                 @foreach($statusList as $status)
-                                    @if ($OrderNum->StatusId == $status->id)
+                                    @if ($Order->StatusId == $status->id)
                                         {{$status->statusName}}
                                     @endif
                                 @endforeach
@@ -46,7 +46,7 @@
                             <label for="OrderDate">Date Ordered:</label>
                         </div>
                         <div>
-                            <label for="OrderDate">{{$OrderNum->OrderDate}}</label>
+                            <label for="OrderDate">{{$Order->OrderDate}}</label>
                         </div>
                     </div>
 
@@ -56,10 +56,10 @@
                         </div>
                         <div>
                             <label for="OrderShipped">
-                                @if($OrderNum->OrderShipped == null)
+                                @if($Order->OrderShipped == null)
                                     0000-00-00 00:00:00
                                 @else
-                                    {{$OrderNum->OrderShipped}}
+                                    {{$Order->OrderShipped}}
                                 @endif </label>
                         </div>
                     </div>
@@ -70,10 +70,10 @@
                         </div>
                         <div>
                             <label for="OrderPacked">
-                                @if($OrderNum->OrderPacked == null)
+                                @if($Order->OrderPacked == null)
                                     0000-00-00 00:00:00
                                 @else
-                                    {{$OrderNum->OrderPacked}}
+                                    {{$Order->OrderPacked}}
                                 @endif
                             </label>
                         </div>
@@ -85,7 +85,7 @@
                         </div>
                         <div>
                             <textarea name="PackageQty" id="PackageQty" cols="0"
-                                      rows="0" readonly>{{$OrderNum->PackageQty}}</textarea>
+                                      rows="0" readonly>{{$Order->PackageQty}}</textarea>
                         </div>
 
                     </div>
@@ -97,7 +97,7 @@
 
                         <div>
                             <input type="text" id="CustomerId"
-                                   value="{{$OrderNUm->CustomerId }} {{--Variable for users details--}} " readonly>
+                                   value="{{$Order->CustomerId }} {{--Variable for users details--}} " readonly>
                         </div>
                     </div>
 
@@ -108,7 +108,7 @@
 
                         <div>
                             <textarea name="Content" id="Content" cols="0" rows="0"
-                                      readonly>{{$OrderNum->Content}}</textarea>
+                                      readonly>{{$Order->Content}}</textarea>
                         </div>
                     </div>
 
@@ -118,7 +118,7 @@
                         </div>
                         <div>
                             <textarea name="NotesStorage" id="NotesStorage" cols="0"
-                                      rows="0" readonly>{{$OrderNum->NotesStorage}}</textarea>
+                                      rows="0" readonly>{{$Order->NotesStorage}}</textarea>
                         </div>
                     </div>
 
@@ -128,19 +128,19 @@
                         </div>
                         <div>
                             <textarea name="NotesPreparation" id="NotesPreparation" cols="0"
-                                      rows="0" readonly>{{$OrderNum->NotesPreparation}}</textarea>
+                                      rows="0" readonly>{{$Order->NotesPreparation}}</textarea>
                         </div>
                     </div>
 
                     <div style="margin-top: 10px">
-                        <a href="{{route('order.edit', $OrderNum)}}">Edit</a>
+                        <a href="{{route('order.edit', $Order)}}">Edit</a>
                     </div>
                 </form>
             </div>
         </div>
 
         <div>
-            {!! QrCode::size(250)->format('svg')->generate($OrderNum, public_path('images/qrcode.svg')) !!}
+            {!! QrCode::size(250)->format('svg')->generate($Order, public_path('images/qrcode.svg')) !!}
             <img src="{{url('/images/qrcode.svg')}}"/>
         </div>
 
