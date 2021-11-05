@@ -17,9 +17,7 @@
                         <Label>Location Name
                             <input name="statusName" type="text" value="{{$status->statusName}}"/>
                         </Label>
-                    </div>
-
-                    <div style="text-align: center;">
+                        
                         <input type="submit" class="button" value="Send"/>
                     </div>
                 </form>

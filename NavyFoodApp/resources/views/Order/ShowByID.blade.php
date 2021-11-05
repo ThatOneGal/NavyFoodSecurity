@@ -124,7 +124,7 @@
 
                         <div> {{--Notes Preparation--}}
                             <div>
-                                <label for="NotesPreparation">Notes Preparation :</label>
+                                <label for="NotesPreparation">Notes Preparation:</label>
                             </div>
                             <div>
                             <textarea name="NotesPreparation" id="NotesPreparation" cols="0"
@@ -132,7 +132,7 @@
                             </div>
 
                             <div style="align-content: center; margin-top: 10px">
-                                <a href="{{route('order.edit', $OrderNum)}}" >Edit</a>
+                                <a href="{{route('order.edit', $OrderNum)}}">Edit</a>
                             </div>
 
                         </div>
