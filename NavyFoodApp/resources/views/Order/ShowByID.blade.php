@@ -11,6 +11,7 @@
 
                 <form style="text-align: center">
                     @csrf
+
                     <div> {{--Destination--}}
                         <div><label for="Location">Destination:</label></div>
                         <div>
@@ -39,7 +40,6 @@
                             </label>
                         </div>
                     </div>
-
 
                     <div> {{--Order Date--}}
                         <div>
@@ -79,7 +79,6 @@
                         </div>
                     </div>
 
-
                     <div> {{--Packaged Qty--}}
                         <div>
                             <label for="PackageQty">Package Qty:</label>
@@ -102,7 +101,6 @@
                         </div>
                     </div>
 
-
                     <div>{{--Order Content--}}
                         <div>
                             <label for="Content">Content:</label>
@@ -124,7 +122,6 @@
                         </div>
                     </div>
 
-
                     <div> {{--Notes Preparation--}}
                         <div>
                             <label for="NotesPreparation">Notes Preparation:</label>
@@ -142,10 +139,8 @@
             </div>
         </div>
 
-
-
         <div>
-            {!! QrCode::size(500)->format('svg')->generate($OrderNum, public_path('images/qrcode.svg')) !!}
+            {!! QrCode::size(400)->format('svg')->generate($OrderNum, public_path('images/qrcode.svg')) !!}
             <img src="{{url('/images/qrcode.svg')}}"/>
         </div>
 
