@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
 
-            <table class="w=100" style="text-align: center">
+            <table class="mx-auto" style="align-content: center">
                     <tr>
                         <th>ID</th>
                         <th>Name</th>

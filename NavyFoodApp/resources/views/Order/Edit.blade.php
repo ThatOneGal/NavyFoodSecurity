@@ -31,7 +31,6 @@
                         </div>
                     </div>
 
-
                     <div> {{--Status--}}
                         <div><label for="Status">Status</label></div>
 
