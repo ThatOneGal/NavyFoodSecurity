@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
 
-            <table class="mx-auto" style="align-content: center">
+                <table class="mx-auto" style="align-content: center">
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
@@ -22,14 +22,15 @@
                             <td>{{$location->locationName}}</td>
 
                             <td>
-                                <a href="{{route('location.edit', $location)}}" style="background: #efefef; border: black; ">Edit</a>
-                            </td>
+                                <a href="{{route('location.edit', $location)}}"
+                                   style="background: #efefef; border: black; ">Edit</a>
 
-                            <td>
                                 <form method="POST" action="{{route('location.destroy', $location)}}">
                                     @method('DELETE')
                                     @csrf
-                                    <button class="button button-red" style="background: #efefef; border: black; " type="submit">Delete</button>
+                                    <button class="button button-red" style="background: #efefef; border: black; "
+                                            type="submit">Delete
+                                    </button>
                                 </form>
                             </td>
 
@@ -38,7 +39,8 @@
                     @endforeach
                 </table>
 
-                <a href="{{route('location.create')}}" style="background: #efefef; border: black; align-content: center" class="button">Create New</a>
+                <a href="{{route('location.create')}}" style="background: #efefef; border: black; align-content: center"
+                   class="button">Create New</a>
             </div>
         </div>
     </div>
