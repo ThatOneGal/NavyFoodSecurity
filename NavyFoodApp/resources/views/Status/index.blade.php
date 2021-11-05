@@ -21,24 +21,28 @@
                             <td>{{$status->statusName}}</td>
 
                             <td>
-                                <a href="{{route('status.edit', $status)}}">Edit</a>
+                                <a href="{{route('status.edit', $status)}}" style="background: #efefef; border: black;">Edit</a>
                             </td>
 
                             <td>
                                 <form method="POST" action="{{route('status.destroy', $status)}}">
                                     @method('DELETE')
                                     @csrf
-                                    <button class="button button-red" type="submit">Delete</button>
+                                    <button class="button button-red" type="submit" style="background: #efefef; border: black;">Delete</button>
                                 </form>
                             </td>
 
                         </tr>
 
                     @endforeach
+                    <div style="text-align: center; margin-top: 10px">
+                        <a href="{{route('status.create')}}" style="background: #efefef; border: black;"
+                           class="button">Create New</a>
+                    </div>
                 </table>
             </div>
 
-            <a href="{{route('status.create')}}" class="button">Create New</a>
+
 
         </div>
     </div>
