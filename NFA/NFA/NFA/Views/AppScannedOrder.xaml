@@ -10,9 +10,15 @@
 
 
     <ContentPage.BindingContext>
-        <vm:AppOrderModel />
+        <vm:AppOrderModel/>
     </ContentPage.BindingContext>
-
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
     <StackLayout>
         <ListView x:Name="ItemsListView"

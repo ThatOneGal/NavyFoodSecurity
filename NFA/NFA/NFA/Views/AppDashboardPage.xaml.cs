@@ -37,7 +37,9 @@ namespace NFA.Views
                 //if (result.BarcodeFormat == BarcodeFormat.QR_CODE && result.Text.Contains("NFA"))
                 {
                     //scan success
-                    await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder()));
+
+
+                    await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder(result.Text)));
                 }
                 else
                 {
