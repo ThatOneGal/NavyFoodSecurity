@@ -22,14 +22,14 @@
                             <td>{{$location->locationName}}</td>
 
                             <td>
-                                <a href="{{route('location.edit', $location)}}">Edit</a>
+                                <a href="{{route('location.edit', $location)}}" style="background: #efefef; border: black; ">Edit</a>
                             </td>
 
                             <td>
                                 <form method="POST" action="{{route('location.destroy', $location)}}">
                                     @method('DELETE')
                                     @csrf
-                                    <button class="button button-red" type="submit">Delete</button>
+                                    <button class="button button-red" style="background: #efefef; border: black; " type="submit">Delete</button>
                                 </form>
                             </td>
 
@@ -38,7 +38,7 @@
                     @endforeach
                 </table>
 
-                <a href="{{route('location.create')}}" style="background: #efefef; border: black" class="button">Create New</a>
+                <a href="{{route('location.create')}}" style="background: #efefef; border: black; align-content: center" class="button">Create New</a>
             </div>
         </div>
     </div>
