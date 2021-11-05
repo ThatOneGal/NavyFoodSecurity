@@ -131,26 +131,28 @@
                             <textarea name="NotesStorage" id="NotesStorage" cols="0"
                                       rows="0">{{$Order->NotesStorage}}</textarea>
                         </div>
+                    </div>
 
 
-                        <div> {{--Notes Preparation--}}
-                            <div>
-                                <label for="NotesPreparation" style="font-weight: bold">Notes Preparation :</label>
-                            </div>
-                            <div>
-                            <textarea name="NotesPreparation" id="NotesPreparation" cols="0"
-                                      rows="0">{{$Order->NotesPreparation}}</textarea>
-                            </div>
-
+                    <div> {{--Notes Preparation--}}
+                        <div>
+                            <label for="NotesPreparation" style="font-weight: bold">Notes Preparation :</label>
                         </div>
                         <div>
-                            <input type="submit" value="Submit">
-
-                            <input type="reset" value="Cancel">
+                            <textarea name="NotesPreparation" id="NotesPreparation" cols="0"
+                                      rows="0">{{$Order->NotesPreparation}}</textarea>
                         </div>
 
-                </form>
+                    </div>
 
+
+                    <div>
+                        <input type="submit" value="Submit">
+
+                        <input type="reset" value="Cancel">
+                    </div>
+
+                </form>
 
             </div>
         </div>
