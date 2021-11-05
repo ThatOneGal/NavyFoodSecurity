@@ -30,33 +30,25 @@ namespace NFA.Services
 
             string baseLink = "https://pacific-spire-38129.herokuapp.com/";
             string apiLink = "api/Orders/";
-            string apiindex = baseLink + item.id.ToString();
+            string apiindex = apiLink + item.id.ToString();
 
             var json = JsonConvert.SerializeObject(item);
 
             var client = new HttpClient();
 
+            //client setup
             client.BaseAddress = new Uri(baseLink);
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
+            //order data update
+            var content = new StringContent(json.ToString(), System.Text.Encoding.UTF8, "application/json");
 
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage();
-            httpRequestMessage = await client.PostAsJsonAsync(apiLink, item).ConfigureAwait(false);
+            var response = await client.PostAsync(baseLink+apiindex,content);
+
+            //httpRequestMessage = await client.PostAsJsonAsync(apiLink, item).ConfigureAwait(false);
 
             //httpRequestMessage = await client.PostAsync(apiAddress, json);
-
-
-
-            //var response = await client.PostAsync(apiAddress,);
-
-
-
-
-
-
-
-
-
 
 
             return await Task.FromResult(true);
@@ -75,9 +67,13 @@ namespace NFA.Services
             var response = await client.GetAsync(apiAddress);
             var responseString = await response.Content.ReadAsStringAsync();
 
-            Order RequestedOrder = JsonConvert.DeserializeObject<Order>(responseString);
+            Order jsonorder = JsonConvert.DeserializeObject<Order>(responseString);
+            Order RequestedOrder = new Order();
+            RequestedOrder = jsonorder;
+         
+
             // try catch snytax 
-            
+
 
             /*
             var client = new HttpClient();

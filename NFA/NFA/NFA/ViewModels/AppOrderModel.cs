@@ -4,43 +4,58 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using NFA.Models;
 using NFA.Views;
+using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace NFA.ViewModels
 {
     public class AppOrderModel : BaseViewModel
     {
-        /*
-         * note-may not be needed 
-                private Command loadOrderCommand;
+        
+         //* note-may not be needed
+        //public Command loadOrderCommand { get; set; }
 
-                public ICommand LoadOrderCommand
-                {
-                    get
-                    {
-                        if (loadOrderCommand == null)
-                        {
-                            loadOrderCommand = new Command(LoadOrder);
-                        }
 
-                        return loadOrderCommand;
-                    }
-                }
 
-                private void LoadOrder()
-                {
 
-                }
-        */
-        public Order Order { get; set; }
-        public AppOrderModel(Order order = null)
+        public Order Order { get; set; } = null;
+        public AppOrderModel(Order order)
         {
+            //loadOrderCommand = new Command(async () => await ExecuteLoadOrderCommand());
+
             Title = order?.id.ToString();
             Order = order;
+
+        }
+        public AppOrderModel()
+        {
 
         }
 
 
 
+        //async Task ExecuteLoadOrderCommand()
+        //{
+        //    if (IsBusy)
+        //        return;
 
-    }
-}
+        //    IsBusy = true;
+
+        //    try
+        //    {
+        //        Order = null;
+
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Debug.WriteLine(ex);
+        //    }
+        //    finally
+        //    {
+        //        IsBusy = false;
+        //    }
+        //}
+
+    } // base view
+} // namespace

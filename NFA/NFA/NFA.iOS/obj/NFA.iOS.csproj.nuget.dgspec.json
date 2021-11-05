@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA.iOS\\NFA.iOS.csproj": {}
+    "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA.iOS\\NFA.iOS.csproj": {}
   },
   "projects": {
-    "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA.iOS\\NFA.iOS.csproj": {
+    "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA.iOS\\NFA.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA.iOS\\NFA.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA.iOS\\NFA.iOS.csproj",
         "projectName": "NFA.iOS",
-        "projectPath": "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA.iOS\\NFA.iOS.csproj",
-        "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
-        "outputPath": "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA.iOS\\obj\\",
+        "projectPath": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA.iOS\\NFA.iOS.csproj",
+        "packagesPath": "C:\\Users\\William  Te\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\William  Te\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {
-                "projectPath": "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj"
+              "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {
+                "projectPath": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj"
               }
             }
           }
@@ -65,20 +65,20 @@
         }
       }
     },
-    "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {
+    "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
+        "projectUniqueName": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
         "projectName": "NFA",
-        "projectPath": "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
-        "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
-        "outputPath": "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\obj\\",
+        "projectPath": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
+        "packagesPath": "C:\\Users\\William  Te\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\William  Te\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
