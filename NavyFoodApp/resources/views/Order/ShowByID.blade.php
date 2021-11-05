@@ -130,7 +130,10 @@
                             <textarea name="NotesPreparation" id="NotesPreparation" cols="0"
                                       rows="0" readonly>{{$OrderNum->NotesPreparation}}</textarea>
                             </div>
-                            <a href="{{route('order.edit', $OrderNum)}}" style="text-align: center">Edit</a>
+                            <div style="text-align: center">
+                                <a href="{{route('order.edit', $OrderNum)}}" >Edit</a>
+                            </div>
+
                         </div>
 
                     </div>
@@ -139,8 +142,6 @@
                 <div>
                     {!! QrCode::size(500)->format('svg')->generate($OrderNum, public_path('images/qrcode.svg')) !!}
                     <img src="{{url('/images/qrcode.svg')}}"/>
-
-
                 </div>
 
             </div>
