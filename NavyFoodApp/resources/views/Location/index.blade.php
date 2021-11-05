@@ -36,7 +36,7 @@
                     @endforeach
                 </table>
 
-                <div style="align-content: center">
+                <div style="text-align: center">
                     <a href="{{route('location.create')}}" style="background: #efefef; border: black;"
                         class="button">Create New</a>
                 </div>
