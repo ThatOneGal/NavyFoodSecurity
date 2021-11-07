@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
-                <table class="mx-auto" style="text-align: center; mso-cellspacing: 20px">
+                <table class="mx-auto">
                     {{--Table header--}}
                     <thead>
                     <tr>
