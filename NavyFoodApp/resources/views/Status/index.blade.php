@@ -9,12 +9,15 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
-                <table class="mx-auto" style="align-content: center">
+                <table class="mx-auto">
+                    {{--Table header--}}
+                    <thead>
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
                     </tr>
-
+                    </thead>
+                    <tbody>
                     @foreach($status as $status)
                         <tr class="text-center">
                             <td>{{$status->id}}</td>
@@ -34,7 +37,8 @@
                         </tr>
 
                     @endforeach
-                </table>
+                    </tbody>
+                </table>s
 
                 <div style="text-align: center; margin-top: 10px">
                     <a href="{{route('status.create')}}" style="background: #efefef; border: black;"
