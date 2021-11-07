@@ -40,7 +40,7 @@
                     </tbody>
                 </table>
 
-                <div style="text-align: center; margin-top: 10px; margin-bottom: 10px">
+                <div style="text-align: center; margin-bottom: 10px">
                     <a href="{{route('status.create')}}" style="background: #efefef; border: black;"
                        class="button">Create New</a>
                 </div>
