@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
-                <table class="mx-auto">
+                <table class="mx-auto" style="text-align: center; mso-cellspacing: 20px">
                     {{--Table header--}}
                     <thead>
                     <tr>
@@ -38,7 +38,7 @@
 
                     @endforeach
                     </tbody>
-                </table>s
+                </table>
 
                 <div style="text-align: center; margin-top: 10px">
                     <a href="{{route('status.create')}}" style="background: #efefef; border: black;"
