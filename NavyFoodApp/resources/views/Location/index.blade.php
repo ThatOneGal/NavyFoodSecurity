@@ -9,12 +9,15 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
-                <table class="mx-auto" style="align-content: center">
+                <table class="mx-auto" cellpadding="15" cellspacing="15">
+                    {{--Table header--}}
+                    <thead>
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
                     </tr>
-
+                    </thead>
+                    <tbody>
                     @foreach($locations as $location)
                         <tr>
                             <td>{{$location->id}}</td>
@@ -33,7 +36,9 @@
                                 </form>
                             </td>
                         </tr>
+
                     @endforeach
+                    </tbody>
                 </table>
 
                 <div style="text-align: center; margin-top: 10px">

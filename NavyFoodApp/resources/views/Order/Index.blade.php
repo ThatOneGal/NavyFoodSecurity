@@ -9,7 +9,7 @@
         <div class="max-w17xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
-                <table class="mx-auto">
+                <table class="mx-auto" cellpadding="5" cellspacing="5">
                     {{--Table header--}}
                     <thead>
                     <tr>
