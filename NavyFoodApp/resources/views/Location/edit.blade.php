@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
 
-            <form method="POST" action="{{route('location.update', $location)}}">
+            <form method="POST" action="{{route('location.update', $location)}}" style="margin-top: 10px; margin-bottom: 10px">
                     @method('PUT')
                     @csrf
 

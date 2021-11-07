@@ -9,10 +9,10 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
-                <table class="mx-auto" cellpadding="15" cellspacing="15">
+                <table class="mx-auto" cellpadding="15" cellspacing="15" style="margin-top: 10px; margin-bottom: 10px">
                     {{--Table header--}}
                     <thead>
-                    <tr class="border">
+                    <tr>
                         <th>ID</th>
                         <th>Name</th>
                     </tr>

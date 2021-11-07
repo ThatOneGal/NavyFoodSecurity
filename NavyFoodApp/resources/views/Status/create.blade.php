@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
-            <form method="POST" action="{{route('status.store')}}" style="text-align: center">
+            <form method="POST" action="{{route('status.store')}}" style="text-align: center; margin-top: 10px; margin-bottom: 10px"">
                 @csrf
 
                 <div style="text-align: center; padding-bottom:4px;">

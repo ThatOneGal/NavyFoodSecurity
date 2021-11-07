@@ -12,7 +12,7 @@
                 {{--
                                 <form method="GET" action="{{view('/showID'),['OrderNum']}}">
                 --}}
-                <form method="GET" action="{{route('showById'),}}">
+                <form method="GET" action="{{route('showById'),}}" style="margin-top: 10px; margin-bottom: 10px">
                 @csrf
 
                 <div style="text-align: center; padding-bottom:10px;">

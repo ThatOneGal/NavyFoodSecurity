@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
-                <form style="text-align: center" action="{{route('order.update', $Order)}}" method="POST">
+                <form style="text-align: center; margin-top: 10px; margin-bottom: 10px"" action="{{route('order.update', $Order)}}" method="POST">
                     @csrf
                     @method('PUT')
                     <div> {{--Destination--}}
