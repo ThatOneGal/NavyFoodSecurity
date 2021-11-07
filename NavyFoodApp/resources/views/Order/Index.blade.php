@@ -12,7 +12,7 @@
                 <table class="mx-auto" cellpadding="5" cellspacing="5">
                     {{--Table header--}}
                     <thead>
-                    <tr>
+                    <tr class="border">
                         <th>Order ID</th>
                         <th>Destination</th>
                         <th>Recipient</th>

@@ -12,14 +12,14 @@
                 <table class="mx-auto" cellpadding="15" cellspacing="15">
                     {{--Table header--}}
                     <thead>
-                    <tr>
+                    <tr class="border">
                         <th>ID</th>
                         <th>Name</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach($locations as $location)
-                        <tr>
+                        <tr class="border">
                             <td>{{$location->id}}</td>
                             <td>{{$location->locationName}}</td>
 
