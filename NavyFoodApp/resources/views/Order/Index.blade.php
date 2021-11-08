@@ -64,7 +64,8 @@
                             <td style="text-align: center">{{$order->Content}}</td>
                             <td style="text-align: center">{{$order->NotesStorage}}</td>
                             <td style="text-align: center">{{$order->NotesPreparation}}</td>
-                            <td style="text-align: center"><a href="{{route('order.edit', $order)}}">
+                            <td style="text-align: center">
+                                <a href="{{route('order.edit', $order)}}">
                                     <button class='button button-primary' type="submit" style="background: #efefef; border: black; margin-bottom: 3px;">Edit</button>
                                 </a>
 

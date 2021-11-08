@@ -23,7 +23,7 @@
                             <td>{{$location->id}}</td>
                             <td>{{$location->locationName}}</td>
 
-                            <td>
+                            <td style="text-align: center">
                                 <a href="{{route('location.edit', $location)}}"
                                    style="background: #efefef; border: black; ">Edit</a>
 

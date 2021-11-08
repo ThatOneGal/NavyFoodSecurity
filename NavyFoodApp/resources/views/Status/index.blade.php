@@ -23,7 +23,7 @@
                             <td>{{$status->id}}</td>
                             <td>{{$status->statusName}}</td>
 
-                            <td>
+                            <td style="text-align: center">
                                 <a href="{{route('status.edit', $status)}}" style="background: #efefef; border: black;">Edit</a>
 
                                 <form method="POST" action="{{route('status.destroy', $status)}}">
