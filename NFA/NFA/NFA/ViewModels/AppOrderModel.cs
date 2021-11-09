@@ -11,11 +11,11 @@ namespace NFA.ViewModels
 {
     public class AppOrderModel : BaseViewModel
     {
-        
-         //* note-may not be needed
+
+        //* note-may not be needed
         //public Command loadOrderCommand { get; set; }
 
-
+        public Newtonsoft.Json.Linq.JObject PulledApi { get; set; } = null;
 
 
         public Order Order { get; set; } = null;
