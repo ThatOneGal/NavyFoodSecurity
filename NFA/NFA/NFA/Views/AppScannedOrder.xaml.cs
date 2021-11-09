@@ -20,7 +20,6 @@ namespace NFA.Views
         {
             getOrderAsync(orderId);
 
-            InitializeComponent();
 
         }
 

@@ -15,6 +15,7 @@ namespace NFA.Services
         public AppDataManagement()
         {
             Order ScannedOrder = null;
+            JObject apiPulled = null;
         }
 
 
@@ -53,7 +54,7 @@ namespace NFA.Services
 
             return await Task.FromResult(true);
 
-        }
+        } 
 
 
         public async Task<Order> GetItemAsync(string id)
@@ -93,6 +94,7 @@ namespace NFA.Services
             return await Task.FromResult(RequestedOrder);
 
         }
+
 
 
         public Task<bool> GetApiOrderAsync(string orderId)
