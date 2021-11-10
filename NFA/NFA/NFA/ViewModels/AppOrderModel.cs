@@ -24,7 +24,15 @@ namespace NFA.ViewModels
         {
             //loadOrderCommand = new Command(async () => await ExecuteLoadOrderCommand());
             Title = order.Value<JObject>("id").ToString();
-            PulledApi = order;
+            Order.id = (int)order.Value<JObject>("id");
+            //Order.CustomerId = (int)order.Value<JObject>("CustomerId");
+            //Order.DriverId = (int)order.Value<JObject>("DriverId");
+            //Order.LocationId = (int)order.Value<JObject>("LocationId");
+            //Order.StatusId = (int)order.Value<JObject>("StatusId");
+            //Order.PackerId = (int)order.Value<JObject>("PackerId");
+            //Order.Content = order.Value<JObject>("Content").ToString() ;
+            //Order.NotesPreparation = order.Value<JObject>("NotesPreparation").ToString();
+            //Order.NotesStorage = order.Value<JObject>("NotesStorage").ToString();
 
         }
         public AppOrderModel()

@@ -24,7 +24,6 @@
         <ListView x:Name="ItemsListView"
                 VerticalOptions="FillAndExpand"
                 HasUnevenRows="true"
-                RefreshCommand="{Binding LoadItemsCommand}"
                 IsPullToRefreshEnabled="true"
                 CachingStrategy="RecycleElement"
                   >
@@ -35,14 +34,14 @@
                         <StackLayout Padding="10">
                             <!--order id--> 
 
-                            <Label Text="{Binding id}" 
+                            <Label Text="{Binding Order.id}" 
                                 d:Text="{Binding .}"
                                 Style="{DynamicResource ListItemTextStyle}" 
                                 FontSize="16" />
                             
                             <!--Location id-->
 
-                            <Label Text="{Binding locationId}" 
+                            <Label Text="Binding locationId" 
                                 d:Text="Location"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
                                 FontSize="13" />

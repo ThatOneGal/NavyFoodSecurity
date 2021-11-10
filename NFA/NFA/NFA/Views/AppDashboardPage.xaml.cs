@@ -38,8 +38,9 @@ namespace NFA.Views
                 {
                     //scan success
 
-
+                    
                     await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder(result.Text)));
+                   
                 }
                 else
                 {

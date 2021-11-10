@@ -19,6 +19,7 @@ namespace NFA.Views
         public AppScannedOrder(string orderId)
         {
             getOrderAsync(orderId);
+            InitializeComponent();
 
 
         }
@@ -31,6 +32,7 @@ namespace NFA.Views
             try
             {
                 OrderModel.PulledApi = await dataManagement.GetItemAsync(id);
+                await DisplayAlert("sda", OrderModel.PulledApi.ToString(), "cancel");
 
             }
 
