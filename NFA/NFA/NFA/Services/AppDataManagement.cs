@@ -9,7 +9,7 @@ using NFA.Models;
 
 namespace NFA.Services
 {
-    public class AppDataManagement : IAppOrderDataStore<Order>, IGetApi
+    public class AppDataManagement : IAppOrderDataStore<JObject>, IGetApi
     {
 
         public AppDataManagement()
@@ -21,7 +21,7 @@ namespace NFA.Services
 
 
 
-        public async Task<bool> UpdateItemAsync(Order item)
+        public async Task<bool> UpdateItemAsync(JObject item)
         {
 
 
@@ -31,8 +31,7 @@ namespace NFA.Services
 
             string baseLink = "https://pacific-spire-38129.herokuapp.com/";
             string apiLink = "api/Orders/";
-            string apiindex = apiLink + item.id.ToString();
-
+            string apiindex = apiLink + item.Value<JObject>("id");
             var json = JsonConvert.SerializeObject(item);
 
             var client = new HttpClient();
@@ -57,7 +56,7 @@ namespace NFA.Services
         } 
 
 
-        public async Task<Order> GetItemAsync(string id)
+        public async Task<JObject> GetItemAsync(string id)
         {
 
 
@@ -68,10 +67,13 @@ namespace NFA.Services
             var response = await client.GetAsync(apiAddress);
             var responseString = await response.Content.ReadAsStringAsync();
 
-            Order jsonorder = JsonConvert.DeserializeObject<Order>(responseString);
-            Order RequestedOrder = new Order();
-            RequestedOrder = jsonorder;
-         
+            //Order jsonorder = JsonConvert.DeserializeObject<Order>(responseString);
+            var jsonorder = JsonConvert.DeserializeObject<JObject>(responseString);
+            //Order RequestedOrder = new Order();
+            //RequestedOrder = jsonorder;
+
+            return jsonorder;
+
 
             // try catch snytax 
 
@@ -91,7 +93,7 @@ namespace NFA.Services
             ToRateFloat = rates.Value<float>(currency);
             */
 
-            return await Task.FromResult(RequestedOrder);
+            //return await Task.FromResult(RequestedOrder);
 
         }
 

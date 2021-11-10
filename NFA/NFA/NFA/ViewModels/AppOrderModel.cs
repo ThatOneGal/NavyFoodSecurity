@@ -6,6 +6,7 @@ using NFA.Models;
 using NFA.Views;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using Newtonsoft.Json.Linq;
 
 namespace NFA.ViewModels
 {
@@ -15,16 +16,15 @@ namespace NFA.ViewModels
         //* note-may not be needed
         //public Command loadOrderCommand { get; set; }
 
-        public Newtonsoft.Json.Linq.JObject PulledApi { get; set; } = null;
+        public JObject PulledApi { get; set; } = null;
 
 
         public Order Order { get; set; } = null;
-        public AppOrderModel(Order order)
+        public AppOrderModel(JObject order)
         {
             //loadOrderCommand = new Command(async () => await ExecuteLoadOrderCommand());
-
-            Title = order?.id.ToString();
-            Order = order;
+            Title = order.Value<JObject>("id").ToString();
+            PulledApi = order;
 
         }
         public AppOrderModel()

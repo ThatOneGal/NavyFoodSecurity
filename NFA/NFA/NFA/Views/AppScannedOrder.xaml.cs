@@ -30,7 +30,7 @@ namespace NFA.Views
             AppDataManagement dataManagement = new AppDataManagement();
             try
             {
-                OrderModel.Order = await dataManagement.GetItemAsync(id);
+                OrderModel.PulledApi = await dataManagement.GetItemAsync(id);
 
             }
 
