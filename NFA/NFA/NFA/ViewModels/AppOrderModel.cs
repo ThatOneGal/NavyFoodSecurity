@@ -7,24 +7,70 @@ using NFA.Views;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace NFA.ViewModels
 {
+
     public class AppOrderModel : BaseViewModel
     {
+        public AppOrderModel()
+        {
+
+        }
+           public AppOrderModel(string scannedId)
+        {
+           getOrderAsync(scannedId);
+
+        }
+
 
         //* note-may not be needed
         //public Command loadOrderCommand { get; set; }
 
         public JObject PulledApi { get; set; } = null;
 
+        public Order Order { get; set; }
 
-        public Order Order { get; set; } = null;
-        public AppOrderModel(JObject order)
+
+
+        public async void getOrderAsync(string id = null)
+        {
+            
+            try
+            {
+                var item = await OrderStore.GetItemAsync(id);
+                Order = item;
+                Console.WriteLine(item.ToString());
+                //Order = await OrderStore.GetItemAsync(id);
+                //OrderModel.PulledApi = await dataManagement.GetItemAsync(id);
+                //await DisplayAlert("sda", OrderModel.PulledApi.ToString(), "cancel");
+
+            }
+
+            catch (Exception ex)
+            {
+                //= DisplayAlert("Error", ex.ToString(), "Confirm");
+                Console.WriteLine(ex);
+            }
+
+
+        }
+
+
+
+
+        public AppOrderModel(Order order)
         {
             //loadOrderCommand = new Command(async () => await ExecuteLoadOrderCommand());
-            Title = order.Value<JObject>("id").ToString();
-            Order.id = (int)order.Value<JObject>("id");
+
+
+            Title = order.id.ToString();
+
+            Order = order;
+
+            //Title = order.Value<JObject>("id").ToString();
+            //Order.id = (int)order.Value<JObject>("id");
             //Order.CustomerId = (int)order.Value<JObject>("CustomerId");
             //Order.DriverId = (int)order.Value<JObject>("DriverId");
             //Order.LocationId = (int)order.Value<JObject>("LocationId");
@@ -35,35 +81,22 @@ namespace NFA.ViewModels
             //Order.NotesStorage = order.Value<JObject>("NotesStorage").ToString();
 
         }
-        public AppOrderModel()
-        {
-
-        }
 
 
 
-        //async Task ExecuteLoadOrderCommand()
-        //{
-        //    if (IsBusy)
-        //        return;
-
-        //    IsBusy = true;
-
-        //    try
-        //    {
-        //        Order = null;
-
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Debug.WriteLine(ex);
-        //    }
-        //    finally
-        //    {
-        //        IsBusy = false;
-        //    }
-        //}
+        //public int id { get; set; }
+        //public int CustomerId { get; set; }
+        //public int LocationId { get; set; }
+        //public int StatusId { get; set; }
+        //public DateTime OrderDate { get; set; }
+        //public DateTime OrderShipped { get; set; }
+        //public DateTime OrderPacked { get; set; }
+        //public string PackageQty { get; set; }
+        //public int PackerId { get; set; }
+        //public int DriverId { get; set; }
+        //public string Content { get; set; }
+        //public string NotesStorage { get; set; }
+        //public string NotesPreparation { get; set; }
 
     } // base view
 } // namespace

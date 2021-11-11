@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using NFA.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ZXing;
@@ -38,8 +38,9 @@ namespace NFA.Views
                 {
                     //scan success
 
-                    
+                    //await Shell.Current.GoToAsync($"{nameof(AppScannedOrder)}?{nameof(AppOrderModel.OrderId)}={result.Text}");
                     await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder(result.Text)));
+                    //await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder(result.Text)));
                    
                 }
                 else

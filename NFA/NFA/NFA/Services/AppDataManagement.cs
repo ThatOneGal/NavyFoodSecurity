@@ -53,7 +53,9 @@ namespace NFA.Services
 
             return await Task.FromResult(true);
 
-        } 
+        }
+
+
 
 
         public async Task<JObject> GetItemAsync(string id)
@@ -66,12 +68,16 @@ namespace NFA.Services
             var client = new HttpClient();
             var response = await client.GetAsync(apiAddress);
             var responseString = await response.Content.ReadAsStringAsync();
+            var settings = new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore,
 
-            //Order jsonorder = JsonConvert.DeserializeObject<Order>(responseString);
-            var jsonorder = JsonConvert.DeserializeObject<JObject>(responseString);
+            };
+            Order jsonorder = JsonConvert.DeserializeObject<Order>(responseString);
+            //var jsonorder = JsonConvert.DeserializeObject<JObject>(responseString, settings);
             //Order RequestedOrder = new Order();
             //RequestedOrder = jsonorder;
-
+            Console.WriteLine(responseString);
             return jsonorder;
 
 

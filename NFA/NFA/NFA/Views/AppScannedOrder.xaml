@@ -20,98 +20,105 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
+    
     <StackLayout>
         <ListView x:Name="ItemsListView"
-                VerticalOptions="FillAndExpand"
-                HasUnevenRows="true"
-                IsPullToRefreshEnabled="true"
-                CachingStrategy="RecycleElement"
-                  >
+                  ItemsSource="{Binding Order}"
+                  VerticalOptions="FillAndExpand"
+                  HasUnevenRows="true" 
+                  IsRefreshing="{Binding IsBusy, Mode=TwoWay}">            
 
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Padding="10">
+                        <StackLayout Padding="10" 
+                                     >
                             <!--order id--> 
 
                             <Label Text="{Binding Order.id}" 
-                                d:Text="{Binding .}"
+                                d:Text=" "
                                 Style="{DynamicResource ListItemTextStyle}" 
                                 FontSize="16" />
                             
                             <!--Location id-->
 
-                            <Label Text="Binding locationId" 
+                            <Label Text="{Binding Order.CustomerId}" 
                                 d:Text="Location"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
                                 FontSize="13" />
                             
                             <!--Order status-->
 
-                            <Label Text="{Binding orderStatus}" 
+                            <Label Text="{Binding LocationId}" 
+                                d:Text="Current Order Status"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                            
+                            <!--StatusId-->
+                            <Label Text="{Binding StatusId}" 
                                 d:Text="Current Order Status"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
                                 FontSize="13" />
                             
                             <!--date ordered-->
 
-                            <Label Text="{Binding orderDate}" 
+                            <Label Text="{Binding OrderDate}" 
                                 d:Text="Date Created"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
                                 FontSize="13" />
                             
                             <!--order id-->
 
-                            <Label Text="{Binding orderShipped}" 
+                            <Label Text="{Binding OrderShipped}" 
                                 d:Text="Date Shipped"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
                                 FontSize="13" />
                             
                             <!--order id-->
 
-                            <Label Text="{Binding orderPacked}" 
+                            <Label Text="{Binding OrderPacked}" 
                                 d:Text="Date Packed"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
                                 FontSize="13" />
                             
                             <!--order id-->
 
-                            <Label Text="{Binding packageQty}" 
+                            <Label Text="{Binding PackageQty}" 
                                 d:Text="Package Qty"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
                                 FontSize="13" />
                             
                             <!--order id-->
 
-                            <Label Text="{Binding packerId}" 
+                            <Label Text="{Binding PackerId}" 
                                 d:Text="Packing staff"
                                 Style="{DynamicResource ListItemDetailTextStyle}"
                                 FontSize="13" />
                             
                             <!--order id-->
 
-                            <Label Text="{Binding driverId}" 
+                            <Label Text="{Binding DriverId}" 
                                     d:Text="Driver"
                                     Style="{DynamicResource ListItemDetailTextStyle}"
                                     FontSize="13" />
                             
                             <!--order id-->
 
-                            <Label Text="{Binding content}" 
+                            <Label Text="{Binding Content}" 
                                    d:Text="List of items"
                                    Style="{DynamicResource ListItemDetailTextStyle}"
                                    FontSize="13" />
                             
                             <!--order id-->
 
-                            <Label Text="{Binding notesStorage}" 
+                            <Label Text="{Binding NotesStorage}" 
                                    d:Text="storage notes"
                                    Style="{DynamicResource ListItemDetailTextStyle}"
                                    FontSize="13" />
                             
                             <!--order id-->
 
-                            <Label Text="{Binding notesPreparation}" 
+                            <Label Text="{Binding NotesPreparation}" 
                                     d:Text="prep notes"
                                     Style="{DynamicResource ListItemDetailTextStyle}"
                                     FontSize="13" />
@@ -121,6 +128,12 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+
+        <StackLayout>
+            <Label x:Name="lb_testingLabel">testDisplay</Label>
+        </StackLayout>
+        
     </StackLayout>
 
 </ContentPage>
