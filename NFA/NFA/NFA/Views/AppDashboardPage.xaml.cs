@@ -52,7 +52,10 @@ namespace NFA.Views
             }
             catch (Exception e)
             {
+                Console.WriteLine("________________________________________");
                 Console.WriteLine(e);
+                Console.WriteLine("________________________________________");
+                
             }
         }
 
