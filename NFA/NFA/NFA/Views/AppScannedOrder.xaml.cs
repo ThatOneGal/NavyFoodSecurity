@@ -30,7 +30,18 @@ namespace NFA.Views
             await orderModel.getOrderAsync(ordId);
 
             Lb_id.Text = orderModel.Order.id.ToString();
+            Lb_CustomerId.Text = orderModel.Order.CustomerId.ToString() ;
+            Lb_LocationId.Text = orderModel.Order.LocationId.ToString();
+            Lb_StatusId.Text = orderModel.Order.StatusId.ToString();
+            Lb_OrderDate.Text = orderModel.Order.OrderDate.ToString();
+            Lb_OrderShipped.Text = orderModel.Order.OrderShipped.ToString();
+            Lb_OrderPacked.Text = orderModel.Order.OrderPacked.ToString();
+            Lb_PackageQty.Text = orderModel.Order.PackageQty;
+            Lb_PackedId.Text = orderModel.Order.PackedId.ToString();
+            Lb_DriverId.Text = orderModel.Order.DriverId.ToString();
             Lb_Content.Text = orderModel.Order.Content;
+            Lb_NotesStorage.Text = orderModel.Order.NotesStorage;
+            Lb_NotesNotesPreparation.Text = orderModel.Order.NotesPreparation;
 
         }
 
