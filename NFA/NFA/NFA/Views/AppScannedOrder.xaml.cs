@@ -27,7 +27,6 @@ namespace NFA.Views
 
         public async Task Populate(string ordId)
         {
-
             orderModel = new AppOrderModel();
             await orderModel.getOrderAsync(ordId);
             Title = "Order: " + orderModel.Order.id.ToString();

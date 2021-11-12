@@ -33,13 +33,10 @@ namespace NFA.ViewModels
   
         public async Task getOrderAsync(string id = null)
         {
-            AppDataManagement ADM = new AppDataManagement();
             try
             {
                 Order = await ADM.GetItemAsync(id);
-                //Order = await OrderStore.GetItemAsync(id);
-                //OrderModel.PulledApi = await dataManagement.GetItemAsync(id);
-                //await DisplayAlert("sda", OrderModel.PulledApi.ToString(), "cancel");
+
 
             }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NFA.Services;
 using NFA.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -28,17 +29,22 @@ namespace NFA.Views
 
         public async void ValidateCode()
         {
+            AppDataManagement ADM = new AppDataManagement();
+            
             try
             {
+                string ender = "Orders/" + result.Text;
                 scanView.IsAnalyzing = result == null;
-
+                bool responsecheck = await ADM.GetResponseCode(ender);
                 //validate qr code
-                if (result.BarcodeFormat == BarcodeFormat.QR_CODE)
+                if (responsecheck)
+                //if (result.BarcodeFormat == BarcodeFormat.QR_CODE) << original code
                 //if (result.BarcodeFormat == BarcodeFormat.QR_CODE && result.Text.Contains("NFA"))
                 {
                     //scan success
 
                     //await Shell.Current.GoToAsync($"{nameof(AppScannedOrder)}?{nameof(AppOrderModel.OrderId)}={result.Text}");
+
                     await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder(result.Text)));
                     //await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder(result.Text)));
                    

@@ -15,6 +15,8 @@ namespace NFA.ViewModels
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
         public IAppOrderDataStore<Order> OrderStore => DependencyService.Get<IAppOrderDataStore<Order>>();
 
+        public AppDataManagement ADM = new AppDataManagement();
+
         bool isBusy = false;
         public bool IsBusy
         {
