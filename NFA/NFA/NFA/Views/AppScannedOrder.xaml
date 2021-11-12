@@ -22,112 +22,20 @@
 
     
     <StackLayout>
-        <ListView x:Name="ItemsListView"
-                  ItemsSource="{Binding Order}"
-                  VerticalOptions="FillAndExpand"
-                  HasUnevenRows="true" 
-                  IsRefreshing="{Binding IsBusy, Mode=TwoWay}">            
+        <Label x:Name="Lb_id"                    Text="Lb_id"/>
+        <Label x:Name="Lb_CustomerId"            Text="Lb_CustomerId"/>
+        <Label x:Name="Lb_LocationId"            Text="Lb_LocationId"/>
+        <Label x:Name="Lb_StatusId"              Text="Lb_StatusId"/>
+        <Label x:Name="Lb_OrderDate"             Text="Lb_OrderDate"/>
+        <Label x:Name="Lb_OrderShipped"          Text="Lb_OrderShipped"/>
+        <Label x:Name="Lb_OrderPacked"           Text="Lb_OrderPacked"/>
+        <Label x:Name="Lb_PackageQty"            Text="Lb_PackageQty"/>
+        <Label x:Name="Lb_PackedId"              Text="Lb_PackedId"/>
+        <Label x:Name="Lb_DriverId"              Text="Lb_DriverId"/>
+        <Label x:Name="Lb_Content"               Text="Lb_Content"/>
+        <Label x:Name="Lb_NotesStorage"          Text="Lb_NotesStorage"/>
+        <Label x:Name="Lb_NotesNotesPreparation" Text="Lb_NotesNotesPreparation"/>
 
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Padding="10" 
-                                     >
-                            <!--order id--> 
-
-                            <Label Text="{Binding Order.id}" 
-                                d:Text=" "
-                                Style="{DynamicResource ListItemTextStyle}" 
-                                FontSize="16" />
-                            
-                            <!--Location id-->
-
-                            <Label Text="{Binding Order.CustomerId}" 
-                                d:Text="Location"
-                                Style="{DynamicResource ListItemDetailTextStyle}"
-                                FontSize="13" />
-                            
-                            <!--Order status-->
-
-                            <Label Text="{Binding LocationId}" 
-                                d:Text="Current Order Status"
-                                Style="{DynamicResource ListItemDetailTextStyle}"
-                                FontSize="13" />
-                            
-                            <!--StatusId-->
-                            <Label Text="{Binding StatusId}" 
-                                d:Text="Current Order Status"
-                                Style="{DynamicResource ListItemDetailTextStyle}"
-                                FontSize="13" />
-                            
-                            <!--date ordered-->
-
-                            <Label Text="{Binding OrderDate}" 
-                                d:Text="Date Created"
-                                Style="{DynamicResource ListItemDetailTextStyle}"
-                                FontSize="13" />
-                            
-                            <!--order id-->
-
-                            <Label Text="{Binding OrderShipped}" 
-                                d:Text="Date Shipped"
-                                Style="{DynamicResource ListItemDetailTextStyle}"
-                                FontSize="13" />
-                            
-                            <!--order id-->
-
-                            <Label Text="{Binding OrderPacked}" 
-                                d:Text="Date Packed"
-                                Style="{DynamicResource ListItemDetailTextStyle}"
-                                FontSize="13" />
-                            
-                            <!--order id-->
-
-                            <Label Text="{Binding PackageQty}" 
-                                d:Text="Package Qty"
-                                Style="{DynamicResource ListItemDetailTextStyle}"
-                                FontSize="13" />
-                            
-                            <!--order id-->
-
-                            <Label Text="{Binding PackerId}" 
-                                d:Text="Packing staff"
-                                Style="{DynamicResource ListItemDetailTextStyle}"
-                                FontSize="13" />
-                            
-                            <!--order id-->
-
-                            <Label Text="{Binding DriverId}" 
-                                    d:Text="Driver"
-                                    Style="{DynamicResource ListItemDetailTextStyle}"
-                                    FontSize="13" />
-                            
-                            <!--order id-->
-
-                            <Label Text="{Binding Content}" 
-                                   d:Text="List of items"
-                                   Style="{DynamicResource ListItemDetailTextStyle}"
-                                   FontSize="13" />
-                            
-                            <!--order id-->
-
-                            <Label Text="{Binding NotesStorage}" 
-                                   d:Text="storage notes"
-                                   Style="{DynamicResource ListItemDetailTextStyle}"
-                                   FontSize="13" />
-                            
-                            <!--order id-->
-
-                            <Label Text="{Binding NotesPreparation}" 
-                                    d:Text="prep notes"
-                                    Style="{DynamicResource ListItemDetailTextStyle}"
-                                    FontSize="13" />
-
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
 
 
         <StackLayout>

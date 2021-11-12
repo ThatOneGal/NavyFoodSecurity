@@ -13,13 +13,21 @@ namespace NFA.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AppScannedOrder : ContentPage
     {
+        AppOrderModel orderModel = new AppOrderModel();
+
 
         public AppScannedOrder(string orderId)
         {
             InitializeComponent();
-            BindingContext = new AppOrderModel(orderId);
-            
-            
+            orderModel = new AppOrderModel(orderId);
+
+
+        }
+
+
+        public void Populate()
+        {
+            Lb_id.Text = orderModel.Order.id.ToString();
         }
 
     

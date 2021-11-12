@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using NFA.Services;
 
 namespace NFA.ViewModels
 {
@@ -18,7 +19,7 @@ namespace NFA.ViewModels
         {
 
         }
-           public AppOrderModel(string scannedId)
+        public AppOrderModel(string scannedId)
         {
            getOrderAsync(scannedId);
 
@@ -36,12 +37,10 @@ namespace NFA.ViewModels
 
         public async void getOrderAsync(string id = null)
         {
-            
+            AppDataManagement ADM = new AppDataManagement();
             try
             {
-                var item = await OrderStore.GetItemAsync(id);
-                Order = item;
-                Console.WriteLine(item.ToString());
+                Order = await ADM.GetItemAsync(id);
                 //Order = await OrderStore.GetItemAsync(id);
                 //OrderModel.PulledApi = await dataManagement.GetItemAsync(id);
                 //await DisplayAlert("sda", OrderModel.PulledApi.ToString(), "cancel");
