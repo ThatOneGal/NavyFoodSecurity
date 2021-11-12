@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\NFA.Android.csproj": {}
+    "C:\\Users\\kyelb\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\NFA.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\NFA.Android.csproj": {
+    "C:\\Users\\kyelb\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\NFA.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\NFA.Android.csproj",
+        "projectUniqueName": "C:\\Users\\kyelb\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\NFA.Android.csproj",
         "projectName": "NFA.Android",
-        "projectPath": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\NFA.Android.csproj",
-        "packagesPath": "C:\\Users\\William  Te\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\obj\\",
+        "projectPath": "C:\\Users\\kyelb\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\NFA.Android.csproj",
+        "packagesPath": "C:\\Users\\kyelb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kyelb\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\William  Te\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kyelb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid10.0": {
             "projectReferences": {
-              "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {
-                "projectPath": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj"
+              "C:\\Users\\kyelb\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {
+                "projectPath": "C:\\Users\\kyelb\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj"
               }
             }
           }
@@ -54,20 +54,20 @@
         }
       }
     },
-    "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {
+    "C:\\Users\\kyelb\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
+        "projectUniqueName": "C:\\Users\\kyelb\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
         "projectName": "NFA",
-        "projectPath": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
-        "packagesPath": "C:\\Users\\William  Te\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\William  Te\\Desktop\\NavyFood\\NavyFoodSecurity\\NFA\\NFA\\NFA\\obj\\",
+        "projectPath": "C:\\Users\\kyelb\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
+        "packagesPath": "C:\\Users\\kyelb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kyelb\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\William  Te\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kyelb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
