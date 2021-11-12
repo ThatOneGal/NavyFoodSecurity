@@ -22,33 +22,96 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
+    <ScrollView BackgroundColor="Yellow">
+        <StackLayout>
 
-        <FlexLayout BackgroundColor="Yellow">
-        <Label x:Name="Lb_CustomerIdTitle"            Text="Customer:"/>
-        <Label x:Name="Lb_CustomerId"            Text="Lb_CustomerId"/>
-        <Label x:Name="Lb_LocationIdTitle"            Text="Location:"/>
-        <Label x:Name="Lb_LocationId"            Text="Lb_LocationId"/>
-        <Label x:Name="Lb_StatusIdTitle"              Text="Status:"/>
-        <Label x:Name="Lb_StatusId"              Text="Lb_StatusId"/>
-        <Label x:Name="Lb_OrderDateTitle"             Text="Date created:"/>
-        <Label x:Name="Lb_OrderDate"             Text="Lb_OrderDate"/>
-        <Label x:Name="Lb_OrderShippedTitle"          Text="Date shipped:"/>
-        <Label x:Name="Lb_OrderShipped"          Text="Lb_OrderShipped"/>
-        <Label x:Name="Lb_OrderPackedTitle"           Text="Date packed:"/>
-        <Label x:Name="Lb_OrderPacked"           Text="Lb_OrderPacked"/>
-        <Label x:Name="Lb_PackageQtyTitle"            Text="Package quantity:"/>
-        <Label x:Name="Lb_PackageQty"            Text="Lb_PackageQty"/>
-        <Label x:Name="Lb_PackedIdTitle"              Text="Packer:"/>
-        <Label x:Name="Lb_PackedId"              Text="Lb_PackedId"/>
-        <Label x:Name="Lb_DriverIdTitle"              Text="Driver:"/>
-        <Label x:Name="Lb_DriverId"              Text="Lb_DriverId"/>
-        <Label x:Name="Lb_ContentTitle"               Text="Content:"/>
-        <Label x:Name="Lb_Content"               Text="Lb_Content"/>
-        <Label x:Name="Lb_NotesStorageTitle"          Text="Storage Notes:"/>
-        <Label x:Name="Lb_NotesStorage"          Text="Lb_NotesStorage"/>
-        <Label x:Name="Lb_NotesNotesPreparationTitle" Text="Preparation Notes:"/>
-        <Label x:Name="Lb_NotesNotesPreparation" Text="Lb_NotesNotesPreparation"/>
-        </FlexLayout>
+            <Frame>
+                <StackLayout>
+                    <Label x:Name="Lb_CustomerIdTitle"            Text="Customer:"/>
+                    <Label x:Name="Lb_CustomerId"            Text="Lb_CustomerId"/>
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <Label x:Name="Lb_LocationIdTitle"            Text="Location:"/>
+                    <Label x:Name="Lb_LocationId"            Text="Lb_LocationId"/>
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <Label x:Name="Lb_StatusIdTitle"              Text="Status:"/>
+                    <Label x:Name="Lb_StatusId"              Text="Lb_StatusId"/>
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <Label x:Name="Lb_OrderDateTitle"             Text="Date created:"/>
+                    <Label x:Name="Lb_OrderDate"             Text="Lb_OrderDate"/>
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <Label x:Name="Lb_OrderShippedTitle"          Text="Date shipped:"/>
+
+                    <Label x:Name="Lb_OrderShipped"          Text="Lb_OrderShipped"/>
+
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <Label x:Name="Lb_OrderPackedTitle"           Text="Date packed:"/>
+
+                    <Label x:Name="Lb_OrderPacked"           Text="Lb_OrderPacked"/>
+
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <Label x:Name="Lb_PackageQtyTitle"            Text="Package quantity:"/>
+
+                    <Label x:Name="Lb_PackageQty"            Text="Lb_PackageQty"/>
+
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <Label x:Name="Lb_PackedIdTitle"              Text="Packer:"/>
+
+                    <Label x:Name="Lb_PackedId"              Text="Lb_PackedId"/>
+
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <Label x:Name="Lb_DriverIdTitle"              Text="Driver:"/>
+
+                    <Label x:Name="Lb_DriverId"              Text="Lb_DriverId"/>
+
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <Label x:Name="Lb_ContentTitle"               Text="Content:"/>
+
+                    <Label x:Name="Lb_Content"               Text="Lb_Content"/>
+
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <Label x:Name="Lb_NotesStorageTitle"          Text="Storage Notes:"/>
+                    <Label x:Name="Lb_NotesStorage"          Text="Lb_NotesStorage"/>
+
+                </StackLayout>
+            </Frame>
+            <Frame>
+                <StackLayout>
+                    <Label x:Name="Lb_NotesNotesPreparationTitle" Text="Preparation Notes:"/>
+                    <Label x:Name="Lb_NotesNotesPreparation" Text="Lb_NotesNotesPreparation"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
 
 
-  </ContentPage>
+</ContentPage>
