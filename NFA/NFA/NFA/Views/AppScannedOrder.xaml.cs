@@ -28,8 +28,7 @@ namespace NFA.Views
         {
             orderModel = new AppOrderModel();
             await orderModel.getOrderAsync(ordId);
-
-            Lb_id.Text = orderModel.Order.id.ToString();
+            Title = "Order: " + orderModel.Order.id.ToString();
             Lb_CustomerId.Text = orderModel.Order.CustomerId.ToString() ;
             Lb_LocationId.Text = orderModel.Order.LocationId.ToString();
             Lb_StatusId.Text = orderModel.Order.StatusId.ToString();
