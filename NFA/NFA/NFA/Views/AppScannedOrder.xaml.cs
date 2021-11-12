@@ -19,15 +19,19 @@ namespace NFA.Views
         public AppScannedOrder(string orderId)
         {
             InitializeComponent();
-            orderModel = new AppOrderModel(orderId);
-
+            Task asyncaa = Populate(orderId);
 
         }
 
 
-        public void Populate()
+        public async Task Populate(string ordId)
         {
+            orderModel = new AppOrderModel();
+            await orderModel.getOrderAsync(ordId);
+
             Lb_id.Text = orderModel.Order.id.ToString();
+            Lb_Content.Text = orderModel.Order.Content;
+
         }
 
     

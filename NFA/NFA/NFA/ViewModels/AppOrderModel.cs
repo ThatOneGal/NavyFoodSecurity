@@ -19,11 +19,6 @@ namespace NFA.ViewModels
         {
 
         }
-        public AppOrderModel(string scannedId)
-        {
-           getOrderAsync(scannedId);
-
-        }
 
 
         //* note-may not be needed
@@ -35,7 +30,8 @@ namespace NFA.ViewModels
 
 
 
-        public async void getOrderAsync(string id = null)
+  
+        public async Task getOrderAsync(string id = null)
         {
             AppDataManagement ADM = new AppDataManagement();
             try
