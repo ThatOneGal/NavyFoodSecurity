@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFA.Android", "NFA\NFA.Andr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFA.iOS", "NFA\NFA.iOS\NFA.iOS.csproj", "{C9AFBD39-47B0-4427-8974-A65E4E1CC924}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NFA", "NFA\NFA\NFA.csproj", "{66170B21-0BCF-415C-A09B-363A658529A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NFA", "NFA\NFA\NFA.csproj", "{66170B21-0BCF-415C-A09B-363A658529A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,7 +47,6 @@ Global
 		{C9AFBD39-47B0-4427-8974-A65E4E1CC924}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{C9AFBD39-47B0-4427-8974-A65E4E1CC924}.Debug|iPhoneSimulator.Deploy.0 = Debug|iPhoneSimulator
 		{C9AFBD39-47B0-4427-8974-A65E4E1CC924}.Release|Any CPU.ActiveCfg = Release|iPhone
-		{C9AFBD39-47B0-4427-8974-A65E4E1CC924}.Release|Any CPU.Build.0 = Release|iPhone
 		{C9AFBD39-47B0-4427-8974-A65E4E1CC924}.Release|Any CPU.Deploy.0 = Release|iPhone
 		{C9AFBD39-47B0-4427-8974-A65E4E1CC924}.Release|iPhone.ActiveCfg = Release|iPhone
 		{C9AFBD39-47B0-4427-8974-A65E4E1CC924}.Release|iPhone.Build.0 = Release|iPhone
