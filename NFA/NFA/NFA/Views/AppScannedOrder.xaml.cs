@@ -19,6 +19,7 @@ namespace NFA.Views
         public AppScannedOrder(string orderId)
         {
             InitializeComponent();
+
             Task asyncaa = Populate(orderId);
 
         }
@@ -26,6 +27,7 @@ namespace NFA.Views
 
         public async Task Populate(string ordId)
         {
+
             orderModel = new AppOrderModel();
             await orderModel.getOrderAsync(ordId);
             Title = "Order: " + orderModel.Order.id.ToString();
@@ -44,7 +46,7 @@ namespace NFA.Views
 
         }
 
-    
+
     }  // partial class
 
 }//namespace
