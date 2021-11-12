@@ -140,7 +140,7 @@
         </div>
 
         <div>
-            {!! QrCode::size(250)->format('svg')->generate($OrderNum->id, public_path('images/qrcode.svg')) !!}
+            {!! QrCode::size(250)->format('svg')->generate($OrderNum, public_path('images/qrcode.svg')) !!}
             <img src="{{url('/images/qrcode.svg')}}"/>
         </div>
 

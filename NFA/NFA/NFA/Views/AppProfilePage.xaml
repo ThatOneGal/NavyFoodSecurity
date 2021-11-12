@@ -1,47 +1,15 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
              mc:Ignorable="d"
-             x:Class="NFA.Views.AppProfilePage"
-             xmlns:vm="clr-namespace:NFA.ViewModels"
-    Title="{Binding Title}">
-
-    <ContentPage.BindingContext>
-        <vm:AppProfileModel />
-    </ContentPage.BindingContext>
-
+             x:Class="NFA.Views.AppProfilePage">
     <ContentPage.Content>
-        <Grid VerticalOptions="Fill"
-              HorizontalOptions="CenterAndExpand">
-            
-            <Label x:Name="firstNameLabel"
-                   Text="First Name: "/>
-            
-            <!--api connection to dsiplay-->
-
-            <Label x:Name="lastNameLabel"
-                   Text="Last Name: "/>
-
-            <!--api connection to display-->
-
-            <Label x:Name="rankLabel"
-                   Text="Rank: "/>
-            
-            <!--api connection to display-->
-
-            <Label x:Name="serialNumberLabel"
-                   Text="Serial Number: "/>
-            
-            <!--api connection to display-->
-            
-            <Label x:Name="emailLabel"
-                   Text="Email: "/>
-
-            <!--api connection to display-->
-            
-        </Grid>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

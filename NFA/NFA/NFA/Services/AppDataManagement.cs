@@ -9,19 +9,18 @@ using NFA.Models;
 
 namespace NFA.Services
 {
-    public class AppDataManagement : IAppOrderDataStore<JObject>, IGetApi
+    public class AppDataManagement : IAppOrderDataStore<Order>, IGetApi
     {
 
         public AppDataManagement()
         {
-            Order ScannedOrder = null;
-            JObject apiPulled = null;
+            
         }
 
 
 
 
-        public async Task<bool> UpdateItemAsync(JObject item)
+        public async Task<bool> UpdateItemAsync(Order item)
         {
 
 
@@ -31,7 +30,8 @@ namespace NFA.Services
 
             string baseLink = "https://pacific-spire-38129.herokuapp.com/";
             string apiLink = "api/Orders/";
-            string apiindex = apiLink + item.Value<JObject>("id");
+            //string apiindex = apiLink + item.Value<Order>("id");
+            string apiindex = apiLink + item.id;
             var json = JsonConvert.SerializeObject(item);
 
             var client = new HttpClient();
@@ -58,7 +58,7 @@ namespace NFA.Services
 
 
 
-        public async Task<JObject> GetItemAsync(string id)
+        public async Task<Order> GetItemAsync(string id)
         {
 
 
@@ -73,7 +73,7 @@ namespace NFA.Services
                 NullValueHandling = NullValueHandling.Ignore,
 
             };
-            Order jsonorder = JsonConvert.DeserializeObject<Order>(responseString);
+            Order jsonorder = JsonConvert.DeserializeObject<Order>(responseString,settings);
             //var jsonorder = JsonConvert.DeserializeObject<JObject>(responseString, settings);
             //Order RequestedOrder = new Order();
             //RequestedOrder = jsonorder;
