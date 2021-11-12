@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -54,10 +55,48 @@ namespace NFA.Services
             return await Task.FromResult(true);
 
         }
+        /// <summary>
+        /// Determines the link will be valid before continuing
+        /// </summary>
+        /// <param name="urlEnd">Ending string of api</param>
+        /// <returns>if api response is OK</returns>
+        public async Task<bool> GetResponseCode(string urlEnd)
+        {   
+            string baseLink = "https://pacific-spire-38129.herokuapp.com/api/";
+            bool statusCheck = false;
+            try
+            {
+                // Creates an HttpWebRequest for the specified URL.
+                HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(baseLink+urlEnd);
+                // Sends the HttpWebRequest and waits for a response.
+                HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
+                if (myHttpWebResponse.StatusCode == HttpStatusCode.OK)
+                {
 
+                    statusCheck = true;
+                }
+      
+                // Releases the resources of the response
+                myHttpWebResponse.Close();
+            }
+            catch (WebException e)
+            {
+                Console.WriteLine("\r\nWebException Raised. The following error occurred : {0}", e.Status);
 
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("\nThe following Exception was raised : {0}", e.Message);
 
+            }
+            return await Task.FromResult(statusCheck);
+        }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id">order id</param>
+        /// <returns>Order object from id</returns>
         public async Task<Order> GetItemAsync(string id)
         {
 
@@ -73,12 +112,12 @@ namespace NFA.Services
                 NullValueHandling = NullValueHandling.Ignore,
 
             };
-            Order jsonorder = JsonConvert.DeserializeObject<Order>(responseString,settings);
+            Order order = JsonConvert.DeserializeObject<Order>(responseString,settings);
             //var jsonorder = JsonConvert.DeserializeObject<JObject>(responseString, settings);
             //Order RequestedOrder = new Order();
             //RequestedOrder = jsonorder;
             Console.WriteLine(responseString);
-            return jsonorder;
+            return order;
 
 
             // try catch snytax 
