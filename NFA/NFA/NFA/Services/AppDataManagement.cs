@@ -55,42 +55,6 @@ namespace NFA.Services
             return await Task.FromResult(true);
 
         }
-        /// <summary>
-        /// Determines the link will be valid before continuing
-        /// </summary>
-        /// <param name="urlEnd">Ending string of api</param>
-        /// <returns>if api response is OK</returns>
-        public async Task<bool> GetResponseCode(string urlEnd)
-        {   
-            string baseLink = "https://pacific-spire-38129.herokuapp.com/api/";
-            bool statusCheck = false;
-            try
-            {
-                // Creates an HttpWebRequest for the specified URL.
-                HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(baseLink+urlEnd);
-                // Sends the HttpWebRequest and waits for a response.
-                HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
-                if (myHttpWebResponse.StatusCode == HttpStatusCode.OK)
-                {
-
-                    statusCheck = true;
-                }
-      
-                // Releases the resources of the response
-                myHttpWebResponse.Close();
-            }
-            catch (WebException e)
-            {
-                Console.WriteLine("\r\nWebException Raised. The following error occurred : {0}", e.Status);
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("\nThe following Exception was raised : {0}", e.Message);
-
-            }
-            return await Task.FromResult(statusCheck);
-        }
 
         /// <summary>
         /// 
@@ -113,35 +77,48 @@ namespace NFA.Services
 
             };
             Order order = JsonConvert.DeserializeObject<Order>(responseString,settings);
-            //var jsonorder = JsonConvert.DeserializeObject<JObject>(responseString, settings);
-            //Order RequestedOrder = new Order();
-            //RequestedOrder = jsonorder;
             Console.WriteLine(responseString);
             return order;
 
-
-            // try catch snytax 
-
-
-            /*
-            var client = new HttpClient();
-            //var response = await client.GetAsync("https://api.exchangeratesapi.io/latest?base=AUD&symbolsGBP");
-            var response = await client.GetAsync("https://api.exchangeratesapi.io/latest?base=AUD");
-            var responseString = await response.Content.ReadAsStringAsync();
-            Console.WriteLine(responseString);
-
-            var obj = JsonConvert.DeserializeObject<JObject>(responseString);
-
-            var rates = obj.Value<JObject>("rates");
-            //responselabel.Text = response.ToString();   
-            ToRate = currency;
-            ToRateFloat = rates.Value<float>(currency);
-            */
-
-            //return await Task.FromResult(RequestedOrder);
-
         }
 
+        /// <summary>
+        /// Determines the link will be valid before continuing
+        /// url is open ended for flexiblility 
+        /// </summary>
+        /// <param name="urlEnd">Ending string of api</param>
+        /// <returns>if api response is OK</returns>
+        public async Task<bool> GetResponseCode(string urlEnd)
+        {
+            string baseLink = "https://pacific-spire-38129.herokuapp.com/api/";
+            bool statusCheck = false;
+            try
+            {
+                // Creates an HttpWebRequest for the specified URL.
+                HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(baseLink + urlEnd);
+                // Sends the HttpWebRequest and waits for a response.
+                HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
+                if (myHttpWebResponse.StatusCode == HttpStatusCode.OK)
+                {
+
+                    statusCheck = true;
+                }
+
+                // Releases the resources of the response
+                myHttpWebResponse.Close();
+            }
+            catch (WebException e)
+            {
+                Console.WriteLine("\r\nWebException Raised. The following error occurred : {0}", e.Status);
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("\nThe following Exception was raised : {0}", e.Message);
+
+            }
+            return await Task.FromResult(statusCheck);
+        }
 
 
         public Task<bool> GetApiOrderAsync(string orderId)

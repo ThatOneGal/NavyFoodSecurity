@@ -109,8 +109,8 @@
         
     <StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-            <Button Text="Update"/>
-            <Button Text="Reset"/>
+            <Button x:Name="Btn_Update" Text="Update" Clicked="Btn_Update_Clicked"/>
+            <Button x:Name="Btn_Reset" Text="Reset" Clicked="Btn_Reset_Clicked"/>
             </StackLayout>
         </StackLayout>
     </StackLayout>
