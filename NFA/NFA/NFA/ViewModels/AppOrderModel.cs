@@ -60,6 +60,21 @@ namespace NFA.ViewModels
 
         }
 
+        public async Task pushOrderAsync()
+        {
+            try 
+            {
+                await ADM.UpdateItemAsync(Order);
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("_______________________________________________________");
+                Console.WriteLine(e);
+                Console.WriteLine("_______________________________________________________");
+
+            }
+        }
 
 
 

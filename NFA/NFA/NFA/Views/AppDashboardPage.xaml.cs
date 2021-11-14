@@ -56,7 +56,7 @@ namespace NFA.Views
                     await Navigation.PushModalAsync(new NavigationPage(new AppScanFailed()));
                 }
             }
-            catch (Exception e)
+            catch (Exception e) 
             {
                 Console.WriteLine("________________________________________");
                 Console.WriteLine(e);

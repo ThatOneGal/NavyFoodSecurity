@@ -21,7 +21,7 @@ namespace NFA.Services
 
 
 
-        public async Task<bool> UpdateItemAsync(Order item)
+        public async Task UpdateItemAsync(Order item)
         {
 
 
@@ -33,7 +33,7 @@ namespace NFA.Services
             string apiLink = "api/Orders/";
             //string apiindex = apiLink + item.Value<Order>("id");
             string apiindex = apiLink + item.id;
-            var json = JsonConvert.SerializeObject(item);
+            JObject json = JObject.Parse(JsonConvert.SerializeObject(item));
 
             var client = new HttpClient();
 
@@ -42,7 +42,7 @@ namespace NFA.Services
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
             //order data update
-            var content = new StringContent(json.ToString(), System.Text.Encoding.UTF8, "application/json");
+            J content = new StringContent(json.ToString(), System.Text.Encoding.UTF8, "application/json");
 
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage();
             var response = await client.PostAsync(baseLink+apiindex,content);
@@ -52,7 +52,7 @@ namespace NFA.Services
             //httpRequestMessage = await client.PostAsync(apiAddress, json);
 
 
-            return await Task.FromResult(true);
+            //return await Task.FromResult(true);
 
         }
 

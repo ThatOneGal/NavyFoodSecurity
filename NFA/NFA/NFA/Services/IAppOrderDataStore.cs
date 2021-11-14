@@ -6,8 +6,9 @@ namespace NFA.Services
 {
     public interface IAppOrderDataStore<T>
     {
-        Task<bool> UpdateItemAsync(T item);
+        Task UpdateItemAsync(T item);
         Task<T> GetItemAsync(string id);
         //Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false);
     }
 }
+ 
