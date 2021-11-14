@@ -3,45 +3,68 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
              mc:Ignorable="d"
-    x:Class="NFA.Views.AppProfilePage"
+             x:Class="NFA.Views.AppScannedOrder"
              xmlns:vm="clr-namespace:NFA.ViewModels"
-    Title="{Binding Title}">
+             Title="{Binding Title}">
+
+
+
 
     <ContentPage.BindingContext>
-        <vm:AppProfileModel />
+        <vm:AppOrderModel/>
     </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <ScrollView BackgroundColor="Yellow">
+            <StackLayout>
 
-    <ContentPage.Content>
-        <Grid VerticalOptions="Fill"
-              HorizontalOptions="CenterAndExpand">
+                <Frame>
+                    <StackLayout>
+                        <Label x:Name="Lb_FirstNameTitle"              Text="First Name:"/>
+                        <Label x:Name="Lb_FirstName"                   Text="Lb_FirstName"/>
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Label x:Name="Lb_LastNameTitle"              Text="Last Name:"/>
+                        <Label x:Name="Lb_LastNameId"                 Text="Lb_LastNameId"/>
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Label x:Name="Lb_RankTitle"                  Text="Rank:"/>
+                        <Label x:Name="Lb_RankId"                     Text="Lb_RankId"/>
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Label x:Name="Lb_NumberTitle"                Text="SerialNumber:"/>
+                        <Label x:Name="Lb_Number"                     Text="Lb_Number"/>
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Label x:Name="Lb_Email"                      Text="Email:"/>
+                        <Label x:Name="Lb_Email"                      Text="Lb_Email"/>
 
-            <Label x:Name="firstNameLabel"
-                   Text="First Name: "/>
+                    </StackLayout>
+                </Frame>
+                
+            </StackLayout>
+        </ScrollView>
 
-            <!--api connection to dsiplay-->
-
-            <Label x:Name="lastNameLabel"
-                   Text="Last Name: "/>
-
-            <!--api connection to display-->
-
-            <Label x:Name="rankLabel"
-                   Text="Rank: "/>
-
-            <!--api connection to display-->
-
-            <Label x:Name="serialNumberLabel"
-                   Text="Serial Number: "/>
-
-            <!--api connection to display-->
-
-            <Label x:Name="emailLabel"
-                   Text="Email: "/>
-
-            <!--api connection to display-->
-
-        </Grid>
-    </ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button Text="Update"/>
+                <Button Text="Reset"/>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
 </ContentPage>
