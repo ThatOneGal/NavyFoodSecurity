@@ -29,8 +29,15 @@ namespace NFA.Views
         {
             orderModel = new AppOrderModel();
             await orderModel.getOrderAsync(ordId);
+            FillOrderForm();
+   
+
+        }
+
+        public void FillOrderForm()
+        {
             Title = "Order: " + orderModel.Order.id.ToString();
-            Lb_CustomerId.Text = orderModel.Order.CustomerId.ToString() ;
+            Lb_CustomerId.Text = orderModel.Order.CustomerId.ToString();
             Lb_LocationId.Text = orderModel.Order.LocationId.ToString();
             Lb_StatusId.Text = orderModel.Order.StatusId.ToString();
             Lb_OrderDate.Text = orderModel.Order.OrderDate.ToString();
@@ -44,6 +51,47 @@ namespace NFA.Views
             Lb_NotesNotesPreparation.Text = orderModel.Order.NotesPreparation;
 
         }
+
+        private void Btn_Update_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Reset_Clicked(object sender, EventArgs e)
+        {
+
+            //FillOrderForm();
+            Task checking = checker();
+
+        }
+
+    //    Task confirm = checker();
+
+    //    bool check = checker().Result;
+
+    //        if (check)
+    //        {
+    //            Task LoadOrder = Populate(orderModel.Order.id.ToString());
+    //}
+
+        public async Task checker()
+        {
+            string title = "Reset";
+            string message = "This will reset the order to default." +
+                "Are you sure?";
+            string accept = "Yes";
+            string cancel = "No";
+
+            bool checker = await DisplayAlert(title, message, accept, cancel);
+            if (checker)
+            {
+                FillOrderForm();
+            }
+
+        }
+
+
+
 
 
     }  // partial class
