@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="NFA.Views.AppScannedOrder"
+             x:Class="NFA.Views.AppProfilePage"
              xmlns:vm="clr-namespace:NFA.ViewModels"
              Title="{Binding Title}">
 
@@ -51,7 +51,7 @@
                 </Frame>
                 <Frame>
                     <StackLayout>
-                        <Label x:Name="Lb_Email"                      Text="Email:"/>
+                        <Label x:Name="Lb_EmailTitle"                      Text="Email:"/>
                         <Label x:Name="Lb_Email"                      Text="Lb_Email"/>
 
                     </StackLayout>
