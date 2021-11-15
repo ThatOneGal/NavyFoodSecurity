@@ -5,15 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="NFA.Views.AppProfilePage"
-             xmlns:vm="clr-namespace:NFA.ViewModels"
              Title="{Binding Title}">
 
-
-
-
-    <ContentPage.BindingContext>
-        <vm:AppOrderModel/>
-    </ContentPage.BindingContext>
+    
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Primary">#2196F3</Color>
@@ -34,25 +28,32 @@
                 <Frame>
                     <StackLayout>
                         <Label x:Name="Lb_LastNameTitle"              Text="Last Name:"/>
-                        <Label x:Name="Lb_LastNameId"                 Text="Lb_LastNameId"/>
+                        <Label x:Name="Lb_LastName"                   Text="Lb_LastName"/>
                     </StackLayout>
                 </Frame>
                 <Frame>
                     <StackLayout>
                         <Label x:Name="Lb_RankTitle"                  Text="Rank:"/>
-                        <Label x:Name="Lb_RankId"                     Text="Lb_RankId"/>
+                        <Label x:Name="Lb_Rank"                       Text="Lb_Rank"/>
                     </StackLayout>
                 </Frame>
                 <Frame>
                     <StackLayout>
-                        <Label x:Name="Lb_NumberTitle"                Text="SerialNumber:"/>
-                        <Label x:Name="Lb_Number"                     Text="Lb_Number"/>
+                        <Label x:Name="Lb_SerialNumberTitle"                Text="SerialNumber:"/>
+                        <Label x:Name="Lb_SerialNumber"                     Text="Lb_Number"/>
                     </StackLayout>
                 </Frame>
                 <Frame>
                     <StackLayout>
-                        <Label x:Name="Lb_EmailTitle"                      Text="Email:"/>
+                        <Label x:Name="Lb_EmailTitle"                 Text="Email:"/>
                         <Label x:Name="Lb_Email"                      Text="Lb_Email"/>
+
+                    </StackLayout>
+                </Frame> 
+                <Frame>
+                    <StackLayout>
+                        <Label x:Name="Lb_UserRoleTitle"              Text="Position:"/>
+                        <Label x:Name="Lb_UserRole"                   Text="UserRole"/>
 
                     </StackLayout>
                 </Frame>

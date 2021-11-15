@@ -5,15 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="NFA.Views.AppScannedOrder"
-             xmlns:vm="clr-namespace:NFA.ViewModels"
              Title="{Binding Title}">
 
 
 
 
-    <ContentPage.BindingContext>
-        <vm:AppOrderModel/>
-    </ContentPage.BindingContext>
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Primary">#2196F3</Color>
@@ -66,7 +62,7 @@
             <Frame>
                 <StackLayout>
                     <Label x:Name="Lb_PackageQtyTitle"              Text="Package quantity:"/>
-                    <Entry x:Name="Lb_PackageQty"                   Text="Lb_PackageQty"/>
+                    <Entry x:Name="Et_PackageQty"                   Text="Lb_PackageQty"/>
 
                 </StackLayout>
             </Frame>
@@ -87,21 +83,21 @@
             <Frame>
                 <StackLayout>
                     <Label x:Name="Lb_ContentTitle"                 Text="Content:"/>
-                    <Entry x:Name="Lb_Content"                      Text="Lb_Content"/>
+                    <Entry x:Name="Et_Content"                      Text="Lb_Content"/>
 
                 </StackLayout>
             </Frame>
             <Frame>
                 <StackLayout>
                     <Label x:Name="Lb_NotesStorageTitle"           Text="Storage Notes:"/>
-                    <Entry x:Name="Lb_NotesStorage"                Text="Lb_NotesStorage"/>
+                    <Entry x:Name="Et_NotesStorage"                Text="Lb_NotesStorage"/>
 
                 </StackLayout>
             </Frame>
             <Frame>
                 <StackLayout>
                     <Label x:Name="Lb_NotesNotesPreparationTitle" Text="Preparation Notes:"/>
-                    <Entry x:Name="Lb_NotesNotesPreparation" Text="Lb_NotesNotesPreparation"/>
+                    <Entry x:Name="Et_NotesNotesPreparation" Text="Lb_NotesNotesPreparation"/>
                 </StackLayout>
             </Frame>
         </StackLayout>

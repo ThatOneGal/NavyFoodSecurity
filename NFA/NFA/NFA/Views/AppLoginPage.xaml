@@ -6,10 +6,33 @@
              mc:Ignorable="d"
              x:Class="NFA.Views.AppLoginPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout HorizontalOptions="Center">
+            <Frame>
+                <StackLayout>
+                    <Label x:Name="Lb_EmailTitle"                 Text="Email:"/>
+                    <Entry x:Name="Lb_Email"                      Placeholder="Enter Email Here"
+                           PlaceholderColor="DarkGray"/>
+
+                </StackLayout>
+            </Frame>
+                       
+            <Frame>
+                <StackLayout>
+                    <Label x:Name="Lb_PasswordTitle"              Text="Password:"/>
+                    <Entry x:Name="Bt_Email"                      Placeholder="Enter Password Here"
+                           PlaceholderColor="DarkGray" IsPassword="True"/>
+
+                </StackLayout>
+            </Frame>
+                     
+            <Frame>
+                <StackLayout>
+                    <Button x:Name="Bt_Login"              Text="LOGIN"  Clicked="Bt_Login_Clicked"/>
+                </StackLayout>
+            </Frame>
+            
+            
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

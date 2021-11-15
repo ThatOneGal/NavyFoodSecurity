@@ -15,6 +15,7 @@ namespace NFA.Views
     public partial class AppDashboardPage : ContentPage
     {
         Result result = null;
+        
 
         public AppDashboardPage()
         {
@@ -30,7 +31,10 @@ namespace NFA.Views
         public async void ValidateCode()
         {
             AppDataManagement ADM = new AppDataManagement();
-            
+
+            Console.WriteLine("________________________________________");
+            Console.WriteLine(result.Text);
+            Console.WriteLine("________________________________________");
             try
             {
                 string ender = "Orders/" + result.Text;
@@ -65,10 +69,17 @@ namespace NFA.Views
             }
         }
 
+
         protected override void OnAppearing()
         {
             scanView.IsAnalyzing = true;
             result = null;
-        }
+        }         
+        protected override void OnDisappearing()
+        {
+            scanView.IsAnalyzing = false;
+            result = null;
+        }     
+        
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NFA.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,35 @@ namespace NFA.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AppProfilePage : ContentPage
     {
+        AppProfileModel profileModel= new AppProfileModel();
         public AppProfilePage()
         {
             InitializeComponent();
+            Title = "Profile";
+            Task asyncaa = Populate("1");
+
         }
+
+
+        public async Task Populate(string id)
+        {
+            profileModel = new AppProfileModel();
+            await profileModel.getUserAsync(id);
+            fill();
+
+
+        }
+        public void fill()
+        {
+            
+            Lb_FirstName.Text = profileModel.User.firstName;
+            Lb_LastName.Text = profileModel.User.lastName;
+            Lb_Rank.Text = profileModel.User.rank;
+            Lb_SerialNumber.Text = profileModel.User.serialnumber;
+            Lb_Email.Text = profileModel.User.email;
+            Lb_UserRole.Text = profileModel.User.UserRoleId.ToString();
+        }
+
+
     }
 }

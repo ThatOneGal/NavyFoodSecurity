@@ -43,12 +43,12 @@ namespace NFA.Views
             Lb_OrderDate.Text = orderModel.Order.OrderDate.ToString();
             Lb_OrderShipped.Text = orderModel.Order.OrderShipped.ToString();
             Lb_OrderPacked.Text = orderModel.Order.OrderPacked.ToString();
-            Lb_PackageQty.Text = orderModel.Order.PackageQty;
+            Et_PackageQty.Text = orderModel.Order.PackageQty;
             Lb_PackedId.Text = orderModel.Order.PackedId.ToString();
             Lb_DriverId.Text = orderModel.Order.DriverId.ToString();
-            Lb_Content.Text = orderModel.Order.Content;
-            Lb_NotesStorage.Text = orderModel.Order.NotesStorage;
-            Lb_NotesNotesPreparation.Text = orderModel.Order.NotesPreparation;
+            Et_Content.Text = orderModel.Order.Content;
+            Et_NotesStorage.Text = orderModel.Order.NotesStorage;
+            Et_NotesNotesPreparation.Text = orderModel.Order.NotesPreparation;
 
         }
         
@@ -60,15 +60,16 @@ namespace NFA.Views
        
 
             //considerations required for editability
-            orderModel.Order.Content = Lb_Content.Text;
+            orderModel.Order.Content = Et_Content.Text;
             orderModel.Order.StatusId = int.Parse(Lb_StatusId.Text);
 
 
-            orderModel.Order.PackageQty = Lb_PackageQty.Text;
-            orderModel.Order.NotesStorage = Lb_NotesStorage.Text;
-            orderModel.Order.NotesPreparation = Lb_NotesNotesPreparation.Text;
+            orderModel.Order.PackageQty = Et_PackageQty.Text;
+            orderModel.Order.NotesStorage = Et_NotesStorage.Text;
+            orderModel.Order.NotesPreparation = Et_NotesNotesPreparation.Text;
 
             // placeholder awaiting user role application
+            //if user role is packer shows update packeddate
             //Lb_PackedId.Text = orderModel.Order.PackedId.ToString();
             //Lb_DriverId.Text = orderModel.Order.DriverId.ToString();
             //Lb_OrderShipped.Text = orderModel.Order.OrderShipped.ToString();

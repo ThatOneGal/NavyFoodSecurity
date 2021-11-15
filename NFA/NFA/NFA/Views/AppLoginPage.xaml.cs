@@ -16,5 +16,10 @@ namespace NFA.Views
         {
             InitializeComponent();
         }
+
+        private void Bt_Login_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

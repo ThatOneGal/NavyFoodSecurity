@@ -10,9 +10,9 @@ namespace NFA.Models
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string rank { get; set; }
-        public string userName { get; set; }
-        public string password { get; set; }
-        public int urID { get; set; }
+        public string serialnumber { get; set; }
+        public string email { get; set; }
+        public int UserRoleId { get; set; }
 
 
 
@@ -20,5 +20,41 @@ namespace NFA.Models
         {
         }
 
+    } // class
+} // namespace
+
+/*
+public DateTime OrderPacked
+{
+    get { return _OrderPacked; }
+    set
+    {
+        if (value == null)
+        {
+            _OrderPacked = DateTime.Now;
+        }
+        else
+        {
+            _OrderPacked = value;
+        }
     }
 }
+public string PackageQty { get; set; }
+
+public int PackedId
+{
+    get { return _PackerId; }
+    set
+    {
+        if (value == null)
+        {
+            _PackerId = 0;
+        }
+        else
+        {
+            _PackerId = value;
+        }
+    }
+}
+
+*/

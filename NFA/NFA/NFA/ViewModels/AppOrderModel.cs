@@ -24,7 +24,6 @@ namespace NFA.ViewModels
         //* note-may not be needed
         //public Command loadOrderCommand { get; set; }
 
-        public JObject PulledApi { get; set; } = null;
 
         public Order Order { get; set; }
 

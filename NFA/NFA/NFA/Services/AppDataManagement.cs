@@ -55,7 +55,9 @@ namespace NFA.Services
 
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage();
 
-            var response = await client.PutAsync(baseLink+apiindex,content);
+             var response = await client.PutAsync(baseLink+apiindex,content);
+            
+            
             response.EnsureSuccessStatusCode();
             //httpRequestMessage = await client.PostAsJsonAsync(apiLink, item).ConfigureAwait(false);
 
@@ -65,6 +67,8 @@ namespace NFA.Services
             //return await Task.FromResult(true);
 
         }
+
+
 
         /// <summary>
         /// 
@@ -87,6 +91,27 @@ namespace NFA.Services
 
             };
             Order order = JsonConvert.DeserializeObject<Order>(responseString,settings);
+            Console.WriteLine(responseString);
+            return order;
+
+        }
+
+             public async Task<User> GetUserAsync(string id)
+        {
+
+
+            string baseLink = "https://pacific-spire-38129.herokuapp.com/api/Users/";
+            string apiAddress = baseLink + id;
+
+            var client = new HttpClient();
+            var response = await client.GetAsync(apiAddress);
+            var responseString = await response.Content.ReadAsStringAsync();
+            JsonSerializerSettings settings = new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore,
+
+            };
+            User order = JsonConvert.DeserializeObject<User>(responseString,settings);
             Console.WriteLine(responseString);
             return order;
 
