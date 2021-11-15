@@ -51,17 +51,42 @@ namespace NFA.Views
             Lb_NotesNotesPreparation.Text = orderModel.Order.NotesPreparation;
 
         }
+        
+        public void FillOrderObject()
+        {
+            //Lb_CustomerId.Text = orderModel.Order.CustomerId.ToString();
+            //Lb_LocationId.Text = orderModel.Order.LocationId.ToString();
+            //Lb_OrderDate.Text = orderModel.Order.OrderDate.ToString();
+       
+
+            //considerations required for editability
+            orderModel.Order.Content = Lb_Content.Text;
+            orderModel.Order.StatusId = int.Parse(Lb_StatusId.Text);
+
+
+            orderModel.Order.PackageQty = Lb_PackageQty.Text;
+            orderModel.Order.NotesStorage = Lb_NotesStorage.Text;
+            orderModel.Order.NotesPreparation = Lb_NotesNotesPreparation.Text;
+
+            // placeholder awaiting user role application
+            //Lb_PackedId.Text = orderModel.Order.PackedId.ToString();
+            //Lb_DriverId.Text = orderModel.Order.DriverId.ToString();
+            //Lb_OrderShipped.Text = orderModel.Order.OrderShipped.ToString();
+            //Lb_OrderPacked.Text = orderModel.Order.OrderPacked.ToString();
+
+        }
 
         private void Btn_Update_Clicked(object sender, EventArgs e)
         {
 
+            Task updater = validateUpdate();
         }
 
         private void Btn_Reset_Clicked(object sender, EventArgs e)
         {
 
             //FillOrderForm();
-            Task checking = checker();
+            Task checking = validatedReset();
 
         }
 
@@ -74,11 +99,10 @@ namespace NFA.Views
     //            Task LoadOrder = Populate(orderModel.Order.id.ToString());
     //}
 
-        public async Task checker()
+        public async Task validatedReset()
         {
             string title = "Reset";
-            string message = "This will reset the order to default." +
-                "Are you sure?";
+            string message = "This will undo changes, are you sure?";
             string accept = "Yes";
             string cancel = "No";
 
@@ -86,6 +110,21 @@ namespace NFA.Views
             if (checker)
             {
                 FillOrderForm();
+            }
+
+        }    
+        public async Task validateUpdate()
+        {
+            string title = "Update";
+            string message = "Continuing will save changes, are you sure?";
+            string accept = "Yes";
+            string cancel = "No";
+            FillOrderObject();
+
+            bool checker = await DisplayAlert(title, message, accept, cancel);
+            if (checker)
+            {
+               Task check = orderModel.pushOrderAsync();
             }
 
         }

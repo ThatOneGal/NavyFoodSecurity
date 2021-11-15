@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -33,20 +34,29 @@ namespace NFA.Services
             string apiLink = "api/Orders/";
             //string apiindex = apiLink + item.Value<Order>("id");
             string apiindex = apiLink + item.id;
-            JObject json = JObject.Parse(JsonConvert.SerializeObject(item));
+            string json = JsonConvert.SerializeObject(item, Formatting.Indented);
 
-            var client = new HttpClient();
+            Console.WriteLine("_______________________________________________________");
+            Console.WriteLine(json);
+            Console.WriteLine("_______________________________________________________");
+
+
+            HttpClient client = new HttpClient();
 
             //client setup
             client.BaseAddress = new Uri(baseLink);
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+            
+
 
             //order data update
-            J content = new StringContent(json.ToString(), System.Text.Encoding.UTF8, "application/json");
+            HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
 
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage();
-            var response = await client.PostAsync(baseLink+apiindex,content);
 
+            var response = await client.PutAsync(baseLink+apiindex,content);
+            response.EnsureSuccessStatusCode();
             //httpRequestMessage = await client.PostAsJsonAsync(apiLink, item).ConfigureAwait(false);
 
             //httpRequestMessage = await client.PostAsync(apiAddress, json);
@@ -71,7 +81,7 @@ namespace NFA.Services
             var client = new HttpClient();
             var response = await client.GetAsync(apiAddress);
             var responseString = await response.Content.ReadAsStringAsync();
-            var settings = new JsonSerializerSettings
+            JsonSerializerSettings settings = new JsonSerializerSettings
             {
                 NullValueHandling = NullValueHandling.Ignore,
 
@@ -81,6 +91,7 @@ namespace NFA.Services
             return order;
 
         }
+
 
         /// <summary>
         /// Determines the link will be valid before continuing
