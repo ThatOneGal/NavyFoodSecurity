@@ -9,8 +9,16 @@
         <StackLayout HorizontalOptions="Center">
             <Frame>
                 <StackLayout>
+                    <Label x:Name="lb_Tester"                 Text="id:"/>
+                    <Entry x:Name="Et_Tester"                      Placeholder="Enter id Here"
+                           PlaceholderColor="DarkGray"/>
+
+                </StackLayout>
+            </Frame> 
+            <Frame>
+                <StackLayout>
                     <Label x:Name="Lb_EmailTitle"                 Text="Email:"/>
-                    <Entry x:Name="Lb_Email"                      Placeholder="Enter Email Here"
+                    <Entry x:Name="Et_Email"                      Placeholder="Enter Email Here"
                            PlaceholderColor="DarkGray"/>
 
                 </StackLayout>
@@ -19,7 +27,7 @@
             <Frame>
                 <StackLayout>
                     <Label x:Name="Lb_PasswordTitle"              Text="Password:"/>
-                    <Entry x:Name="Bt_Email"                      Placeholder="Enter Password Here"
+                    <Entry x:Name="Et_Password"                   Placeholder="Enter Password Here"
                            PlaceholderColor="DarkGray" IsPassword="True"/>
 
                 </StackLayout>
