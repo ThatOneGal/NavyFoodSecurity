@@ -10,31 +10,17 @@
             <Frame>
                 <StackLayout>
                     <Label x:Name="lb_Tester"                 Text="id:"/>
-                    <Entry x:Name="Et_Tester"                      Placeholder="Enter id Here"
+                    <Entry x:Name="Et_Tester"                      Placeholder="Enter ID Here"
                            PlaceholderColor="DarkGray"/>
 
-                </StackLayout>
-            </Frame> 
-            <Frame>
-                <StackLayout>
                     <Label x:Name="Lb_EmailTitle"                 Text="Email:"/>
                     <Entry x:Name="Et_Email"                      Placeholder="Enter Email Here"
                            PlaceholderColor="DarkGray"/>
 
-                </StackLayout>
-            </Frame>
-                       
-            <Frame>
-                <StackLayout>
                     <Label x:Name="Lb_PasswordTitle"              Text="Password:"/>
                     <Entry x:Name="Et_Password"                   Placeholder="Enter Password Here"
                            PlaceholderColor="DarkGray" IsPassword="True"/>
 
-                </StackLayout>
-            </Frame>
-                     
-            <Frame>
-                <StackLayout>
                     <Button x:Name="Bt_Login"              Text="LOGIN"  Clicked="Bt_Login_Clicked"/>
                 </StackLayout>
             </Frame>

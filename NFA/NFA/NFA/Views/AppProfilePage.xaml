@@ -16,7 +16,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <StackLayout>
-        <ScrollView BackgroundColor="Yellow">
+        <ScrollView BackgroundColor="White">
             <StackLayout>
 
                 <Frame>
