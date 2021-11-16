@@ -15,7 +15,7 @@
 
     <ContentPage.Content>
         <Grid VerticalOptions="Fill"
-              HorizontalOptions="CenterAndExpand">
+              HorizontalOptions="Fill">
             <zxing:ZXingScannerView x:Name="scanView"
                                         OnScanResult="scanView_OnScanResult"
                                         IsScanning="True"
