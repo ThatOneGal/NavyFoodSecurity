@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,9 +12,54 @@ namespace NFA.Views
     [DesignTimeVisible(false)]
     public partial class MainPage : TabbedPage
     {
+
         public MainPage()
         {
             InitializeComponent();
+
         }
+        //public MainPage()
+        //{
+        //    string user = Preferences.Get("Local_Id", "0");
+        //    bool ischecking = Preferences.Get("LogOut", true);
+
+        //    Console.WriteLine("________________________________________");
+
+        //    Console.WriteLine(user);
+        //    Console.WriteLine("________________________________________");
+
+        //    while (ischecking)
+        //    {
+        //        Task precheck = Authenticate(user);
+
+        //    }
+
+        //}
+
+        //public async Task<bool> Authenticate(string usercheck)
+        //{
+        //    string user = usercheck;
+        //    bool isChecking = Preferences.Get("LogOut", true);
+        //    if (user == "0")
+        //    {
+        //        await Navigation.PushModalAsync(new NavigationPage(new AppLoginPage()));
+        //    }
+        //    else
+        //    {
+        //        InitializeComponent();
+        //    }
+        //    return isChecking;
+        //    /*
+        //     * check if user logged in.
+        //     * if user preference is value force login display
+        //     * else if user preference is there profile 
+        //     * 
+        //     */
+
+
+        //}
+
+
+
     }
 }

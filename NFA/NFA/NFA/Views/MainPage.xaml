@@ -5,11 +5,12 @@
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             mc:Ignorable="d"
             xmlns:views="clr-namespace:NFA.Views"
-            x:Class="NFA.Views.MainPage">
+            x:Class="NFA.Views.MainPage"
+            SelectedTabColor="Green">
 
     <TabbedPage.Children>
 
-        <NavigationPage Title="Dashboard" >
+        <NavigationPage Title="Dashboard" x:Name="NP_Dashboard" IsEnabled="False">
             <x:Arguments>
                 <views:AppDashboardPage />
             </x:Arguments>
@@ -21,7 +22,7 @@
 
         </NavigationPage>
 
-        <NavigationPage Title="Login">
+        <NavigationPage Title="Login" x:Name="NP_Login" IsEnabled="True">
             <x:Arguments>
                 <views:AppLoginPage />
             </x:Arguments>
@@ -33,9 +34,9 @@
 
         </NavigationPage>
 
-        <NavigationPage Title="Profile">
+        <NavigationPage Title="Profile" x:Name="NP_Profile" >
             <x:Arguments>
-                <views:AppProfilePage />
+                <views:AppProfilePage x:Name="NP_ProfileVM"/>
             </x:Arguments>
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">

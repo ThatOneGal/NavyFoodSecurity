@@ -38,7 +38,8 @@ namespace NFA.Views
                 fill();
 
             }
-
+ 
+            
         }
         public void fill()
         {

@@ -113,7 +113,7 @@ namespace NFA.Views
                 FillOrderForm();
             }
 
-        }    
+        }
         public async Task validateUpdate()
         {
             string title = "Update";
