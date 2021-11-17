@@ -607,23 +607,40 @@
     ]
   },
   "packageFolders": {
+<<<<<<< Updated upstream
     "C:\\Users\\20069271\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+=======
+    "C:\\Users\\William\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+>>>>>>> Stashed changes
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream
       "projectUniqueName": "C:\\Users\\20069271\\Documents\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
       "projectName": "NFA",
       "projectPath": "C:\\Users\\20069271\\Documents\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
       "packagesPath": "C:\\Users\\20069271\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\20069271\\Documents\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\obj\\",
+=======
+      "projectUniqueName": "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
+      "projectName": "NFA",
+      "projectPath": "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
+      "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
+      "outputPath": "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\obj\\",
+>>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
+<<<<<<< Updated upstream
         "C:\\Users\\20069271\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -677,7 +694,11 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+<<<<<<< Updated upstream
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes
       }
     }
   }
