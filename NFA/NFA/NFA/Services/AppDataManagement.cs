@@ -96,10 +96,8 @@ namespace NFA.Services
 
         }
 
-             public async Task<User> GetUserAsync(string id)
+        public async Task<User> GetUserAsync(string id)
         {
-
-
             string baseLink = "https://pacific-spire-38129.herokuapp.com/api/Users/";
             string apiAddress = baseLink + id;
 
@@ -157,6 +155,22 @@ namespace NFA.Services
         }
 
 
+
+        public async Task<List<UserRole>> GetApiUserRoleListAsync()
+        {
+            List<UserRole> Roles = new List<UserRole>();
+
+            string baseLink = "https://pacific-spire-38129.herokuapp.com/api/UserRoles";
+
+            var client = new HttpClient();
+            var response = await client.GetAsync(baseLink);
+            var responseString = await response.Content.ReadAsStringAsync();
+
+            Roles = JsonConvert.DeserializeObject<List<UserRole>>(responseString);
+
+
+            return Roles;
+        }
         public Task<bool> GetApiOrderAsync(string orderId)
         {
             throw new NotImplementedException();
@@ -177,9 +191,6 @@ namespace NFA.Services
             throw new NotImplementedException();
         }
 
-        public Task<bool> GetApiUserRoleAsync(string userRoleId)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

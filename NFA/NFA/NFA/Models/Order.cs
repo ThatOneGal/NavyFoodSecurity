@@ -62,7 +62,7 @@ namespace NFA.Models
         }
         public string PackageQty { get; set; }
 
-        public int PackedId
+        public int PackerId
         {
             get { return _PackerId; }
             set

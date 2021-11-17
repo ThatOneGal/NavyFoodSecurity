@@ -22,38 +22,38 @@
                 <Frame>
                     <StackLayout>
                         <Label x:Name="Lb_FirstNameTitle"              Text="First Name:"/>
-                        <Label x:Name="Lb_FirstName"                   Text="Lb_FirstName"/>
+                        <Label x:Name="Lb_FirstName"                   Text=""/>
                     </StackLayout>
                 </Frame>
                 <Frame>
                     <StackLayout>
                         <Label x:Name="Lb_LastNameTitle"              Text="Last Name:"/>
-                        <Label x:Name="Lb_LastName"                   Text="Lb_LastName"/>
+                        <Label x:Name="Lb_LastName"                   Text=" "/>
                     </StackLayout>
                 </Frame>
                 <Frame>
                     <StackLayout>
                         <Label x:Name="Lb_RankTitle"                  Text="Rank:"/>
-                        <Label x:Name="Lb_Rank"                       Text="Lb_Rank"/>
+                        <Label x:Name="Lb_Rank"                       Text=" "/>
                     </StackLayout>
                 </Frame>
                 <Frame>
                     <StackLayout>
                         <Label x:Name="Lb_SerialNumberTitle"                Text="SerialNumber:"/>
-                        <Label x:Name="Lb_SerialNumber"                     Text="Lb_Number"/>
+                        <Label x:Name="Lb_SerialNumber"                     Text=" "/>
                     </StackLayout>
                 </Frame>
                 <Frame>
                     <StackLayout>
                         <Label x:Name="Lb_EmailTitle"                 Text="Email:"/>
-                        <Label x:Name="Lb_Email"                      Text="Lb_Email"/>
+                        <Label x:Name="Lb_Email"                      Text=" "/>
 
                     </StackLayout>
                 </Frame> 
                 <Frame>
                     <StackLayout>
                         <Label x:Name="Lb_UserRoleTitle"              Text="Position:"/>
-                        <Label x:Name="Lb_UserRole"                   Text="UserRole"/>
+                        <Picker x:Name="Pk_UserRole" SelectedIndexChanged="Pk_UserRole_SelectedIndexChanged"/>
 
                     </StackLayout>
                 </Frame>

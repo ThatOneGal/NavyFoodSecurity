@@ -1,4 +1,5 @@
-﻿using NFA.Services;
+﻿using NFA.Models;
+using NFA.Services;
 using NFA.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,8 @@ namespace NFA.Views
             InitializeComponent();
             Title = "Profile";
 
-            Task asyncaa = Populate("");
+            Task asyncaa = Populate("1");
+            Task userroles = PopUserRoles();
 
         }
 
@@ -35,23 +37,59 @@ namespace NFA.Views
             {
                 var isLogged = Preferences.Get("Local_Id", "0");
                 await profileModel.getUserAsync(id);
-                fill();
+
 
             }
  
             
         }
+
+        public async Task PopUserRoles()
+        {
+            await profileModel.getUserRolesAsync();
+            fill();
+        }
+
+        public void updateRole()
+        {
+            UserRole role = (UserRole)Pk_UserRole.SelectedItem;
+            profileModel.User.UserRoleId = role.id;
+            if(role.RoleName=="Driver" || role.RoleName == "Packer")
+            {
+                Preferences.Set("Role", role.RoleName);
+            }
+            //Console.WriteLine("_____________________________________________________________________");
+            //Console.WriteLine(profileModel.User.UserRoleId);
+            //Console.WriteLine("_____________________________________________________________________");
+            //Console.WriteLine(role.id);
+            //Console.WriteLine(role.RoleName);
+            //Console.WriteLine("_____________________________________________________________________");
+
+
+        }
+
         public void fill()
         {
             
             Lb_FirstName.Text = profileModel.User.firstName;
+
             Lb_LastName.Text = profileModel.User.lastName;
+
             Lb_Rank.Text = profileModel.User.rank;
+
             Lb_SerialNumber.Text = profileModel.User.serialnumber;
+
             Lb_Email.Text = profileModel.User.email;
-            Lb_UserRole.Text = profileModel.User.UserRoleId.ToString();
+
+            Pk_UserRole.ItemsSource = profileModel.roles;
+            Pk_UserRole.ItemDisplayBinding = new Binding("RoleName");
+            Pk_UserRole.SelectedItem = profileModel.roles.FirstOrDefault(u => u.id == profileModel.User.UserRoleId);
+
         }
 
-
+        private void Pk_UserRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            updateRole();
+        }
     }
 }
