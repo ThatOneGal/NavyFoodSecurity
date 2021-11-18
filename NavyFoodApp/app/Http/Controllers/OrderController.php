@@ -132,10 +132,12 @@ class OrderController extends Controller
         $order->fill($request->all());
 
         if ($user->UserRoleId == 3) {
+            $order->StatusId = 11;
             $order->PackerId = Auth::id();
             $order->OrderPacked = date('Y-m-d H:i:s');
         }
         if ($user->UserRoleId == 4) {
+            $order->StatusId = 12;
             $order->DriverId = Auth::id();
             $order->OrderShipped = date('Y-m-d H:i:s');
         }
