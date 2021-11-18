@@ -73,24 +73,23 @@ class OrderController extends Controller
 
         return view('Order.Show', compact('Order', 'locationList', 'statusList'));
     }
+/*
+    public function showByID(int $orderNum)
+    {
+        $view = DB::table('orders')
+            ->where('id', $orderNum)
+            ->get();
 
-    /*
-        public function showByID(int $orderNum)
-        {
-            $view = DB::table('orders')
-                ->where('id', $orderNum)
-                ->get();
+        $locationList = Location::all();
+        $statusList = Status::all();
 
-            $locationList = Location::all();
-            $statusList = Status::all();
+        return view('showByID', compact('view', 'locationList', 'statusList'));
 
-            return view('showByID', compact('view', 'locationList', 'statusList'));
-
-        }*/
+    }*/
     public function showByID(Request $request)
     {
 
-        (int)$id = $request->id;
+        (int) $id = $request->id;
         $Order = Order::find($id);
         if (!$Order) {
             abort(404);
@@ -119,14 +118,15 @@ class OrderController extends Controller
     public function edit(Order $Order)
     {
         //
+        $locationList = Location::all();
+        $statusList = Status::all();
         $user = User::find(Auth::id());
-        if ($user->UserRoleId == 1) {
-            $locationList = Location::all();
-            $statusList = Status::all();
-        } else {
+        if($user->UserRoleId == 1){
 
-            $locationList = Location::where($Order->LocationId);
-            $statusList = Status::where($Order->StatusId);
+        }
+        else{
+            $locationList = Location::find($Order->LocationId);
+            $statusList = Status::find($Order->StatusId);
         }
         return view('Order.Edit', compact('Order', 'locationList', 'statusList'));
     }
@@ -153,10 +153,12 @@ class OrderController extends Controller
         if ($order->OrderPacked == null && $user->UserRoleId == 4) {
             echo "<script>alert('This order has not been packed yet.');</script>";
 
-        } else {
+        }
+        else{
             $order->save();
 
         }
+
 
 
         return redirect(route('order.index'));
