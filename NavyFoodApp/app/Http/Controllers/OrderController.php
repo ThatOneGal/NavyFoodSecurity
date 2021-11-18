@@ -118,16 +118,17 @@ class OrderController extends Controller
     public function edit(Order $Order)
     {
         //
+        $user = User::find(Auth::id());
+//        if($user->UserRoleId == 1){
+//            $locationList = Location::all();
+//            $statusList = Status::all();
+//        }
+//        else{
+//            $locationList = Location::find( $Order->LocationId);
+//            $statusList = Status::find($Order->StatusId);
+//        }
         $locationList = Location::all();
         $statusList = Status::all();
-        $user = User::find(Auth::id());
-        if($user->UserRoleId == 1){
-
-        }
-        else{
-            $locationList = Location::find($Order->LocationId);
-            $statusList = Status::find($Order->StatusId);
-        }
         return view('Order.Edit', compact('Order', 'locationList', 'statusList'));
     }
 
