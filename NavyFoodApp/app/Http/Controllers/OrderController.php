@@ -125,8 +125,8 @@ class OrderController extends Controller
             $statusList = Status::all();
         } else {
 
-            $locationList = Location::where('id', $Order->LocationId);
-            $statusList = Status::where('id', $Order->StatusId);
+            $locationList = Location::where($Order->LocationId);
+            $statusList = Status::where($Order->StatusId);
         }
         return view('Order.Edit', compact('Order', 'locationList', 'statusList'));
     }
