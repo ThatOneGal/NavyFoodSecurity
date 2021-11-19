@@ -34,7 +34,9 @@ namespace NFA.Views
             if (responsecheck)
             {
                 Preferences.Set("Local_Id", Et_Tester.Text);
-                await Navigation.PopToRootAsync();
+                //await Navigation.PopToRootAsync();
+                await Navigation.PushModalAsync(new NavigationPage(new MainPage()));
+                
             }
             else
             {
