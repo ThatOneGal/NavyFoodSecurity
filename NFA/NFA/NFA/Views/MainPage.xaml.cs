@@ -16,48 +16,34 @@ namespace NFA.Views
         public MainPage()
         {
             InitializeComponent();
-
+            Start();
         }
-        //public MainPage()
-        //{
-        //    string user = Preferences.Get("Local_Id", "0");
-        //    bool ischecking = Preferences.Get("LogOut", true);
 
-        //    Console.WriteLine("________________________________________");
+        public void Start()
+        {
+            string user = Preferences.Get("Local_Id", "0");
+            bool ischecking = Preferences.Get("LogOut", true);
 
-        //    Console.WriteLine(user);
-        //    Console.WriteLine("________________________________________");
+            Console.WriteLine("________________________________________");
 
-        //    while (ischecking)
-        //    {
-        //        Task precheck = Authenticate(user);
+            Console.WriteLine(user);
+            Console.WriteLine("________________________________________");
 
-        //    }
+            Authenticate(user).Wait();
+        }
 
-        //}
+        public async Task<bool> Authenticate(string usercheck)
+        {
+            string user = usercheck;
+            bool isChecking = Preferences.Get("LogOut", true);
 
-        //public async Task<bool> Authenticate(string usercheck)
-        //{
-        //    string user = usercheck;
-        //    bool isChecking = Preferences.Get("LogOut", true);
-        //    if (user == "0")
-        //    {
-        //        await Navigation.PushModalAsync(new NavigationPage(new AppLoginPage()));
-        //    }
-        //    else
-        //    {
-        //        InitializeComponent();
-        //    }
-        //    return isChecking;
-        //    /*
-        //     * check if user logged in.
-        //     * if user preference is value force login display
-        //     * else if user preference is there profile 
-        //     * 
-        //     */
+            if (user == "0")
+            {
+                await Navigation.PushModalAsync(new NavigationPage(new AppLoginPage()));
+            }
 
-
-        //}
+            return isChecking;
+        }
 
 
 

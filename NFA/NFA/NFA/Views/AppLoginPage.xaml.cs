@@ -18,20 +18,15 @@ namespace NFA.Views
         public AppLoginPage()
         {
             InitializeComponent(); 
-        
         }
 
-        private void Bt_Login_Clicked(object sender, EventArgs e)
+        private async void Bt_Login_Clicked(object sender, EventArgs e)
         {
-
-            Task loggingin = Validate();
-
+            await Validate();
         }
 
         public async Task Validate()
         {
-
-
             //Et_Tester.Text
             //Et_Email
             //Et_Password
@@ -44,7 +39,6 @@ namespace NFA.Views
                 Preferences.Set("Local_Id", Et_Tester.Text);
                 await Navigation.PopToRootAsync();
             }
-
             else
             {
                 //william - could do a try catch and parse the message to the failed page to show why it failed.
