@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NFA.Models;
+using System.Net.Http.Headers;
 
 namespace NFA.Services
 {
@@ -44,18 +45,31 @@ namespace NFA.Services
             HttpClient client = new HttpClient();
 
             //client setup
-            client.BaseAddress = new Uri(baseLink);
-            client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-            
 
+            client.BaseAddress = new Uri(baseLink);
+            //client.DefaultRequestHeaders.Accept.Add(MediaTypeWithQualityHeaderValue("application/json"));
 
             //order data update
-            HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
+            //HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
+  
+            //HttpRequestMessage httpRequestMessage = new HttpRequestMessage();
+            MultipartFormDataContent form = new MultipartFormDataContent();
+            form.Add(new StringContent(item.id.ToString()), "id");
+            form.Add(new StringContent(item.CustomerId.ToString()), "CustomerId");
+            form.Add(new StringContent(item.LocationId.ToString()), "LocationId");
+            form.Add(new StringContent(item.StatusId.ToString()), "StatusId");
+            form.Add(new StringContent(item.OrderDate.ToString()), "OrderDate");
+            form.Add(new StringContent(item.OrderShipped.ToString()), "OrderShipped");
+            form.Add(new StringContent(item.OrderShipped.ToString()), "OrderPacked");
+            form.Add(new StringContent(item.PackageQty), "PackageQty");
+            form.Add(new StringContent(item.PackerId.ToString()), "PackerId");
+            form.Add(new StringContent(item.DriverId.ToString()), "DriverId");
+            form.Add(new StringContent(item.Content), "Content");
+            form.Add(new StringContent(item.NotesStorage), "NotesStorage");
+            form.Add(new StringContent(item.NotesPreparation), "NotesPreparation");
 
-
-            HttpRequestMessage httpRequestMessage = new HttpRequestMessage();
-
-             var response = await client.PutAsync(baseLink+apiindex,content);
+            var response = await client.PutAsync(baseLink+apiindex,form);
+            //var response = await client.PutAsync(baseLink+apiindex,content);
             
             
             response.EnsureSuccessStatusCode();

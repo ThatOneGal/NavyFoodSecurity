@@ -36,6 +36,14 @@ namespace NFA.Views
             if (responsecheck)
             {
                 var isLogged = Preferences.Get("Local_Id", "0");
+                foreach (UserRole item in profileModel.roles)
+                {
+                    if (item.id == profileModel.User.UserRoleId)
+                    {
+                        Preferences.Set("Role", item.RoleName);
+                    }
+                }
+
                 await profileModel.getUserAsync(id);
 
 
@@ -44,6 +52,10 @@ namespace NFA.Views
             
         }
 
+        private void Pk_UserRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            updateRole();
+        }
         public async Task PopUserRoles()
         {
             await profileModel.getUserRolesAsync();
@@ -54,10 +66,9 @@ namespace NFA.Views
         {
             UserRole role = (UserRole)Pk_UserRole.SelectedItem;
             profileModel.User.UserRoleId = role.id;
-            if(role.RoleName=="Driver" || role.RoleName == "Packer")
-            {
-                Preferences.Set("Role", role.RoleName);
-            }
+            
+            Preferences.Set("Role", role.RoleName);
+       
             //Console.WriteLine("_____________________________________________________________________");
             //Console.WriteLine(profileModel.User.UserRoleId);
             //Console.WriteLine("_____________________________________________________________________");
@@ -87,9 +98,6 @@ namespace NFA.Views
 
         }
 
-        private void Pk_UserRole_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            updateRole();
-        }
+
     }
 }

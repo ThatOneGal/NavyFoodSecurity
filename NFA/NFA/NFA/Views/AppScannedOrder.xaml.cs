@@ -97,11 +97,11 @@ namespace NFA.Views
             Task updater = validateUpdate();
         }
 
-        private void Btn_Reset_Clicked(object sender, EventArgs e)
+        private async void Btn_Reset_Clicked(object sender, EventArgs e)
         {
 
             //FillOrderForm();
-            Task checking = validatedReset();
+            await validatedReset();
 
         }
 
@@ -141,7 +141,7 @@ namespace NFA.Views
                 bool checker = await DisplayAlert(title, message, accept, cancel);
                 if (checker)
                 {
-                    Task check = orderModel.pushOrderAsync();
+                    await orderModel.pushOrderAsync();
                     FillOrderForm();
                 }
             }
