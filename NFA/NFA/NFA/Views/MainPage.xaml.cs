@@ -17,7 +17,6 @@ namespace NFA.Views
         {
             InitializeComponent();
             Start();
-
         }
 
         public void Start()
@@ -30,38 +29,20 @@ namespace NFA.Views
             Console.WriteLine(user);
             Console.WriteLine("________________________________________");
 
-            while (ischecking)
-            {
-                Task precheck = Authenticate(user);
-
-            }
+            Authenticate(user).Wait();
         }
 
         public async Task<bool> Authenticate(string usercheck)
         {
             string user = usercheck;
             bool isChecking = Preferences.Get("LogOut", true);
+
             if (user == "0")
             {
                 await Navigation.PushModalAsync(new NavigationPage(new AppLoginPage()));
-                //await Navigation.PushAsync(new AppLoginPage());
-                //Navigation.InsertPageBefore(new AppLoginPage(), this);
-                //await Navigation.PopAsync();
-                
             }
-            else
-            {
-                InitializeComponent();
-            }
+
             return isChecking;
-            /*
-             * check if user logged in.
-             * if user preference is value force login display
-             * else if user preference is there profile 
-             * 
-             */
-
-
         }
 
 
