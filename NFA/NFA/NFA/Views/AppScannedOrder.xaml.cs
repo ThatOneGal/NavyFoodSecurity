@@ -16,13 +16,13 @@ namespace NFA.Views
     {
         AppOrderModel orderModel = new AppOrderModel();
 
-        string Role = Preferences.Get("Role", "");
-        int UserId = int.Parse(Preferences.Get("Local_Id","0"));
+        public string Role = Preferences.Get("Role", "");
+        int UserId = int.Parse(Preferences.Get("Local_Id", "0"));
 
         public AppScannedOrder(string orderId)
         {
             InitializeComponent();
-
+            Console.WriteLine(Role);
             Task asyncaa = Populate(orderId);
 
         }
@@ -33,7 +33,7 @@ namespace NFA.Views
             orderModel = new AppOrderModel();
             await orderModel.getOrderAsync(ordId);
             FillOrderForm();
-   
+
 
         }
 
@@ -54,13 +54,13 @@ namespace NFA.Views
             Et_NotesNotesPreparation.Text = orderModel.Order.NotesPreparation;
 
         }
-        
+
         public void FillOrderObject()
         {
             //Lb_CustomerId.Text = orderModel.Order.CustomerId.ToString();
             //Lb_LocationId.Text = orderModel.Order.LocationId.ToString();
             //Lb_OrderDate.Text = orderModel.Order.OrderDate.ToString();
-       
+
 
             //considerations required for editability
             orderModel.Order.Content = Et_Content.Text;
@@ -105,14 +105,14 @@ namespace NFA.Views
 
         }
 
-    //    Task confirm = checker();
+        //    Task confirm = checker();
 
-    //    bool check = checker().Result;
+        //    bool check = checker().Result;
 
-    //        if (check)
-    //        {
-    //            Task LoadOrder = Populate(orderModel.Order.id.ToString());
-    //}
+        //        if (check)
+        //        {
+        //            Task LoadOrder = Populate(orderModel.Order.id.ToString());
+        //}
 
         public async Task validatedReset()
         {
@@ -135,19 +135,38 @@ namespace NFA.Views
             string message = "Continuing will save changes, are you sure?";
             string accept = "Yes";
             string cancel = "No";
-            FillOrderObject();
-            if (Role == "Driver" && orderModel.Order.PackerId != 0)
+            //FillOrderObject();
+            bool checker = await DisplayAlert(title, message, accept, cancel);
+            if (checker)
             {
-                bool checker = await DisplayAlert(title, message, accept, cancel);
-                if (checker)
+                if (Role == "Admin")
                 {
-                    await orderModel.pushOrderAsync();
                     FillOrderForm();
+
+                    await orderModel.pushOrderAsync();
+
+
                 }
-            }
-            else
-            {
-                await DisplayAlert(title, "The order has not been packed yet.", "Understood");
+                if (Role == "Driver" && orderModel.Order.PackerId != 0)
+                {
+                    FillOrderForm();
+
+                    await orderModel.pushOrderAsync();
+       
+
+                }
+                else if (Role == "Packer" && orderModel.Order.DriverId != 0)
+                {
+
+                    await DisplayAlert(title, "The order has not been shipped.", "Understood");
+                }
+
+
+                else
+                {
+                    await DisplayAlert(title, "The order has not been packed yet.", "Understood");
+
+                }
 
             }
 

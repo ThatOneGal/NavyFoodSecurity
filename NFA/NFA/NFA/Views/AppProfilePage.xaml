@@ -22,7 +22,7 @@
                 <Frame>
                     <StackLayout>
                         <Label x:Name="Lb_FirstNameTitle"              Text="First Name:"/>
-                        <Label x:Name="Lb_FirstName"                   Text=""/>
+                        <Label x:Name="Lb_FirstName"                   Text=" "/>
                     </StackLayout>
                 </Frame>
                 <Frame>
@@ -63,8 +63,8 @@
 
         <StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                <Button Text="Update"/>
-                <Button Text="Reset"/>
+                <Button x:Name="reload" Text="reload" Clicked="reload_Clicked"/>
+                <Button Text="Reset" Clicked="Button_Clicked" />
             </StackLayout>
         </StackLayout>
     </StackLayout>

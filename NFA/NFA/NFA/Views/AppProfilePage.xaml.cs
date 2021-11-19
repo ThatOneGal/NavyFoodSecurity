@@ -17,12 +17,14 @@ namespace NFA.Views
     {
         AppProfileModel profileModel= new AppProfileModel();
         AppDataManagement ADM = new AppDataManagement();
+        public string isLogged = Preferences.Get("Local_Id", "0");
+
         public AppProfilePage()
         {
             InitializeComponent();
             Title = "Profile";
 
-            Task asyncaa = Populate("1");
+            Task asyncaa = Populate(isLogged);
             Task userroles = PopUserRoles();
 
         }
@@ -32,21 +34,11 @@ namespace NFA.Views
         {
             string ender = "Users/" + id;
             bool responsecheck = await ADM.GetResponseCode(ender);
-            profileModel = new AppProfileModel();
+            //profileModel = new AppProfileModel();
             if (responsecheck)
             {
-                var isLogged = Preferences.Get("Local_Id", "0");
-                foreach (UserRole item in profileModel.roles)
-                {
-                    if (item.id == profileModel.User.UserRoleId)
-                    {
-                        Preferences.Set("Role", item.RoleName);
-                    }
-                }
-
+                //var isLogged = Preferences.Get("Local_Id", "1");
                 await profileModel.getUserAsync(id);
-
-
             }
  
             
@@ -56,9 +48,18 @@ namespace NFA.Views
         {
             updateRole();
         }
+
         public async Task PopUserRoles()
         {
             await profileModel.getUserRolesAsync();
+
+            foreach (UserRole item in profileModel.roles)
+            {
+                if (item.id == profileModel.User.UserRoleId)
+                {
+                    Preferences.Set("Role", item.RoleName);
+                }
+            }
             fill();
         }
 
@@ -68,21 +69,22 @@ namespace NFA.Views
             profileModel.User.UserRoleId = role.id;
             
             Preferences.Set("Role", role.RoleName);
-       
-            //Console.WriteLine("_____________________________________________________________________");
-            //Console.WriteLine(profileModel.User.UserRoleId);
-            //Console.WriteLine("_____________________________________________________________________");
-            //Console.WriteLine(role.id);
-            //Console.WriteLine(role.RoleName);
-            //Console.WriteLine("_____________________________________________________________________");
+
+            Console.WriteLine("_____________________________________________________________________");
+            Console.WriteLine(profileModel.User.UserRoleId);
+            Console.WriteLine("_____________________________________________________________________");
+            Console.WriteLine(role.id);
+            Console.WriteLine(role.RoleName);
+            Console.WriteLine("_____________________________________________________________________");
 
 
         }
 
         public void fill()
         {
-            
+
             Lb_FirstName.Text = profileModel.User.firstName;
+                Console.WriteLine(profileModel.User.firstName);
 
             Lb_LastName.Text = profileModel.User.lastName;
 
@@ -98,6 +100,14 @@ namespace NFA.Views
 
         }
 
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Preferences.Remove("Local_Id");
+        }
 
+        private void reload_Clicked(object sender, EventArgs e)
+        {
+            fill();
+        }
     }
 }
