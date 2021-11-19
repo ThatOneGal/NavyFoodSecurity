@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Windows.Input;
-using Xamarin.Essentials;
-using Xamarin.Forms;
 
 namespace NFA.ViewModels
 {
@@ -14,7 +11,7 @@ namespace NFA.ViewModels
         public AppProfileModel()
         {
             Title = "Profile";
-      
+
 
 
         }
@@ -23,7 +20,7 @@ namespace NFA.ViewModels
         public List<UserRole> roles { get; set; }
 
         public async Task getUserAsync(string id = null)
-        { 
+        {
             try
             {
                 User = await ADM.GetUserAsync(id);

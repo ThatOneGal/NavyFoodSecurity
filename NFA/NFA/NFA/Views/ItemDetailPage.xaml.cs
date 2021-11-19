@@ -1,10 +1,7 @@
-﻿using System;
+﻿using NFA.Models;
+using NFA.ViewModels;
 using System.ComponentModel;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
-using NFA.Models;
-using NFA.ViewModels;
 
 namespace NFA.Views
 {
@@ -15,7 +12,7 @@ namespace NFA.Views
     {
         ItemDetailViewModel viewModel;
 
-        
+
         public ItemDetailPage(ItemDetailViewModel viewModel)
         {
             InitializeComponent();

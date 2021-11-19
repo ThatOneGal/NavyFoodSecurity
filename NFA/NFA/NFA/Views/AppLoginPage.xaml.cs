@@ -1,8 +1,5 @@
 ﻿using NFA.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -17,7 +14,7 @@ namespace NFA.Views
 
         public AppLoginPage()
         {
-            InitializeComponent(); 
+            InitializeComponent();
         }
 
         private async void Bt_Login_Clicked(object sender, EventArgs e)

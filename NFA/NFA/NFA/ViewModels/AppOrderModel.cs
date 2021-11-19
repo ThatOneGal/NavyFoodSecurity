@@ -1,14 +1,6 @@
-﻿using System;
-using System.Windows.Input;
-using Xamarin.Essentials;
-using Xamarin.Forms;
-using NFA.Models;
-using NFA.Views;
+﻿using NFA.Models;
+using System;
 using System.Threading.Tasks;
-using System.Diagnostics;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
-using NFA.Services;
 
 namespace NFA.ViewModels
 {
@@ -61,7 +53,7 @@ namespace NFA.ViewModels
 
         public async Task pushOrderAsync()
         {
-            try 
+            try
             {
                 await ADM.UpdateItemAsync(Order);
 

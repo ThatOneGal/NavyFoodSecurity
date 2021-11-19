@@ -1,10 +1,6 @@
-﻿using System;
+﻿using NFA.Models;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using NFA.Models;
 
 namespace NFA.Services
 {
@@ -15,6 +11,6 @@ namespace NFA.Services
         Task<bool> GetApiStatusAsync(string statusId); // note: no async here
         Task<bool> GetApiUserAsync(string userId); // note: no async here
         Task<List<UserRole>> GetApiUserRoleListAsync(); // note: no async here
-        
+
     }
 }

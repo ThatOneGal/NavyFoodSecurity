@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
-using NFA.Models;
-using NFA.Views;
-using NFA.ViewModels;
 
 namespace NFA.Views
 {
@@ -24,25 +14,25 @@ namespace NFA.Views
             InitializeComponent();
 
         }
-        
 
 
-/*        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
-        {
-            var item = args.SelectedItem as Item;
-            if (item == null)
-                return;
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+        /*        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+                {
+                    var item = args.SelectedItem as Item;
+                    if (item == null)
+                        return;
 
-            // Manually deselect item.
-            ItemsListView.SelectedItem = null;
-        }*/
+                    await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
 
-/*        async void AddItem_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
-        }*/
+                    // Manually deselect item.
+                    ItemsListView.SelectedItem = null;
+                }*/
+
+        /*        async void AddItem_Clicked(object sender, EventArgs e)
+                {
+                    await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
+                }*/
 
         protected override void OnAppearing()
         {

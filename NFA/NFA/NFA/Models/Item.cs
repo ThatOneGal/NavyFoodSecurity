@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace NFA.Models
+﻿namespace NFA.Models
 {
     public class Item
     {

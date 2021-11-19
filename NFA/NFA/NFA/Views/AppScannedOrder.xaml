@@ -7,9 +7,6 @@
              x:Class="NFA.Views.AppScannedOrder"
              Title="{Binding Title}">
 
-
-
-
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Primary">#2196F3</Color>
@@ -18,95 +15,95 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <StackLayout>
-    <ScrollView BackgroundColor="White">
+        <ScrollView BackgroundColor="White">
+            <StackLayout>
+
+                <Frame>
+                    <StackLayout>
+                        <Label x:Name="Lb_CustomerIdTitle"              Text="Customer:"/>
+                        <Label x:Name="Lb_CustomerId"                   Text="Lb_CustomerId"/>
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Label x:Name="Lb_LocationIdTitle"              Text="Location:"/>
+                        <Label x:Name="Lb_LocationId"                   Text="Lb_LocationId"/>
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Label x:Name="Lb_StatusIdTitle"                Text="Status:"/>
+                        <Label x:Name="Lb_StatusId"                     Text="Lb_StatusId"/>
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Label x:Name="Lb_OrderDateTitle"               Text="Date created:"/>
+                        <Label x:Name="Lb_OrderDate"                    Text="Lb_OrderDate"/>
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Label x:Name="Lb_OrderShippedTitle"            Text="Date shipped:"/>
+                        <Label x:Name="Lb_OrderShipped"                 Text="Lb_OrderShipped"/>
+
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Label x:Name="Lb_OrderPackedTitle"             Text="Date packed:"/>
+                        <Label x:Name="Lb_OrderPacked"                  Text="Lb_OrderPacked"/>
+
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Label x:Name="Lb_PackageQtyTitle"              Text="Package quantity:"/>
+                        <Entry x:Name="Et_PackageQty"                   Text="Lb_PackageQty"/>
+
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Label x:Name="Lb_PackedIdTitle"                Text="Packer:"/>
+                        <Label x:Name="Lb_PackedId"                     Text="Lb_PackedId"/>
+
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Label x:Name="Lb_DriverIdTitle"                Text="Driver:"/>
+                        <Label x:Name="Lb_DriverId"                     Text="Lb_DriverId"/>
+
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Label x:Name="Lb_ContentTitle"                 Text="Content:"/>
+                        <Entry x:Name="Et_Content"                      Text="Lb_Content"/>
+
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Label x:Name="Lb_NotesStorageTitle"           Text="Storage Notes:"/>
+                        <Entry x:Name="Et_NotesStorage"                Text="Lb_NotesStorage"/>
+
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Label x:Name="Lb_NotesNotesPreparationTitle" Text="Preparation Notes:"/>
+                        <Entry x:Name="Et_NotesNotesPreparation" Text="Lb_NotesNotesPreparation"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+
         <StackLayout>
-
-            <Frame>
-                <StackLayout>
-                    <Label x:Name="Lb_CustomerIdTitle"              Text="Customer:"/>
-                    <Label x:Name="Lb_CustomerId"                   Text="Lb_CustomerId"/>
-                </StackLayout>
-            </Frame>
-            <Frame>
-                <StackLayout>
-                    <Label x:Name="Lb_LocationIdTitle"              Text="Location:"/>
-                    <Label x:Name="Lb_LocationId"                   Text="Lb_LocationId"/>
-                </StackLayout>
-            </Frame>
-            <Frame>
-                <StackLayout>
-                    <Label x:Name="Lb_StatusIdTitle"                Text="Status:"/>
-                    <Label x:Name="Lb_StatusId"                     Text="Lb_StatusId"/>
-                </StackLayout>
-            </Frame>
-            <Frame>
-                <StackLayout>
-                    <Label x:Name="Lb_OrderDateTitle"               Text="Date created:"/>
-                    <Label x:Name="Lb_OrderDate"                    Text="Lb_OrderDate"/>
-                </StackLayout>
-            </Frame>
-            <Frame>
-                <StackLayout>
-                    <Label x:Name="Lb_OrderShippedTitle"            Text="Date shipped:"/>
-                    <Label x:Name="Lb_OrderShipped"                 Text="Lb_OrderShipped"/>
-
-                </StackLayout>
-            </Frame>
-            <Frame>
-                <StackLayout>
-                    <Label x:Name="Lb_OrderPackedTitle"             Text="Date packed:"/>
-                    <Label x:Name="Lb_OrderPacked"                  Text="Lb_OrderPacked"/>
-
-                </StackLayout>
-            </Frame>
-            <Frame>
-                <StackLayout>
-                    <Label x:Name="Lb_PackageQtyTitle"              Text="Package quantity:"/>
-                    <Entry x:Name="Et_PackageQty"                   Text="Lb_PackageQty"/>
-
-                </StackLayout>
-            </Frame>
-            <Frame>
-                <StackLayout>
-                    <Label x:Name="Lb_PackedIdTitle"                Text="Packer:"/>
-                    <Label x:Name="Lb_PackedId"                     Text="Lb_PackedId"/>
-
-                </StackLayout>
-            </Frame>
-            <Frame>
-                <StackLayout>
-                    <Label x:Name="Lb_DriverIdTitle"                Text="Driver:"/>
-                    <Label x:Name="Lb_DriverId"                     Text="Lb_DriverId"/>
-
-                </StackLayout>
-            </Frame>
-            <Frame>
-                <StackLayout>
-                    <Label x:Name="Lb_ContentTitle"                 Text="Content:"/>
-                    <Entry x:Name="Et_Content"                      Text="Lb_Content"/>
-
-                </StackLayout>
-            </Frame>
-            <Frame>
-                <StackLayout>
-                    <Label x:Name="Lb_NotesStorageTitle"           Text="Storage Notes:"/>
-                    <Entry x:Name="Et_NotesStorage"                Text="Lb_NotesStorage"/>
-
-                </StackLayout>
-            </Frame>
-            <Frame>
-                <StackLayout>
-                    <Label x:Name="Lb_NotesNotesPreparationTitle" Text="Preparation Notes:"/>
-                    <Entry x:Name="Et_NotesNotesPreparation" Text="Lb_NotesNotesPreparation"/>
-                </StackLayout>
-            </Frame>
-        </StackLayout>
-    </ScrollView> 
-        
-    <StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-            <Button x:Name="Btn_Update" Text="Update" Clicked="Btn_Update_Clicked"/>
-            <Button x:Name="Btn_Reset" Text="Reset" Clicked="Btn_Reset_Clicked"/>
+                <Button x:Name="Btn_Update" Text="Update" Clicked="Btn_Update_Clicked"/>
+                <Button x:Name="Btn_Reset" Text="Reset" Clicked="Btn_Reset_Clicked"/>
             </StackLayout>
         </StackLayout>
     </StackLayout>

@@ -1,7 +1,4 @@
-﻿using NFA.Models;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace NFA.Services
 {
@@ -12,4 +9,3 @@ namespace NFA.Services
         //Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false);
     }
 }
- 

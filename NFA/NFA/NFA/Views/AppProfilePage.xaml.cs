@@ -2,9 +2,7 @@
 using NFA.Services;
 using NFA.ViewModels;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -15,7 +13,7 @@ namespace NFA.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AppProfilePage : ContentPage
     {
-        AppProfileModel profileModel= new AppProfileModel();
+        AppProfileModel profileModel = new AppProfileModel();
         AppDataManagement ADM = new AppDataManagement();
         public AppProfilePage()
         {
@@ -48,8 +46,8 @@ namespace NFA.Views
 
 
             }
- 
-            
+
+
         }
 
         private void Pk_UserRole_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,9 +64,9 @@ namespace NFA.Views
         {
             UserRole role = (UserRole)Pk_UserRole.SelectedItem;
             profileModel.User.UserRoleId = role.id;
-            
+
             Preferences.Set("Role", role.RoleName);
-       
+
             //Console.WriteLine("_____________________________________________________________________");
             //Console.WriteLine(profileModel.User.UserRoleId);
             //Console.WriteLine("_____________________________________________________________________");
@@ -81,7 +79,7 @@ namespace NFA.Views
 
         public void fill()
         {
-            
+
             Lb_FirstName.Text = profileModel.User.firstName;
 
             Lb_LastName.Text = profileModel.User.lastName;

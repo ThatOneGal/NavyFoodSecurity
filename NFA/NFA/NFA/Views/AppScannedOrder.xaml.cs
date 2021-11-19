@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using NFA.ViewModels;
+using System;
 using System.Threading.Tasks;
-using NFA.Services;
-using NFA.ViewModels;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -17,7 +13,7 @@ namespace NFA.Views
         AppOrderModel orderModel = new AppOrderModel();
 
         string Role = Preferences.Get("Role", "");
-        int UserId = int.Parse(Preferences.Get("Local_Id","0"));
+        int UserId = int.Parse(Preferences.Get("Local_Id", "0"));
 
         public AppScannedOrder(string orderId)
         {
@@ -33,7 +29,7 @@ namespace NFA.Views
             orderModel = new AppOrderModel();
             await orderModel.getOrderAsync(ordId);
             FillOrderForm();
-   
+
 
         }
 
@@ -54,13 +50,13 @@ namespace NFA.Views
             Et_NotesNotesPreparation.Text = orderModel.Order.NotesPreparation;
 
         }
-        
+
         public void FillOrderObject()
         {
             //Lb_CustomerId.Text = orderModel.Order.CustomerId.ToString();
             //Lb_LocationId.Text = orderModel.Order.LocationId.ToString();
             //Lb_OrderDate.Text = orderModel.Order.OrderDate.ToString();
-       
+
 
             //considerations required for editability
             orderModel.Order.Content = Et_Content.Text;
@@ -105,14 +101,14 @@ namespace NFA.Views
 
         }
 
-    //    Task confirm = checker();
+        //    Task confirm = checker();
 
-    //    bool check = checker().Result;
+        //    bool check = checker().Result;
 
-    //        if (check)
-    //        {
-    //            Task LoadOrder = Populate(orderModel.Order.id.ToString());
-    //}
+        //        if (check)
+        //        {
+        //            Task LoadOrder = Populate(orderModel.Order.id.ToString());
+        //}
 
         public async Task validatedReset()
         {

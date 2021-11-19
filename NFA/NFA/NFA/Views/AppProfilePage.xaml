@@ -61,11 +61,5 @@
             </StackLayout>
         </ScrollView>
 
-        <StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                <Button Text="Update"/>
-                <Button Text="Reset"/>
-            </StackLayout>
-        </StackLayout>
     </StackLayout>
 </ContentPage>
