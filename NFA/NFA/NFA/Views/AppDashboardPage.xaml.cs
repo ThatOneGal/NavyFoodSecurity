@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NFA.Services;
-using NFA.ViewModels;
+﻿using NFA.Services;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ZXing;
@@ -15,7 +10,7 @@ namespace NFA.Views
     public partial class AppDashboardPage : ContentPage
     {
         Result result = null;
-        
+
 
         public AppDashboardPage()
         {
@@ -51,7 +46,7 @@ namespace NFA.Views
 
                     await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder(result.Text)));
                     //await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder(result.Text)));
-                   
+
                 }
                 else
                 {
@@ -60,12 +55,12 @@ namespace NFA.Views
                     await Navigation.PushModalAsync(new NavigationPage(new AppScanFailed()));
                 }
             }
-            catch (Exception e) 
+            catch (Exception e)
             {
                 Console.WriteLine("________________________________________");
                 Console.WriteLine(e);
                 Console.WriteLine("________________________________________");
-                
+
             }
         }
 
@@ -74,12 +69,12 @@ namespace NFA.Views
         {
             scanView.IsAnalyzing = true;
             result = null;
-        }         
+        }
         protected override void OnDisappearing()
         {
             scanView.IsAnalyzing = false;
             result = null;
-        }     
-        
+        }
+
     }
 }

@@ -3,12 +3,9 @@ using System.ComponentModel;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace NFA.Views
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
     public partial class MainPage : TabbedPage
     {
@@ -22,7 +19,6 @@ namespace NFA.Views
         public void Start()
         {
             string user = Preferences.Get("Local_Id", "0");
-            bool ischecking = Preferences.Get("LogOut", true);
 
             Console.WriteLine("________________________________________");
 
@@ -44,8 +40,5 @@ namespace NFA.Views
 
             return isChecking;
         }
-
-
-
     }
 }

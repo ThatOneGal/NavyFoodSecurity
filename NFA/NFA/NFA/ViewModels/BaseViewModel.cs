@@ -1,12 +1,10 @@
-﻿using System;
+﻿using NFA.Models;
+using NFA.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-
 using Xamarin.Forms;
-
-using NFA.Models;
-using NFA.Services;
 
 namespace NFA.ViewModels
 {
@@ -32,7 +30,7 @@ namespace NFA.ViewModels
         }
 
         protected bool SetProperty<T>(ref T backingStore, T value,
-            [CallerMemberName]string propertyName = "",
+            [CallerMemberName] string propertyName = "",
             Action onChanged = null)
         {
             if (EqualityComparer<T>.Default.Equals(backingStore, value))

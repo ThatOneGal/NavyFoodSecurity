@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 using NFA.Models;
 
 namespace NFA.ViewModels

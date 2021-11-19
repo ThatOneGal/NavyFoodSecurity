@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Text;
 
 namespace NFA.Models
 {
@@ -18,11 +16,12 @@ namespace NFA.Models
         public int CustomerId { get; set; }
         public int LocationId { get; set; }
         public int StatusId { get; set; }
-        public DateTime OrderDate {
+        public DateTime OrderDate
+        {
             get { return _OrderDate; }
-            set 
+            set
             {
-                if(value == null)
+                if (value == null)
                 {
                     _OrderDate = DateTime.Now;
                 }
@@ -31,12 +30,13 @@ namespace NFA.Models
                     _OrderDate = value;
                 }
             }
-        }        
-        public DateTime OrderShipped {
+        }
+        public DateTime OrderShipped
+        {
             get { return _OrderShipped; }
-            set 
+            set
             {
-                if(value == null)
+                if (value == null)
                 {
                     _OrderShipped = DateTime.Now;
                 }
@@ -45,12 +45,13 @@ namespace NFA.Models
                     _OrderShipped = value;
                 }
             }
-        }        
-        public DateTime OrderPacked {
+        }
+        public DateTime OrderPacked
+        {
             get { return _OrderPacked; }
-            set 
+            set
             {
-                if(value == null)
+                if (value == null)
                 {
                     _OrderPacked = DateTime.Now;
                 }
@@ -84,7 +85,7 @@ namespace NFA.Models
             {
                 if (value == null)
                 {
-                    _DriverId= 0;
+                    _DriverId = 0;
                 }
                 else
                 {

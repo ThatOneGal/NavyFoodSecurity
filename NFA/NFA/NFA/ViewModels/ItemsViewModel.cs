@@ -1,12 +1,10 @@
-﻿using System;
+﻿using NFA.Models;
+using NFA.Views;
+using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
-
-using NFA.Models;
-using NFA.Views;
 
 namespace NFA.ViewModels
 {

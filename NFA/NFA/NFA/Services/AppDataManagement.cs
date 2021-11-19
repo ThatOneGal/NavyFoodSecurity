@@ -1,14 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using NFA.Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using NFA.Models;
-using System.Net.Http.Headers;
 
 namespace NFA.Services
 {
@@ -17,7 +13,7 @@ namespace NFA.Services
 
         public AppDataManagement()
         {
-            
+
         }
 
 
@@ -51,7 +47,7 @@ namespace NFA.Services
 
             //order data update
             //HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
-  
+
             //HttpRequestMessage httpRequestMessage = new HttpRequestMessage();
             MultipartFormDataContent form = new MultipartFormDataContent();
             form.Add(new StringContent(item.id.ToString()), "id");
@@ -68,10 +64,10 @@ namespace NFA.Services
             form.Add(new StringContent(item.NotesStorage), "NotesStorage");
             form.Add(new StringContent(item.NotesPreparation), "NotesPreparation");
 
-            var response = await client.PutAsync(baseLink+apiindex,form);
+            var response = await client.PutAsync(baseLink + apiindex, form);
             //var response = await client.PutAsync(baseLink+apiindex,content);
-            
-            
+
+
             response.EnsureSuccessStatusCode();
             //httpRequestMessage = await client.PostAsJsonAsync(apiLink, item).ConfigureAwait(false);
 
@@ -104,7 +100,7 @@ namespace NFA.Services
                 NullValueHandling = NullValueHandling.Ignore,
 
             };
-            Order order = JsonConvert.DeserializeObject<Order>(responseString,settings);
+            Order order = JsonConvert.DeserializeObject<Order>(responseString, settings);
             Console.WriteLine(responseString);
             return order;
 
@@ -123,7 +119,7 @@ namespace NFA.Services
                 NullValueHandling = NullValueHandling.Ignore,
 
             };
-            User order = JsonConvert.DeserializeObject<User>(responseString,settings);
+            User order = JsonConvert.DeserializeObject<User>(responseString, settings);
             Console.WriteLine(responseString);
             return order;
 

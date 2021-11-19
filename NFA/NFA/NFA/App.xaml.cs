@@ -1,10 +1,5 @@
-﻿using System;
+﻿using NFA.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using NFA.Services;
-using NFA.Views;
-using Xamarin.Essentials;
-using System.Threading.Tasks;
 
 namespace NFA
 {
@@ -15,13 +10,12 @@ namespace NFA
         {
             InitializeComponent();
 
-            //DependencyService.Register<MockDataStore>();
             MainPage = new MainPage();
         }
 
         protected override void OnStart()
         {
-            
+
         }
 
         protected override void OnSleep()
@@ -33,6 +27,6 @@ namespace NFA
         }
 
 
-        
+
     }
 }
