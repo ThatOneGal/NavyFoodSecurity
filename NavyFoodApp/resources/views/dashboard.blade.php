@@ -19,7 +19,6 @@
                     <Label>ID to Display</Label>
 
                     <input name="id" type="text" value=""/>
-
                 </div>
                 <div style="text-align: center; border: black">
                     <input type="submit" />
