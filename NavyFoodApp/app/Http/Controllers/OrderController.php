@@ -69,42 +69,24 @@ class OrderController extends Controller
         if ($Order == null)
             $Order = Order::latest()->first();
 
-
         return view('Order.Show', compact('Order', 'locationList', 'statusList'));
     }
-/*
-    public function showByID(int $orderNum)
-    {
-        $view = DB::table('orders')
-            ->where('id', $orderNum)
-            ->get();
 
-        $locationList = Location::all();
-        $statusList = Status::all();
-<<<<<<< HEAD
-
-        return view('showByID', compact('view', 'locationList', 'statusList'));
-
-=======
-
-        return view('showByID', compact('view', 'locationList', 'statusList'));
-
->>>>>>> parent of 1113110 (web stuff)
-    }*/
     public function showByID(Request $request)
     {
-
         (int) $id = $request->id;
         $Order = Order::find($id);
-        if (!$Order) {
-            abort(404);
+
+        if (!$Order || !isset($Order)) {
+            echo '<a href="#" data-reveal-id="myModal">Click Me For A Modal</a>
+            <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+            <h2 id="modalTitle">ID does not exist</h2>';
         }
 
         $locationList = Location::all();
         $statusList = Status::all();
 
         return view('Order.Show', compact('Order', 'locationList', 'statusList'));
-
     }
 
     public function last()
@@ -112,7 +94,6 @@ class OrderController extends Controller
         $locationList = Location::all();
         $statusList = Status::all();
         $Order = Order::latest()->first();
-
 
         return view('Order.Show', compact('Order', 'locationList', 'statusList'));
     }
@@ -122,9 +103,9 @@ class OrderController extends Controller
      */
     public function edit(Order $Order)
     {
-        //
         $locationList = Location::all();
         $statusList = Status::all();
+
         return view('Order.Edit', compact('Order', 'locationList', 'statusList'));
     }
 
@@ -133,45 +114,10 @@ class OrderController extends Controller
      */
     public function update(Request $request, Order $order)
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        $user = User::find(Auth::id());
-        $order->fill($request->all());
-
-        if ($user->UserRoleId == 3) {
-            $order->StatusId = 11;
-            $order->PackerId = Auth::id();
-            $order->OrderPacked = date('Y-m-d H:i:s');
-        }
-        if ($user->UserRoleId == 4) {
-            $order->StatusId = 12;
-            $order->DriverId = Auth::id();
-            $order->OrderShipped = date('Y-m-d H:i:s');
-        }
-
-        if ($order->OrderPacked == null && $user->UserRoleId == 4) {
-            echo "<script>alert('This order has not been packed yet.');</script>";
-
-        }
-        else{
-            $order->save();
-
-        }
-
-
-
-=======
-
         $order->fill($request->all());
         $order->save();
->>>>>>> parent of 1113110 (web stuff)
-=======
 
-        $order->fill($request->all());
-        $order->save();
->>>>>>> parent of 1113110 (web stuff)
         return redirect(route('order.index'));
-
     }
 
     /**
@@ -180,12 +126,9 @@ class OrderController extends Controller
      */
     public function destroy(Order $order)
     {
-        //
-
         $order->delete();
+
         return redirect(route('order.index'));
-
-
     }
 
 }
