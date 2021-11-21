@@ -77,10 +77,8 @@ class OrderController extends Controller
         (int) $id = $request->id;
         $Order = Order::find($id);
 
-        if (!$Order || !isset($Order)) {
-            echo '<a href="#" data-reveal-id="myModal">Click Me For A Modal</a>
-            <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-            <h2 id="modalTitle">ID does not exist</h2>';
+        if (!$Order) {
+            abort(404);
         }
 
         $locationList = Location::all();
