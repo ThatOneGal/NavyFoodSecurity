@@ -69,36 +69,25 @@ class OrderController extends Controller
         if ($Order == null)
             $Order = Order::latest()->first();
 
-
         return view('Order.Show', compact('Order', 'locationList', 'statusList'));
     }
-/*
-    public function showByID(int $orderNum)
-    {
-        $view = DB::table('orders')
-            ->where('id', $orderNum)
-            ->get();
 
-        $locationList = Location::all();
-        $statusList = Status::all();
-
-        return view('showByID', compact('view', 'locationList', 'statusList'));
-
-    }*/
     public function showByID(Request $request)
     {
-
         (int) $id = $request->id;
         $Order = Order::find($id);
-        if (!$Order) {
-            abort(404);
+
+        if (!$Order || !isset($Order)) {
+            echo '<a href="#" data-reveal-id="myModal">Click Me For A Modal</a>
+
+            <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+            <h2 id="modalTitle">ID does not exist</h2>';
         }
 
         $locationList = Location::all();
         $statusList = Status::all();
 
         return view('Order.Show', compact('Order', 'locationList', 'statusList'));
-
     }
 
     public function last()
@@ -106,7 +95,6 @@ class OrderController extends Controller
         $locationList = Location::all();
         $statusList = Status::all();
         $Order = Order::latest()->first();
-
 
         return view('Order.Show', compact('Order', 'locationList', 'statusList'));
     }
@@ -116,9 +104,9 @@ class OrderController extends Controller
      */
     public function edit(Order $Order)
     {
-        //
         $locationList = Location::all();
         $statusList = Status::all();
+
         return view('Order.Edit', compact('Order', 'locationList', 'statusList'));
     }
 
@@ -127,11 +115,10 @@ class OrderController extends Controller
      */
     public function update(Request $request, Order $order)
     {
-
         $order->fill($request->all());
         $order->save();
-        return redirect(route('order.index'));
 
+        return redirect(route('order.index'));
     }
 
     /**
@@ -140,12 +127,9 @@ class OrderController extends Controller
      */
     public function destroy(Order $order)
     {
-        //
-
         $order->delete();
+
         return redirect(route('order.index'));
-
-
     }
 
 }
