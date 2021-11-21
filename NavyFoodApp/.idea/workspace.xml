@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="9eb25c43-2a17-4e20-9c80-68522cf1eaa0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Order.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_11_19_101355_add_soft_delete_columns_to_orders.php" beforeDir="false" />
 =======
+=======
+>>>>>>> parent of 1113110 (web stuff)
 <<<<<<< Updated upstream
     <list default="true" id="769d679b-17ff-4a27-a830-4b3a5f67c168" name="Default Changelist" comment="Updated navigation of status and location create, edit and index pages.">
       <change beforePath="$PROJECT_DIR$/resources/views/Status/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Status/edit.blade.php" afterDir="false" />
@@ -17,6 +20,9 @@
     <list default="true" id="769d679b-17ff-4a27-a830-4b3a5f67c168" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" afterDir="false" />
 >>>>>>> Stashed changes
+<<<<<<< HEAD
+>>>>>>> parent of 1113110 (web stuff)
+=======
 >>>>>>> parent of 1113110 (web stuff)
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -231,12 +237,18 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 1113110 (web stuff)
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Updated navigation of status and location create, edit and index pages." />
     <option name="LAST_COMMIT_MESSAGE" value="Updated navigation of status and location create, edit and index pages." />
+<<<<<<< HEAD
+>>>>>>> parent of 1113110 (web stuff)
+=======
 >>>>>>> parent of 1113110 (web stuff)
   </component>
 </project>

@@ -81,9 +81,15 @@ class OrderController extends Controller
 
         $locationList = Location::all();
         $statusList = Status::all();
+<<<<<<< HEAD
 
         return view('showByID', compact('view', 'locationList', 'statusList'));
 
+=======
+
+        return view('showByID', compact('view', 'locationList', 'statusList'));
+
+>>>>>>> parent of 1113110 (web stuff)
     }*/
     public function showByID(Request $request)
     {
@@ -128,6 +134,7 @@ class OrderController extends Controller
     public function update(Request $request, Order $order)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $user = User::find(Auth::id());
         $order->fill($request->all());
 
@@ -153,6 +160,11 @@ class OrderController extends Controller
 
 
 
+=======
+
+        $order->fill($request->all());
+        $order->save();
+>>>>>>> parent of 1113110 (web stuff)
 =======
 
         $order->fill($request->all());
