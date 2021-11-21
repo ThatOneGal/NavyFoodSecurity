@@ -115,10 +115,33 @@ class OrderController extends Controller
      */
     public function update(Request $request, Order $order)
     {
+        $user = User::find(Auth::id());
         $order->fill($request->all());
-        $order->save();
+
+        if ($user->UserRoleId == 3) {
+            $order->StatusId = 11;
+            $order->PackerId = Auth::id();
+            $order->OrderPacked = date('Y-m-d H:i:s');
+        }
+        if ($user->UserRoleId == 4) {
+            $order->StatusId = 12;
+            $order->DriverId = Auth::id();
+            $order->OrderShipped = date('Y-m-d H:i:s');
+        }
+
+        if ($order->OrderPacked == null && $user->UserRoleId == 4) {
+            echo "<script>alert('This order has not been packed yet.');</script>";
+
+        }
+        else{
+            $order->save();
+
+        }
+
+
 
         return redirect(route('order.index'));
+
     }
 
     /**
