@@ -28,6 +28,7 @@ namespace NFA.Views
             AppDataManagement ADM = new AppDataManagement();
 
             Console.WriteLine("________________________________________");
+            Console.WriteLine("scan results");
             Console.WriteLine(result.Text);
             Console.WriteLine("________________________________________");
             try

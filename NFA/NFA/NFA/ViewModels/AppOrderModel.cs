@@ -18,6 +18,8 @@ namespace NFA.ViewModels
 
 
         public Order Order { get; set; }
+        public string StatusName { get; set; }
+        public string LocationName { get; set; }
 
 
         public AppOrderModel(Order order)
@@ -33,7 +35,14 @@ namespace NFA.ViewModels
         }
 
 
+
+        /// <summary>
+        /// loads the order into the model
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task getOrderAsync(string id = null)
+           
         {
             try
             {
@@ -44,7 +53,7 @@ namespace NFA.ViewModels
 
             catch (Exception ex)
             {
-                //= DisplayAlert("Error", ex.ToString(), "Confirm");
+                
                 Console.WriteLine(ex);
             }
 
@@ -65,6 +74,12 @@ namespace NFA.ViewModels
                 Console.WriteLine("_______________________________________________________");
 
             }
+        }
+
+        public async Task getNameForId()
+        {
+            StatusName = await ADM.GetApiStatusNameAsync(Order.StatusId);
+            LocationName = await ADM.GetApiLocationNameAsync(Order.LocationId);
         }
 
 

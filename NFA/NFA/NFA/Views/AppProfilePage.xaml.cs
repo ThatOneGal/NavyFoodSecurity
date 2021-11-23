@@ -15,7 +15,7 @@ namespace NFA.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AppProfilePage : ContentPage
     {
-        AppProfileModel profileModel= new AppProfileModel();
+        AppProfileModel profileModel = new AppProfileModel();
         AppDataManagement ADM = new AppDataManagement();
         public string isLogged = Preferences.Get("Local_Id", "0");
 
@@ -24,8 +24,8 @@ namespace NFA.Views
             InitializeComponent();
             Title = "Profile";
 
-            Task asyncaa = Populate(isLogged);
-            Task userroles = PopUserRoles();
+            //Task asyncaa = Populate(isLogged);
+            //Task userroles = PopUserRoles();
 
         }
 
@@ -40,19 +40,20 @@ namespace NFA.Views
                 //var isLogged = Preferences.Get("Local_Id", "1");
                 await profileModel.getUserAsync(id);
             }
- 
-            
+            await profileModel.getUserRolesAsync();
+
         }
 
-        private void Pk_UserRole_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            updateRole();
-        }
+
 
         public async Task PopUserRoles()
         {
             await profileModel.getUserRolesAsync();
 
+            Pk_UserRole.ItemsSource = profileModel.roles;
+            Pk_UserRole.ItemDisplayBinding = new Binding("RoleName");
+
+            //sets the role based on the user settings
             foreach (UserRole item in profileModel.roles)
             {
                 if (item.id == profileModel.User.UserRoleId)
@@ -60,16 +61,14 @@ namespace NFA.Views
                     Preferences.Set("Role", item.RoleName);
                 }
             }
-            fill();
         }
 
         public void updateRole()
         {
             UserRole role = (UserRole)Pk_UserRole.SelectedItem;
             profileModel.User.UserRoleId = role.id;
-            
-            Preferences.Set("Role", role.RoleName);
 
+            Preferences.Set("Role", role.RoleName);
             Console.WriteLine("_____________________________________________________________________");
             Console.WriteLine(profileModel.User.UserRoleId);
             Console.WriteLine("_____________________________________________________________________");
@@ -80,11 +79,20 @@ namespace NFA.Views
 
         }
 
-        public void fill()
+        public async Task fill()
         {
+            if (profileModel.User == null)
+            {
+                await Populate(isLogged);
+
+            }
+            if (Pk_UserRole.ItemsSource == null)
+            {
+                await PopUserRoles();
+            }
+
 
             Lb_FirstName.Text = profileModel.User.firstName;
-                Console.WriteLine(profileModel.User.firstName);
 
             Lb_LastName.Text = profileModel.User.lastName;
 
@@ -94,10 +102,21 @@ namespace NFA.Views
 
             Lb_Email.Text = profileModel.User.email;
 
-            Pk_UserRole.ItemsSource = profileModel.roles;
-            Pk_UserRole.ItemDisplayBinding = new Binding("RoleName");
+
             Pk_UserRole.SelectedItem = profileModel.roles.FirstOrDefault(u => u.id == profileModel.User.UserRoleId);
 
+        }
+
+        protected override async void OnAppearing()
+        {
+ 
+            Task a = fill();
+
+        }
+
+        private void Pk_UserRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            updateRole();
         }
 
         private void Button_Clicked(object sender, EventArgs e)
@@ -109,5 +128,7 @@ namespace NFA.Views
         {
             fill();
         }
+
+
     }
 }

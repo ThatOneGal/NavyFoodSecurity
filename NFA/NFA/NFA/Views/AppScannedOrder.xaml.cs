@@ -24,6 +24,9 @@ namespace NFA.Views
             InitializeComponent();
             Console.WriteLine(Role);
             Task asyncaa = Populate(orderId);
+            //Task asynca2 = PopulateName();
+            //FillOrderForm();
+
 
         }
 
@@ -34,20 +37,49 @@ namespace NFA.Views
             await orderModel.getOrderAsync(ordId);
             FillOrderForm();
 
+            await orderModel.getNameForId();
 
+            Lb_LocationId.Text = orderModel.LocationName;
+            Lb_StatusId.Text = orderModel.StatusName;
         }
 
+        public async Task PopulateName()
+        {
+            await orderModel.getNameForId();
+
+        }
         public void FillOrderForm()
         {
             Title = "Order: " + orderModel.Order.id.ToString();
             Lb_CustomerId.Text = orderModel.Order.CustomerId.ToString();
+
+            //if (orderModel.LocationName != null)
+            //{
+            //    Lb_LocationId.Text = orderModel.LocationName;
+            //}
+            //else
+            //{
+            //    Lb_LocationId.Text = orderModel.Order.LocationId.ToString();
+            //}
+            //if (orderModel.StatusName != null)
+            //{
+            //    Lb_StatusId.Text = orderModel.StatusName;
+            //}
+            //else
+            //{
+            //    Lb_StatusId.Text = orderModel.Order.StatusId.ToString();
+            //}
+
+
             Lb_LocationId.Text = orderModel.Order.LocationId.ToString();
             Lb_StatusId.Text = orderModel.Order.StatusId.ToString();
+
+
             Lb_OrderDate.Text = orderModel.Order.OrderDate.ToString();
             Lb_OrderShipped.Text = orderModel.Order.OrderShipped.ToString();
             Lb_OrderPacked.Text = orderModel.Order.OrderPacked.ToString();
             Et_PackageQty.Text = orderModel.Order.PackageQty;
-            Lb_PackedId.Text = orderModel.Order.PackerId.ToString();
+            Lb_PackerId.Text = orderModel.Order.PackerId.ToString();
             Lb_DriverId.Text = orderModel.Order.DriverId.ToString();
             Et_Content.Text = orderModel.Order.Content;
             Et_NotesStorage.Text = orderModel.Order.NotesStorage;
@@ -64,7 +96,7 @@ namespace NFA.Views
 
             //considerations required for editability
             orderModel.Order.Content = Et_Content.Text;
-            orderModel.Order.StatusId = int.Parse(Lb_StatusId.Text);
+            //orderModel.Order.StatusId = int.Parse(Lb_StatusId.Text);
 
 
             orderModel.Order.PackageQty = Et_PackageQty.Text;
@@ -125,6 +157,8 @@ namespace NFA.Views
             if (checker)
             {
                 FillOrderForm();
+                Lb_LocationId.Text = orderModel.LocationName;
+                Lb_StatusId.Text = orderModel.StatusName;
             }
 
         }
@@ -139,6 +173,13 @@ namespace NFA.Views
             bool checker = await DisplayAlert(title, message, accept, cancel);
             if (checker)
             {
+
+                FillOrderObject();
+
+                await orderModel.pushOrderAsync();
+
+
+
                 if (Role == "Admin")
                 {
                     FillOrderForm();
@@ -152,21 +193,17 @@ namespace NFA.Views
                     FillOrderForm();
 
                     await orderModel.pushOrderAsync();
-       
+
 
                 }
                 else if (Role == "Packer" && orderModel.Order.DriverId != 0)
                 {
 
-                    await DisplayAlert(title, "The order has not been shipped.", "Understood");
+                    await DisplayAlert(title, "The order has been shipped.", "Understood");
                 }
 
 
-                else
-                {
-                    await DisplayAlert(title, "The order has not been packed yet.", "Understood");
 
-                }
 
             }
 

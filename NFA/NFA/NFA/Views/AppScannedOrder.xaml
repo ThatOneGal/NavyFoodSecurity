@@ -65,8 +65,8 @@
                 </Frame>
                 <Frame>
                     <StackLayout>
-                        <Label x:Name="Lb_PackedIdTitle"                Text="Packer:"/>
-                        <Label x:Name="Lb_PackedId"                     Text="Lb_PackedId"/>
+                        <Label x:Name="Lb_PackerIdTitle"                Text="Packer:"/>
+                        <Label x:Name="Lb_PackerId"                     Text="Lb_PackerId"/>
 
                     </StackLayout>
                 </Frame>
