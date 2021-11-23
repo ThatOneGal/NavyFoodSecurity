@@ -66,6 +66,7 @@ class OrderController extends Controller
         if (!$Order) {
             abort(404);
         }
+        $Order->content = $request->input("content");
         $Order->update($request->all());
 
         $Order->save();
