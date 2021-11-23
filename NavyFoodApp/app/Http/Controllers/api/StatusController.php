@@ -44,9 +44,14 @@ class StatusController extends Controller
      * @param  \App\Models\Status  $status
      * @return \Illuminate\Http\Response
      */
-    public function show(Status $status)
+    public function show($id)
     {
-        return response()->json($status, 200);
+        $Status = Status::find($id);
+        if (!$Status) {
+            abort(404);
+        }
+
+        return response()->json($Status, 200);
     }
 
     /**

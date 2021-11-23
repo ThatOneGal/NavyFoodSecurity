@@ -44,12 +44,19 @@ class LocationController extends Controller
      * @param  \App\Models\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function show(Location $location)
+    public function show($id)
     {
-        return response()->json($location, 200);
+        $Location = Location::find($id);
+        if (!$Location) {
+            abort(404);
+        }
+
+        return response()->json($Location, 200);
     }
 
-    /**
+
+
+        /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
