@@ -61,11 +61,11 @@ class OrderController extends Controller
      */
     public function update(Request $request, $id)
     {
-
         $Order = Order::find($id);
         if (!$Order) {
             abort(404);
         }
+
 /*        $Order->Content = $request->input("Content");
         $Order->CustomerId = $request->input("CustomerId");
         $Order->LocationId = $request->input("LocationId");
@@ -85,7 +85,7 @@ class OrderController extends Controller
 
         $Order->save();
         $fetched = $Order->refresh();
-        return response()->json([$Order,$fetched], 200);
+        return response()->json([$Order,$request->all()], 200);
 
     }
 
