@@ -14,7 +14,6 @@ namespace NFA.Views
     public partial class AppDashboardPage : ContentPage
     {
         Result result = null;
-        AppDashboardModel dbModel= new AppDashboardModel();
         AppDataManagement ADM = new AppDataManagement();
 
 
