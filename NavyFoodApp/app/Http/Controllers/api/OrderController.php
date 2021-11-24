@@ -66,21 +66,21 @@ class OrderController extends Controller
             abort(404);
         }
 
-       $Order->Content = $request->input("Content");
-        $Order->CustomerId = $request->input("CustomerId");
-        $Order->LocationId = $request->input("LocationId");
-        $Order->StatusId = $request->input("StatusId");
-        $Order->OrderDate = $request->input("OrderDate");
-        $Order->OrderShipped = $request->input("OrderShipped");
-        $Order->OrderPacked = $request->input("OrderPacked");
-        $Order->PackerId = $request->input("PackerId");
-        $Order->DriverId = $request->input("DriverId");
-        $Order->Content = $request->input("Content");
-        $Order->PackageQty = $request->input("PackageQty");
-        $Order->NotesStorage = $request->input("NotesStorage");
-        $Order->NotesPreparation = $request->input("NotesPreparation");
+//       $Order->Content = $request->input("Content");
+//        $Order->CustomerId = $request->input("CustomerId");
+//        $Order->LocationId = $request->input("LocationId");
+//        $Order->StatusId = $request->input("StatusId");
+//        $Order->OrderDate = $request->input("OrderDate");
+//        $Order->OrderShipped = $request->input("OrderShipped");
+//        $Order->OrderPacked = $request->input("OrderPacked");
+//        $Order->PackerId = $request->input("PackerId");
+//        $Order->DriverId = $request->input("DriverId");
+//        $Order->Content = $request->input("Content");
+//        $Order->PackageQty = $request->input("PackageQty");
+//        $Order->NotesStorage = $request->input("NotesStorage");
+//        $Order->NotesPreparation = $request->input("NotesPreparation");
 
-       $Order->update();
+       $Order->update($request);
 //        $Order->fill($request->json()->all());
 
        // $Order->save();
