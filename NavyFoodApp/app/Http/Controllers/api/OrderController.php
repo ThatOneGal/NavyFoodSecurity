@@ -80,7 +80,7 @@ class OrderController extends Controller
 //        $Order->NotesStorage = $request->input("NotesStorage");
 //        $Order->NotesPreparation = $request->input("NotesPreparation");
 
-       $Order->update($request);
+       $Order->update($request->all());
 //        $Order->fill($request->json()->all());
 
        // $Order->save();
