@@ -59,9 +59,9 @@ class OrderController extends Controller
      *
 
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Order $Order)
     {
-        $Order = Order::find($id);
+       // $Order = Order::find($id);
         if (!$Order) {
             abort(404);
         }
