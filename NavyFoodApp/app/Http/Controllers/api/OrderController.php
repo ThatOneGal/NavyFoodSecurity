@@ -66,7 +66,7 @@ class OrderController extends Controller
         if (!$Order) {
             abort(404);
         }
-        $Order->Content = $request->input("Content");
+/*        $Order->Content = $request->input("Content");
         $Order->CustomerId = $request->input("CustomerId");
         $Order->LocationId = $request->input("LocationId");
         $Order->StatusId = $request->input("StatusId");
@@ -78,9 +78,10 @@ class OrderController extends Controller
         $Order->Content = $request->input("Content");
         $Order->PackageQty = $request->input("PackageQty");
         $Order->NotesStorage = $request->input("NotesStorage");
-        $Order->NotesPreparation = $request->input("NotesPreparation");
+        $Order->NotesPreparation = $request->input("NotesPreparation");*/
 
 //        $Order->update($request->all());
+        $Order->update($request->all());
 
         $Order->save();
         return response()->json($Order, 200);
