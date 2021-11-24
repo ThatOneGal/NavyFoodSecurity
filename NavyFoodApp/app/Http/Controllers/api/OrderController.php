@@ -85,7 +85,7 @@ class OrderController extends Controller
 
         $Order->save();
         $fetched = $Order->refresh();
-        return response()->json([$Order,$request->all()], 200);
+        return response()->json([$Order,$request->json()->all()], 200);
 
     }
 
