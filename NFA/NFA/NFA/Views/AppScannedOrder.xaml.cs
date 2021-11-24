@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NFA.Models;
 using NFA.Services;
 using NFA.ViewModels;
 using Xamarin.Essentials;
@@ -31,16 +32,21 @@ namespace NFA.Views
         }
 
 
+
         public async Task Populate(string ordId)
         {
             orderModel = new AppOrderModel();
+
             await orderModel.getOrderAsync(ordId);
             FillOrderForm();
+
+
 
             await orderModel.getNameForId();
 
             Lb_LocationId.Text = orderModel.LocationName;
             Lb_StatusId.Text = orderModel.StatusName;
+
         }
 
         public async Task PopulateName()
@@ -180,40 +186,42 @@ namespace NFA.Views
 
 
 
-                if (Role == "Admin")
-                {
-                    FillOrderForm();
+                //if (Role == "Admin")
+                //{
+                //    FillOrderForm();
 
-                    await orderModel.pushOrderAsync();
-
-
-                }
-                if (Role == "Driver" && orderModel.Order.PackerId != 0)
-                {
-                    FillOrderForm();
-
-                    await orderModel.pushOrderAsync();
+                //    await orderModel.pushOrderAsync();
 
 
-                }
-                else if (Role == "Packer" && orderModel.Order.DriverId != 0)
-                {
+                //}
+                //if (Role == "Driver" && orderModel.Order.PackerId != 0)
+                //{
+                //    FillOrderForm();
 
-                    await DisplayAlert(title, "The order has been shipped.", "Understood");
-                }
+                //    await orderModel.pushOrderAsync();
+
+
+                //}
+                //else if (Role == "Packer" && orderModel.Order.DriverId != 0)
+                //{
+
+                //    await DisplayAlert(title, "The order has been shipped.", "Understood");
+                //}
 
 
 
 
             }
-
-
         }
 
 
 
 
 
+
     }  // partial class
+
+
+
 
 }//namespace

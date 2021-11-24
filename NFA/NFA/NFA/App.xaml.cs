@@ -1,4 +1,6 @@
-﻿using NFA.Views;
+﻿using NFA.Models;
+using NFA.Views;
+using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace NFA
@@ -12,6 +14,8 @@ namespace NFA
 
             MainPage = new MainPage();
         }
+        public List<Order> OrderList { get; set; }
+
 
         protected override void OnStart()
         {

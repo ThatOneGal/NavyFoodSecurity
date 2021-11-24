@@ -1,5 +1,9 @@
-﻿using NFA.Services;
+﻿using NFA.Models;
+using NFA.Services;
+using NFA.ViewModels;
 using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ZXing;
@@ -10,11 +14,15 @@ namespace NFA.Views
     public partial class AppDashboardPage : ContentPage
     {
         Result result = null;
+        AppDashboardModel dbModel= new AppDashboardModel();
+        AppDataManagement ADM = new AppDataManagement();
 
 
         public AppDashboardPage()
         {
             InitializeComponent();
+
+
         }
 
         public void scanView_OnScanResult(Result result)
@@ -23,9 +31,9 @@ namespace NFA.Views
             Device.BeginInvokeOnMainThread(ValidateCode);
         }
 
+
         public async void ValidateCode()
         {
-            AppDataManagement ADM = new AppDataManagement();
 
             Console.WriteLine("________________________________________");
             Console.WriteLine("scan results");
@@ -45,8 +53,14 @@ namespace NFA.Views
 
                     //await Shell.Current.GoToAsync($"{nameof(AppScannedOrder)}?{nameof(AppOrderModel.OrderId)}={result.Text}");
 
+
+
+                    //await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder(ob)));
                     await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder(result.Text)));
                     //await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder(result.Text)));
+                    //await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder(result.Text)));
+
+
 
                 }
                 else

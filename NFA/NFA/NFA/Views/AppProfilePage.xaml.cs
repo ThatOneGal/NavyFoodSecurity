@@ -109,8 +109,12 @@ namespace NFA.Views
 
         protected override async void OnAppearing()
         {
- 
-            Task a = fill();
+
+            if (isLogged != "0")
+            {
+                await fill();
+
+            }
 
         }
 

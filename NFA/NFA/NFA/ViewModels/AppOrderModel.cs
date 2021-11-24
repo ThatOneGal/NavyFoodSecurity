@@ -1,5 +1,7 @@
 ﻿using NFA.Models;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace NFA.ViewModels
@@ -7,10 +9,13 @@ namespace NFA.ViewModels
 
     public class AppOrderModel : BaseViewModel
     {
+
+        App app = new App();
         public AppOrderModel()
         {
-
         }
+
+
 
 
         //* note-may not be needed
@@ -20,7 +25,6 @@ namespace NFA.ViewModels
         public Order Order { get; set; }
         public string StatusName { get; set; }
         public string LocationName { get; set; }
-
 
         public AppOrderModel(Order order)
         {
@@ -34,6 +38,8 @@ namespace NFA.ViewModels
 
         }
 
+    
+
 
 
         /// <summary>
@@ -46,7 +52,19 @@ namespace NFA.ViewModels
         {
             try
             {
-                Order = await ADM.GetItemAsync(id);
+                
+                if (app.OrderList == null)
+                {
+                   app.OrderList = await ADM.GetOrderList();
+                }
+
+                if (Order != null)
+                {
+                    Order = new Order();
+                }
+                Order ob = (Order)ADM.OrderList.Find(x => x.id.ToString() == id);
+                Order = ob;
+                //Order = await ADM.GetItemAsync(id);
 
 
             }
@@ -64,7 +82,15 @@ namespace NFA.ViewModels
         {
             try
             {
-                await ADM.UpdateItemAsync(Order);
+
+                Order check = app.OrderList.First(O => O.id == Order.id);
+
+                var index = app.OrderList.IndexOf(check);
+                Order updated = check;
+
+                if (index != -1)
+                   app.OrderList[index] = updated;
+                //await ADM.UpdateItemAsync(Order);
 
             }
             catch (Exception e)
