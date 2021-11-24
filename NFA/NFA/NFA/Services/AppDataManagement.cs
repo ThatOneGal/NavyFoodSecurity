@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace NFA.Services
@@ -16,7 +18,7 @@ namespace NFA.Services
 
         }
 
-
+        public List<Order> OrderList { get; set; }
 
 
         public async Task UpdateItemAsync(Order item)
@@ -27,11 +29,17 @@ namespace NFA.Services
             //items.Remove(oldItem);
             //items.Add(item);
 
-            string baseLink = "https://pacific-spire-38129.herokuapp.com/";
-            string apiLink = "api/Orders/";
+            string baseLink = "https://pacific-spire-38129.herokuapp.com/api/Orders/";
             //string apiindex = apiLink + item.Value<Order>("id");
-            string apiindex = apiLink + item.id;
-            string json = JsonConvert.SerializeObject(item, Formatting.Indented);
+            string apiindex = baseLink + item.id;
+            Console.WriteLine(apiindex);
+            JsonSerializerSettings settings = new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore,
+               
+
+            };
+            string json = JsonConvert.SerializeObject(item,settings);
 
             Console.WriteLine("_______________________________________________________");
             Console.WriteLine(json);
@@ -39,18 +47,55 @@ namespace NFA.Services
 
 
             HttpClient client = new HttpClient();
+            
+            Dictionary<string, string> values = new Dictionary<string, string>()
+            {
+               
+
+                { "CustomerId"       ,item.CustomerId.ToString()},
+                {"LocationId"        ,item.LocationId.ToString()    },
+                {"StatusId"          ,item.StatusId.ToString()   },
+                {"OrderDate"         ,item.OrderDate.ToString() },
+                {"OrderShipped"      ,item.OrderShipped.ToString()  },
+                {"OrderPacked"       ,item.OrderPacked.ToString()  },
+                {"PackerId"          ,item.PackerId.ToString()},
+                {"DriverId"          ,item.DriverId.ToString()},
+                {"PackageQty"           ,item.PackageQty},
+                {"Content"        ,item.Content},
+                {"NotesStorage"      ,item.NotesStorage},
+                {"NotesPreparation"  ,item.NotesPreparation},
+
+
+
+
+
+
+
+
+
+            };
+            //FormUrlEncodedContent form = new FormUrlEncodedContent(values);
+            
+            //form.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
+
 
             //client setup
 
-            client.BaseAddress = new Uri(baseLink);
+            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded"));
+      
+
+
+
             //client.DefaultRequestHeaders.Accept.Add(MediaTypeWithQualityHeaderValue("application/json"));
 
             //order data update
-            //HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
+            HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
+            HttpContent cont = new StringContent(json);
 
-            //HttpRequestMessage httpRequestMessage = new HttpRequestMessage();
+            HttpRequestMessage httpRequestMessage = new HttpRequestMessage();
             MultipartFormDataContent form = new MultipartFormDataContent();
-            form.Add(new StringContent(item.id.ToString()), "id");
+            form.Add(new StringContent("_method"), "PUT");
             form.Add(new StringContent(item.CustomerId.ToString()), "CustomerId");
             form.Add(new StringContent(item.LocationId.ToString()), "LocationId");
             form.Add(new StringContent(item.StatusId.ToString()), "StatusId");
@@ -64,14 +109,19 @@ namespace NFA.Services
             form.Add(new StringContent(item.NotesStorage), "NotesStorage");
             form.Add(new StringContent(item.NotesPreparation), "NotesPreparation");
 
-            var response = await client.PutAsync(baseLink + apiindex, form);
-            //var response = await client.PutAsync(baseLink+apiindex,content);
+            //var response = await client.PutAsync(apiindex, content);
+            //var response = await client.PutAsJsonAsync(apiindex, form);
+            // var response = await client.PutAsJsonAsync(apiindex, cont);
+            var response = await client.PutAsync(apiindex, form);
 
 
-            response.EnsureSuccessStatusCode();
+            //response.EnsureSuccessStatusCode();
+
+            Console.WriteLine("___________________________________________");
+            Console.WriteLine(await response.Content.ReadAsStringAsync());
+            Console.WriteLine("___________________________________________");
             //httpRequestMessage = await client.PostAsJsonAsync(apiLink, item).ConfigureAwait(false);
 
-            //httpRequestMessage = await client.PostAsync(apiAddress, json);
 
 
             //return await Task.FromResult(true);
@@ -180,27 +230,69 @@ namespace NFA.Services
 
 
             return Roles;
-        }
-        public Task<bool> GetApiOrderAsync(string orderId)
+        }   
+        
+        public async Task<List<Order>> GetOrderList()
         {
-            throw new NotImplementedException();
+            List<Order> orders = new List<Order>();
+
+            string baseLink = "https://pacific-spire-38129.herokuapp.com/api/Orders";
+
+            var client = new HttpClient();
+            var response = await client.GetAsync(baseLink);
+            var responseString = await response.Content.ReadAsStringAsync();
+            JsonSerializerSettings settings = new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore,
+
+            };
+            orders = JsonConvert.DeserializeObject<List<Order>>(responseString, settings);
+            Console.WriteLine(responseString);
+            OrderList = orders;
+            bool check = OrderList == orders;
+            return orders;
         }
 
-        public Task<bool> GetApiLocationAsync(string locationId)
+        public async Task<string> GetApiLocationNameAsync(int locationId)
         {
-            throw new NotImplementedException();
+
+            string baseLink = "https://pacific-spire-38129.herokuapp.com/api/";
+            string apiAddress = baseLink + "Locations/" + locationId.ToString();
+
+            var client = new HttpClient();
+            var response = await client.GetAsync(apiAddress);
+            var responseString = await response.Content.ReadAsStringAsync();
+            JsonSerializerSettings settings = new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore,
+
+            };
+            Location item = JsonConvert.DeserializeObject<Location>(responseString, settings);
+            Console.WriteLine(responseString);
+            return item.locationName;
         }
 
-        public Task<bool> GetApiStatusAsync(string statusId)
+        public async Task<string> GetApiStatusNameAsync(int statusId)
         {
-            throw new NotImplementedException();
+            string baseLink = "https://pacific-spire-38129.herokuapp.com/api/";
+            string apiAddress = baseLink + "Statuses/" + statusId.ToString();
+
+            var client = new HttpClient();
+            var response = await client.GetAsync(apiAddress);
+            var responseString = await response.Content.ReadAsStringAsync();
+            JsonSerializerSettings settings = new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore,
+
+            };
+            Status item = JsonConvert.DeserializeObject<Status>(responseString, settings);
+            Console.WriteLine(responseString);
+            return item.statusName;
         }
 
         public Task<bool> GetApiUserAsync(string userId)
         {
             throw new NotImplementedException();
         }
-
-
     }
 }

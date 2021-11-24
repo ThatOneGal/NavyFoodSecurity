@@ -5,19 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9eb25c43-2a17-4e20-9c80-68522cf1eaa0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_11_19_101355_add_soft_delete_columns_to_orders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NFA/.vs/NFA/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../NFA/.vs/NFA/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NFA/NFA/NFA.Android/Properties/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../NFA/NFA/NFA.Android/Properties/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NFA/NFA/NFA/Services/AppDataManagement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../NFA/NFA/NFA/Services/AppDataManagement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/OrderController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -194,6 +193,7 @@
       <option name="presentableId" value="Default" />
       <updated>1637465282832</updated>
       <workItem from="1637465284254" duration="4440000" />
+      <workItem from="1637722876526" duration="7830000" />
     </task>
     <servers />
   </component>
@@ -210,5 +210,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
