@@ -109,6 +109,9 @@ namespace NFA.Views
             orderModel.Order.NotesStorage = Et_NotesStorage.Text;
             orderModel.Order.NotesPreparation = Et_NotesNotesPreparation.Text;
 
+            orderModel.Order.PackerId = UserId;
+            orderModel.Order.DriverId = UserId;
+
             // placeholder awaiting user role application
             //if user role is packer shows update packeddate
             if (Role == "Packer")
