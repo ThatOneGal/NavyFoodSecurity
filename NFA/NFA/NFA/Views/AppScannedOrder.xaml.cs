@@ -59,23 +59,7 @@ namespace NFA.Views
             Title = "Order: " + orderModel.Order.id.ToString();
             Lb_CustomerId.Text = orderModel.Order.CustomerId.ToString();
 
-            //if (orderModel.LocationName != null)
-            //{
-            //    Lb_LocationId.Text = orderModel.LocationName;
-            //}
-            //else
-            //{
-            //    Lb_LocationId.Text = orderModel.Order.LocationId.ToString();
-            //}
-            //if (orderModel.StatusName != null)
-            //{
-            //    Lb_StatusId.Text = orderModel.StatusName;
-            //}
-            //else
-            //{
-            //    Lb_StatusId.Text = orderModel.Order.StatusId.ToString();
-            //}
-
+ 
 
             Lb_LocationId.Text = orderModel.Order.LocationId.ToString();
             Lb_StatusId.Text = orderModel.Order.StatusId.ToString();
@@ -95,16 +79,9 @@ namespace NFA.Views
 
         public void FillOrderObject()
         {
-            //Lb_CustomerId.Text = orderModel.Order.CustomerId.ToString();
-            //Lb_LocationId.Text = orderModel.Order.LocationId.ToString();
-            //Lb_OrderDate.Text = orderModel.Order.OrderDate.ToString();
 
-
-            //considerations required for editability
             orderModel.Order.Content = Et_Content.Text;
-            //orderModel.Order.StatusId = int.Parse(Lb_StatusId.Text);
-
-
+   
             orderModel.Order.PackageQty = Et_PackageQty.Text;
             orderModel.Order.NotesStorage = Et_NotesStorage.Text;
             orderModel.Order.NotesPreparation = Et_NotesNotesPreparation.Text;
@@ -141,19 +118,9 @@ namespace NFA.Views
         private async void Btn_Reset_Clicked(object sender, EventArgs e)
         {
 
-            //FillOrderForm();
             await validatedReset();
 
         }
-
-        //    Task confirm = checker();
-
-        //    bool check = checker().Result;
-
-        //        if (check)
-        //        {
-        //            Task LoadOrder = Populate(orderModel.Order.id.ToString());
-        //}
 
         public async Task validatedReset()
         {
@@ -178,7 +145,6 @@ namespace NFA.Views
             string message = "Continuing will save changes, are you sure?";
             string accept = "Yes";
             string cancel = "No";
-            //FillOrderObject();
             bool checker = await DisplayAlert(title, message, accept, cancel);
             if (checker)
             {
@@ -186,31 +152,6 @@ namespace NFA.Views
                 FillOrderObject();
 
                 await orderModel.pushOrderAsync();
-
-
-
-                //if (Role == "Admin")
-                //{
-                //    FillOrderForm();
-
-                //    await orderModel.pushOrderAsync();
-
-
-                //}
-                //if (Role == "Driver" && orderModel.Order.PackerId != 0)
-                //{
-                //    FillOrderForm();
-
-                //    await orderModel.pushOrderAsync();
-
-
-                //}
-                //else if (Role == "Packer" && orderModel.Order.DriverId != 0)
-                //{
-
-                //    await DisplayAlert(title, "The order has been shipped.", "Understood");
-                //}
-
 
 
 

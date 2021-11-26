@@ -28,8 +28,6 @@ namespace NFA.ViewModels
 
         public AppOrderModel(Order order)
         {
-            //loadOrderCommand = new Command(async () => await ExecuteLoadOrderCommand());
-
 
             Title = order.id.ToString();
 
@@ -53,17 +51,7 @@ namespace NFA.ViewModels
             try
             {
 
-                /*            if (app.OrderList == null)
-                            {
-                               app.OrderList = await ADM.GetOrderList();
-                            }
-
-                            if (Order != null)
-                            {
-                                Order = new Order();
-                            }
-                            Order ob = (Order)ADM.OrderList.Find(x => x.id.ToString() == id);
-                            Order = ob;*/
+          
                 Order = await ADM.GetItemAsync(id);
 
 
@@ -83,13 +71,6 @@ namespace NFA.ViewModels
             try
             {
 
-                //Order check = app.OrderList.First(O => O.id == Order.id);
-
-                //var index = app.OrderList.IndexOf(check);
-                //Order updated = check;
-
-                //if (index != -1)
-                //   app.OrderList[index] = updated;
                 await ADM.UpdateItemAsync(Order);
 
             }

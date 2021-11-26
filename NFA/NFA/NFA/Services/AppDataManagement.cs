@@ -24,21 +24,12 @@ namespace NFA.Services
         public async Task UpdateItemAsync(Order item)
         {
 
-
-            //var oldItem = Order.Where((Order arg) => arg.Id == item.Id).FirstOrDefault();
-            //items.Remove(oldItem);
-            //items.Add(item);
-
             string baseLink = "https://pacific-spire-38129.herokuapp.com/api/Orders/";
-            //string apiindex = apiLink + item.Value<Order>("id");
             string apiindex = baseLink + item.id;
             Console.WriteLine(apiindex);
             JsonSerializerSettings settings = new JsonSerializerSettings
             {
                 NullValueHandling = NullValueHandling.Ignore,
-                
-               
-
             };
             string json = JsonConvert.SerializeObject(item,settings);
 
@@ -48,75 +39,16 @@ namespace NFA.Services
 
 
             HttpClient client = new HttpClient();
-            
-           /* Dictionary<string, string> values = new Dictionary<string, string>()
-            {
-               
-
-                { "CustomerId"       ,item.CustomerId.ToString()},
-                {"LocationId"        ,item.LocationId.ToString()    },
-                {"StatusId"          ,item.StatusId.ToString()   },
-                {"OrderDate"         ,item.OrderDate.ToString() },
-                {"OrderShipped"      ,item.OrderShipped.ToString()  },
-                {"OrderPacked"       ,item.OrderPacked.ToString()  },
-                {"PackerId"          ,item.PackerId.ToString()},
-                {"DriverId"          ,item.DriverId.ToString()},
-                {"PackageQty"           ,item.PackageQty},
-                {"Content"        ,item.Content},
-                {"NotesStorage"      ,item.NotesStorage},
-                {"NotesPreparation"  ,item.NotesPreparation},
-            };*/
-            //FormUrlEncodedContent form = new FormUrlEncodedContent(values);
-            
-            //form.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
-
-
-            //client setup
-
-            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded"));
-      
-
-
-
-            //client.DefaultRequestHeaders.Accept.Add(MediaTypeWithQualityHeaderValue("application/json"));
-
-            //order data update
+         
             HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
-            //HttpContent cont = new StringContent(json);
 
-            //HttpRequestMessage httpRequestMessage = new HttpRequestMessage();
-            //MultipartFormDataContent form = new MultipartFormDataContent();
-            //form.Add(new StringContent("_method"), "PUT");
-            //form.Add(new StringContent(item.CustomerId.ToString()), "CustomerId");
-            //form.Add(new StringContent(item.LocationId.ToString()), "LocationId");
-            //form.Add(new StringContent(item.StatusId.ToString()), "StatusId");
-            //form.Add(new StringContent(item.OrderDate.ToString()), "OrderDate");
-            //form.Add(new StringContent(item.OrderShipped.ToString()), "OrderShipped");
-            //form.Add(new StringContent(item.OrderShipped.ToString()), "OrderPacked");
-            //form.Add(new StringContent(item.PackageQty), "PackageQty");
-            //form.Add(new StringContent(item.PackerId.ToString()), "PackerId");
-            //form.Add(new StringContent(item.DriverId.ToString()), "DriverId");
-            //form.Add(new StringContent(item.Content), "Content");
-            //form.Add(new StringContent(item.NotesStorage), "NotesStorage");
-            //form.Add(new StringContent(item.NotesPreparation), "NotesPreparation");
 
             var response = await client.PutAsync(apiindex, content);
-            //var response = await client.PutAsJsonAsync(apiindex, form);
-            // var response = await client.PutAsJsonAsync(apiindex, cont);
-            //var response = await client.PutAsync(apiindex, form);
 
-
-            //response.EnsureSuccessStatusCode();
 
             Console.WriteLine("___________________________________________");
             Console.WriteLine(await response.Content.ReadAsStringAsync());
             Console.WriteLine("___________________________________________");
-            //httpRequestMessage = await client.PostAsJsonAsync(apiLink, item).ConfigureAwait(false);
-
-
-
-            //return await Task.FromResult(true);
 
         }
 

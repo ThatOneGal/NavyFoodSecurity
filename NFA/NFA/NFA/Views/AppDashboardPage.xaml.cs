@@ -45,20 +45,9 @@ namespace NFA.Views
                 bool responsecheck = await ADM.GetResponseCode(ender);
                 //validate qr code
                 if (responsecheck)
-                //if (result.BarcodeFormat == BarcodeFormat.QR_CODE) << original code
-                //if (result.BarcodeFormat == BarcodeFormat.QR_CODE && result.Text.Contains("NFA"))
                 {
                     //scan success
-
-                    //await Shell.Current.GoToAsync($"{nameof(AppScannedOrder)}?{nameof(AppOrderModel.OrderId)}={result.Text}");
-
-
-
-                    //await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder(ob)));
                     await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder(result.Text)));
-                    //await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder(result.Text)));
-                    //await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder(result.Text)));
-
 
 
                 }
