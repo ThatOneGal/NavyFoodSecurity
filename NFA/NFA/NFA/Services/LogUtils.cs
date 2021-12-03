@@ -10,7 +10,7 @@ namespace NFA.Services
 
         public LogUtils()
         {
-            string path = System.IO.Directory.GetCurrentDirectory();
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             logFilePath = System.IO.Path.Combine(path, "log.txt");
             if(!System.IO.File.Exists(logFilePath))
             {
