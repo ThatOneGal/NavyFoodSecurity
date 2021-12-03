@@ -8,6 +8,9 @@ namespace NFA.Services
     {
         string logFilePath = null;
 
+        /// <summary>
+        /// gets the log file path, begins logging session.
+        /// </summary>
         public LogUtils()
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
@@ -21,6 +24,10 @@ namespace NFA.Services
             }
         }
 
+        /// <summary>
+        /// writes log message.
+        /// </summary>
+        /// <param name="message"></param>
         public void Log(String message)
         {
             using (System.IO.StreamWriter writer = new System.IO.StreamWriter(logFilePath, true))

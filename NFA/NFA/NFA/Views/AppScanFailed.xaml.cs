@@ -14,6 +14,11 @@ namespace NFA.Views
             InitializeComponent();
         }
 
+        /// <summary>
+        /// on button click, pop this page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TryAgainButton_Clicked(object sender, EventArgs e)
         {
             Navigation.PopModalAsync();

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {}
+    "C:\\Users\\kyelb\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {}
   },
   "projects": {
-    "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {
+    "C:\\Users\\kyelb\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
+        "projectUniqueName": "C:\\Users\\kyelb\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
         "projectName": "NFA",
-        "projectPath": "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
-        "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
-        "outputPath": "S:\\GitHub\\NavyFoodSecurity\\NFA\\NFA\\NFA\\obj\\",
+        "projectPath": "C:\\Users\\kyelb\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA\\NFA.csproj",
+        "packagesPath": "C:\\Users\\kyelb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kyelb\\Desktop\\NavyFoodSecurity\\NFA\\NFA\\NFA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kyelb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -85,7 +85,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

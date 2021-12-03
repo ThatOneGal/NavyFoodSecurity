@@ -17,7 +17,6 @@ namespace NFA.Views
         AppDataManagement ADM = new AppDataManagement();
         LogUtils lu = new LogUtils();
 
-
         public AppDashboardPage()
         {
             InitializeComponent();
@@ -25,16 +24,21 @@ namespace NFA.Views
 
         }
 
+        /// <summary>
+        /// validate the QRcode when a result is recieved
+        /// </summary>
+        /// <param name="result"></param>
         public void scanView_OnScanResult(Result result)
         {
             this.result = result;
             Device.BeginInvokeOnMainThread(ValidateCode);
         }
 
-
+        /// <summary>
+        /// on validate success, open order view. on validate fail, open scan fail view
+        /// </summary>
         public async void ValidateCode()
         {
-
             Console.WriteLine("________________________________________");
             Console.WriteLine("scan results");
             Console.WriteLine(result.Text);
@@ -44,13 +48,12 @@ namespace NFA.Views
                 string ender = "Orders/" + result.Text;
                 scanView.IsAnalyzing = result == null;
                 bool responsecheck = await ADM.GetResponseCode(ender);
+
                 //validate qr code
                 if (responsecheck)
                 {
                     //scan success
                     await Navigation.PushModalAsync(new NavigationPage(new AppScannedOrder(result.Text)));
-
-
                 }
                 else
                 {

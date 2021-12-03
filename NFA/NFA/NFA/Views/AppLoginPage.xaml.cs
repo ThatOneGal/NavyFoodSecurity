@@ -17,11 +17,20 @@ namespace NFA.Views
             InitializeComponent();
         }
 
+        /// <summary>
+        /// call the validate method
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void Bt_Login_Clicked(object sender, EventArgs e)
         {
             await Validate();
         }
 
+        /// <summary>
+        /// id user ID exists, push the main page.
+        /// </summary>
+        /// <returns></returns>
         public async Task Validate()
         {
             //Et_Tester.Text
