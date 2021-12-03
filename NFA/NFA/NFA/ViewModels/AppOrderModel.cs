@@ -69,6 +69,11 @@ namespace NFA.ViewModels
 
         }
 
+
+        /// <summary>
+        /// sends the Order data back into the api to be saved
+        /// </summary>
+        /// <returns></returns>
         public async Task pushOrderAsync()
         {
             try
@@ -87,6 +92,10 @@ namespace NFA.ViewModels
             }
         }
 
+        /// <summary>
+        /// Method for the conversion of id to name (UX) 
+        /// </summary>
+        /// <returns></returns>
         public async Task getNameForId()
         {
             StatusName = await ADM.GetApiStatusNameAsync(Order.StatusId);
