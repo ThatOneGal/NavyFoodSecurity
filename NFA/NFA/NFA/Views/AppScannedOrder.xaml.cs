@@ -25,14 +25,16 @@ namespace NFA.Views
             InitializeComponent();
             Console.WriteLine(Role);
             Task asyncaa = Populate(orderId);
-            //Task asynca2 = PopulateName();
-            //FillOrderForm();
 
 
         }
 
 
-
+        /// <summary>
+        /// Fills the Model data based off the order id being retrieved from the dashboard
+        /// </summary>
+        /// <param name="ordId"></param>
+        /// <returns></returns>
         public async Task Populate(string ordId)
         {
             orderModel = new AppOrderModel();
@@ -54,6 +56,9 @@ namespace NFA.Views
             await orderModel.getNameForId();
 
         }
+        /// <summary>
+        /// matches the data from the view model Order into the view
+        /// </summary>
         public void FillOrderForm()
         {
             Title = "Order: " + orderModel.Order.id.ToString();
@@ -77,6 +82,11 @@ namespace NFA.Views
 
         }
 
+
+        /// <summary>
+        /// returns the data placed in the view back into the Model, ready for saving
+        ///
+        /// </summary>
         public void FillOrderObject()
         {
 
@@ -93,18 +103,14 @@ namespace NFA.Views
             //if user role is packer shows update packeddate
             if (Role == "Packer")
             {
-                //Lb_PackedId.Text = orderModel.Order.PackerId.ToString();
                 orderModel.Order.PackerId = UserId;
                 orderModel.Order.OrderPacked = DateTime.Now;
-                //Lb_OrderPacked.Text = orderModel.Order.OrderPacked.ToString();
             }
 
             if (Role == "Driver")
             {
-                //Lb_DriverId.Text = orderModel.Order.DriverId.ToString();
                 orderModel.Order.DriverId = UserId;
                 orderModel.Order.OrderShipped = DateTime.Now;
-                //Lb_OrderShipped.Text = orderModel.Order.OrderShipped.ToString();
             }
 
         }
