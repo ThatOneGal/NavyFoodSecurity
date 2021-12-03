@@ -15,6 +15,7 @@ namespace NFA.Views
     {
         Result result = null;
         AppDataManagement ADM = new AppDataManagement();
+        LogUtils lu = new LogUtils();
 
 
         public AppDashboardPage()
@@ -62,6 +63,7 @@ namespace NFA.Views
             {
                 Console.WriteLine("________________________________________");
                 Console.WriteLine(e);
+                lu.Log(e.ToString());
                 Console.WriteLine("________________________________________");
 
             }

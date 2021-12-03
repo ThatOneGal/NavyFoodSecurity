@@ -19,6 +19,7 @@ namespace NFA.Services
         }
 
         public List<Order> OrderList { get; set; }
+        LogUtils lu = new LogUtils();
 
 
         public async Task UpdateItemAsync(Order item)
@@ -128,11 +129,13 @@ namespace NFA.Services
             catch (WebException e)
             {
                 Console.WriteLine("\r\nWebException Raised. The following error occurred : {0}", e.Status);
+                lu.Log(e.ToString());
 
             }
             catch (Exception e)
             {
                 Console.WriteLine("\nThe following Exception was raised : {0}", e.Message);
+                lu.Log(e.ToString());
 
             }
             return await Task.FromResult(statusCheck);

@@ -2,11 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using NFA.Services;
 
 namespace NFA.ViewModels
 {
     public class AppProfileModel : BaseViewModel
     {
+        LogUtils lu = new LogUtils();
 
         public AppProfileModel()
         {
@@ -32,6 +34,7 @@ namespace NFA.ViewModels
             {
                 //= DisplayAlert("Error", ex.ToString(), "Confirm");
                 Console.WriteLine(ex);
+                lu.Log(ex.ToString());
             }
         }
 
@@ -48,6 +51,7 @@ namespace NFA.ViewModels
             {
                 //= DisplayAlert("Error", ex.ToString(), "Confirm");
                 Console.WriteLine(ex);
+                lu.Log(ex.ToString());
             }
         }
 

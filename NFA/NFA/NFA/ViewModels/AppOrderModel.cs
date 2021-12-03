@@ -3,12 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using NFA.Services;
 
 namespace NFA.ViewModels
 {
-
+    
     public class AppOrderModel : BaseViewModel
     {
+        LogUtils lu = new LogUtils();
 
         App app = new App();
         public AppOrderModel()
@@ -61,6 +63,7 @@ namespace NFA.ViewModels
             {
                 
                 Console.WriteLine(ex);
+                lu.Log(ex.ToString());
             }
 
 
@@ -78,6 +81,7 @@ namespace NFA.ViewModels
             {
                 Console.WriteLine("_______________________________________________________");
                 Console.WriteLine(e);
+                lu.Log(e.ToString());
                 Console.WriteLine("_______________________________________________________");
 
             }
